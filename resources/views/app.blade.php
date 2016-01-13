@@ -12,12 +12,11 @@
 
 <!-- Bootstrap core CSS -->
 
-<!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
--->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
 <!-- Okay this is STILL not working -->
 <!--<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">-->
-{!! HTML::style('css/bootstrap.min.css') !!}
+<!--{!! HTML::style('css/bootstrap.min.css') !!}-->
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">

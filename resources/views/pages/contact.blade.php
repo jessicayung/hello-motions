@@ -1,4 +1,10 @@
-@extends('app')
+@extends('template')
+
+@section('title')
+
+	Contact
+
+@endsection
 
 @section('content')
 
@@ -13,4 +19,4 @@
 </p>
 
 
-@stop
+@endsection
