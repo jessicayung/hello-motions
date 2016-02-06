@@ -12,7 +12,7 @@ class CreateMotionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('Motions_Table', function (Blueprint $table) {
+        Schema::create('motions', function (Blueprint $table) {
             $table->increments('id');
             $table->date('Date')->nullable();
             $table->string('Circuit', 50)->nullable();
