@@ -84,6 +84,11 @@
         <table class="table table-striped">
           <tr><th>Date</th><th>Notes<th></tr>
           
+          <tr><td>6 Feb 2016</td><td><ul>
+            <li>Deployed to public server!</li>
+            <li>Fixed CSS link and padding-top problems.</li>
+          </ul></td></tr>
+
           <tr><td>6 Jan 2016</td><td><ul>
             <li>Added form to submit motions directly to database instead of using Google Form.</li>
             <li>Porting to Laravel.</li>
