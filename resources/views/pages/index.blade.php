@@ -69,7 +69,7 @@
             @endforeach
           </table>
 
-      <p><a href="2015-full.php"> Show Full List for 2015</a></p>
+      <p><a href="motions2015"> Show Full List for 2015</a></p>
       </div> <!-- /row -->
       </div> <!-- /container -->
 
