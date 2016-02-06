@@ -14,23 +14,23 @@ class CreateMotionsTable extends Migration
     {
         Schema::create('Motions_Table', function (Blueprint $table) {
             $table->increments('id');
-            $table->date('Date');
-            $table->text('Circuit', 50);
-            $table->text('Country', 50);
-            $table->text('Tournament', 200);
-            $table->text('CA_1', 50);            
-            $table->text('CA_2', 50);            
-            $table->text('CA_3', 50);            
-            $table->text('CA_4', 50);            
-            $table->text('CA_5', 50);            
-            $table->text('CA_6', 50);            
-            $table->text('CA_7', 50);                        
-            $table->text('Round_Code', 50);
-            $table->text('Round', 50);
-            $table->text('Motion', 500);
-            $table->text('Infoslide', 1000);
-            $table->text('Topic_Area_1', 50);
-            $table->text('Topic_Area_2', 50);
+            $table->date('Date')->nullable();
+            $table->varchar('Circuit', 50)->nullable();
+            $table->varchar('Country', 50)->nullable();
+            $table->varchar('Tournament', 200)->nullable();
+            $table->varchar('CA_1', 50)->nullable();            
+            $table->varchar('CA_2', 50)->nullable();            
+            $table->varchar('CA_3', 50)->nullable();            
+            $table->varchar('CA_4', 50)->nullable();            
+            $table->varchar('CA_5', 50)->nullable();            
+            $table->varchar('CA_6', 50)->nullable();            
+            $table->varchar('CA_7', 50)->nullable();                        
+            $table->varchar('Round_Code', 50)->nullable();
+            $table->varchar('Round', 50)->nullable();
+            $table->varchar('Motion', 500);
+            $table->varchar('Infoslide', 1000)->nullable();
+            $table->varchar('Topic_Area_1', 50)->nullable();
+            $table->varchar('Topic_Area_2', 50)->nullable();
             $table->timestamps();
         });
     }
