@@ -46,12 +46,6 @@ return [
 
     'connections' => [
 
-        'sqlite' => [
-            'driver'   => 'sqlite',
-            'database' => storage_path('database.sqlite'),
-            'prefix'   => '',
-        ],
-
         'mysql' => [
             'driver'    => 'mysql',
             'host'      => env('DB_HOST', 'localhost'),
@@ -62,6 +56,13 @@ return [
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
             'strict'    => false,
+        ],
+/*
+        
+        'sqlite' => [
+            'driver'   => 'sqlite',
+            'database' => storage_path('database.sqlite'),
+            'prefix'   => '',
         ],
 
         'pgsql' => [
@@ -84,7 +85,7 @@ return [
             'charset'  => 'utf8',
             'prefix'   => '',
         ],
-
+*/
     ],
 
     /*
