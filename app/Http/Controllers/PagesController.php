@@ -20,6 +20,10 @@ class PagesController extends Controller
 		return view('pages.contact');
 	}
 
+    public function addmotions() {
+		return view('pages.addmotions');
+	}	
+
 	public function index() {
 		$recentmotions = DB::table('motions', [25])
 							-> select('Date', 'RoundCode', 'Round', 'Motion', 'Tournament') 
