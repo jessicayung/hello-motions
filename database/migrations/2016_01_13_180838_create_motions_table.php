@@ -15,16 +15,22 @@ class CreateMotionsTable extends Migration
         Schema::create('motions', function (Blueprint $table) {
             $table->increments('id');
             $table->date('Date');
-            $table->text('Circuit');
-            $table->text('Country');
-            $table->text('Tournament');
-            $table->text('CA_1')            
-            $table->text('Round_Code');
-            $table->text('Round');
-            $table->text('Motion');
-            $table->text('Infoslide');
-            $table->text('Topic_Area_1');
-            $table->text('Topic_Area_2');
+            $table->text('Circuit', 50);
+            $table->text('Country', 50);
+            $table->text('Tournament', 200);
+            $table->text('CA_1', 50);            
+            $table->text('CA_2', 50);            
+            $table->text('CA_3', 50);            
+            $table->text('CA_4', 50);            
+            $table->text('CA_5', 50);            
+            $table->text('CA_6', 50);            
+            $table->text('CA_7', 50);                        
+            $table->text('Round_Code', 50);
+            $table->text('Round', 50);
+            $table->text('Motion', 500);
+            $table->text('Infoslide', 1000);
+            $table->text('Topic_Area_1', 50);
+            $table->text('Topic_Area_2', 50);
             $table->timestamps();
         });
     }
