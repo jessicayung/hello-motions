@@ -25,7 +25,8 @@ class PagesController extends Controller
 	}	
 
 	public function index() {
-		$recentmotions = App\Motion::whereDB::table('motions', [25])
+		$recentmotions = whereDB::table('motions')
+							-> take(25)
 							-> select('Date', 'Round_Code', 'Round', 'Motion', 'Tournament') 
 							-> orderby('Date', 'desc') 
 							-> orderby('Round_Code', 'asc') 
