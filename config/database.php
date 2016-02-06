@@ -49,7 +49,7 @@ return [
         'mysql' => [
             'driver'    => 'mysql',
             'host'      => env('DB_HOST', 'localhost'),
-            'database'  => env('DB_DATABASE', 'forge'),
+            'database'  => env('DB_DATABASE', 'motions'),
             'username'  => env('DB_USERNAME', 'forge'),
             'password'  => env('DB_PASSWORD', '7vJCHz5SD2Qq3fD9rkKb'),
             'charset'   => 'utf8',
