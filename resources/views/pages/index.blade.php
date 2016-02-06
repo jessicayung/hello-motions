@@ -35,7 +35,7 @@
 
         <div class="col-md-4">
           <h2>Our Aim</h2>
-          <p> No more clicking through a bajillion sites or blog posts to find motions on feminism - we can give you a list of quality recent ones. You can even <a href="#">generate a random motion from a category for debating practice.</a> </p>
+          <p> No more clicking through a bajillion sites or blog posts to find motions on feminism - we can give you a list of high quality recent ones. You can even <a href="#">generate a random motion from a category for debating practice.</a> </p>
         </div>
 
         <div class="col-md-4">
