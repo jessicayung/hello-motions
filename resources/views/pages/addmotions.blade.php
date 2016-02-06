@@ -10,7 +10,7 @@
 
    <div class="container">
         <h1>Add Motions</h1>
-        <p>Add your motions to our database here.</p>
+        <p>Add your motions to our database.</p>
 
     <form action="#" method="#" id="addmotions" >
                 <div class="form-group">
