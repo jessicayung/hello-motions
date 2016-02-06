@@ -31,7 +31,7 @@ class PagesController extends Controller
 							-> orderby('Date', 'desc') 
 							-> orderby('Round_Code', 'asc') 
 							-> get();
-        return view('pages.index');
+        return view('pages.index')->with('recentmotions', $recentmotions);
 	}
 
 	public function search() {
@@ -47,7 +47,7 @@ class PagesController extends Controller
 				->orderby('Date', 'desc')
 				->orderby('Round_Code', 'asc')
 				->get();
-        return view('pages.motions2015', ['motions' => $motions2015]);
+        return view('pages.motions2015')->with('motions2015', $motions2015);
 
 	}
 }
