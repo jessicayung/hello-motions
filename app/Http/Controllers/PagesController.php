@@ -30,7 +30,7 @@ class PagesController extends Controller
 							-> orderby('Date', 'desc') 
 							-> orderby('Round_Code', 'asc') 
 							-> get();
-        return view('pages.index', ['motions' => $recentmotions]);
+        return view('pages.index');
 	}
 
 	public function search() {
