@@ -41,7 +41,8 @@ class PagesController extends Controller
 	public function motions2015() {
 		
 
-		$motions2015 = DB::where('date','>=',20120151201)
+		$motions2015 = DB::table('motions')
+				->having('Date','>=',20120151201)
 				->having('Date','<',20160101)
 				->select('Date', 'Round_Code', 'Round', 'Motion', 'Tournament')
 				->orderby('Date', 'desc')
