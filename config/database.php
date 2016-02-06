@@ -57,7 +57,7 @@ return [
             'prefix'    => '',
             'strict'    => false,
         ],
-/*
+
         
         'sqlite' => [
             'driver'   => 'sqlite',
@@ -85,7 +85,7 @@ return [
             'charset'  => 'utf8',
             'prefix'   => '',
         ],
-*/
+
     ],
 
     /*
