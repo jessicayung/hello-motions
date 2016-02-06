@@ -18,3 +18,5 @@ Route::get('about', 'PagesController@about');
 Route::get('contact', 'PagesController@contact');
 
 Route::get('search', 'PagesController@search');
+
+Route::get('motions2015', 'PagesController@motions2015');

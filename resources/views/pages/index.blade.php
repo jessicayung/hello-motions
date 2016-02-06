@@ -51,7 +51,23 @@
 
           <h2> Recent Motions </h2>
 
-          <p> PHP here </p>
+          <table class="table table-striped">
+            <tr>
+             <th>Date</th>
+             <th>Tournament</th>
+             <th>Round</th>
+             <th>Motion</th>
+            </tr>
+            <!--Output data of each row-->
+            @foreach ($recentmotions as $motion)
+            <tr>
+              <td> {{ $motion ->Date }} </td>
+              <td> {{ $motion ->Tournament }} </td>
+              <td> {{ $motion ->Round }} </td>
+              <td> {{ $motion ->Motion }} </td>
+            </tr>
+            @endforeach
+          </table>
 
       <p><a href="2015-full.php"> Show Full List for 2015</a></p>
       </div> <!-- /row -->
