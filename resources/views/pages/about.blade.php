@@ -87,6 +87,7 @@
           <tr><td>6 Feb 2016</td><td><ul>
             <li>Deployed to public server!</li>
             <li>Fixed CSS link and padding-top problems.</li>
+            <li>Make database queries compatible with Laravel.</li>
           </ul></td></tr>
 
           <tr><td>6 Jan 2016</td><td><ul>
