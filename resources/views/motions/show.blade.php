@@ -2,7 +2,7 @@
 
 @section('title')
 
-	{{$motion->motion}}
+	Motion
 
 @endsection
 
@@ -21,7 +21,7 @@
      <th>Round</th>
     </tr>
     <!--Output data of each row-->
-    <tr>
+    <tr>	
       <td> {{ $motion ->Date }} </td>
       <td> {{ $motion ->Tournament }} </td>
       <td> {{ $motion ->Round }} </td>
