@@ -56,7 +56,7 @@ class MotionsController extends Controller
     public function show($id)
     {
 
-        $motion = DB::table('motions')->findOrFail($id);
+        $motion = App\Motion::findOrFail($id);
 
         return view('motions.show')->with('motion', $motion);
 
