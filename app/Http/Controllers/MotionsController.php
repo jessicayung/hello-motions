@@ -7,7 +7,6 @@ use Illuminate\Support\Facades\DB;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Motion;
 
 class MotionsController extends Controller
 {
@@ -57,7 +56,7 @@ class MotionsController extends Controller
     public function show($id)
     {
 
-        $motion = DB::table('motions')-> find($id);
+        $motion = DB::table('motions')->where('id','=', $id);
 
         if (! $motion) {
             abort(404);
