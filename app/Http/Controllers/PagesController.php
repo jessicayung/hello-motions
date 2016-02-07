@@ -37,7 +37,7 @@ class PagesController extends Controller
 	public function search($term) {
 
 		$motions = DB::table('motions')
-							-> orwhere('Date', 'LIKE', $term)
+							-> where('Motion', 'LIKE', $term)
 							-> orwhere('Circuit', 'LIKE', $term)
 							-> orwhere('Country', 'LIKE', $term)
 							-> orwhere('Tournament', 'LIKE', $term)
@@ -50,7 +50,6 @@ class PagesController extends Controller
 							-> orwhere('CA_7', 'LIKE', $term)
 							-> orwhere('Round_Code', 'LIKE', $term)
 							-> orwhere('Round', 'LIKE', $term)
-							-> orwhere('Motion', 'LIKE', $term)
 							-> orwhere('Infoslide', 'LIKE', $term)
 							-> orwhere('Topic_Area_1', 'LIKE', $term)
 							-> orwhere('Topic_Area_2', 'LIKE', $term)

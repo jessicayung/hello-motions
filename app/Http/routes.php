@@ -21,8 +21,6 @@ Route::get('search', 'PagesController@search');
 
 Route::get('search/{term}','PagesController@search');
 
-Route::get('/test/{squirrel}', ['uses' =>'SomeController@doSomething']);
-
 Route::get('motions2015', 'PagesController@motions2015');
 
 Route::get('addmotions', 'PagesController@addmotions');
