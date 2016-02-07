@@ -19,7 +19,7 @@ Route::get('contact', 'PagesController@contact');
 
 Route::get('search', 'PagesController@search');
 
-Route::get('search/{term}','PagesController@search');
+Route::get('search/{$request}','PagesController@search');
 
 Route::get('motions2015', 'PagesController@motions2015');
 
