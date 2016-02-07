@@ -24,12 +24,22 @@
 		</p>
 	</form>
 
-	<!--database query-->
 
-	
-	<!-- if query is empty show-->
 
-       <!-- <p> Your search query for BLAH returned results.</p> -->
+{!! Form::open(array('route' => 'pages.search’, 'class'=>'form-group, col-md-6')) !!}
+    {!! Form::text('search', null,
+                           array('required',
+                                'class'=>'form-control',
+                                'placeholder'=>'Search for a tutorial...')) !!}
+     {!! Form::submit('Search',
+                                array('class'=>'btn btn-default')) !!}
+ {!! Form::close() !!}
+
+	@if (count($motions) === 0)
+
+		<p> Your query returned 0 results.</p>
+
+	@elseif (count($motions) >= 1)
 
   		 <table class="table table-striped">
 		    <tr>
@@ -49,4 +59,5 @@
 		    @endforeach
 	   </table>
 
+	@endif
 @endsection

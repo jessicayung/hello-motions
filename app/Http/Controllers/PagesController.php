@@ -34,10 +34,12 @@ class PagesController extends Controller
         return view('pages.index')->with('recentmotions', $recentmotions);
 	}
 
-	public function search($term) {
+	public function search(Request $request) {
 
+		$query = Request::input('search');
 		$motions = DB::table('motions')
-							-> where('Motion', 'LIKE', $term)
+							-> where('Motion', 'LIKE', '%'. $query . '%')
+							/*
 							-> orwhere('Circuit', 'LIKE', $term)
 							-> orwhere('Country', 'LIKE', $term)
 							-> orwhere('Tournament', 'LIKE', $term)
@@ -53,6 +55,8 @@ class PagesController extends Controller
 							-> orwhere('Infoslide', 'LIKE', $term)
 							-> orwhere('Topic_Area_1', 'LIKE', $term)
 							-> orwhere('Topic_Area_2', 'LIKE', $term)
+
+							*/
 							-> get();
 
 		return view('pages.search')->with('motions', $motions);
