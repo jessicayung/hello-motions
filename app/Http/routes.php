@@ -22,3 +22,5 @@ Route::get('search', 'PagesController@search');
 Route::get('motions2015', 'PagesController@motions2015');
 
 Route::get('addmotions', 'PagesController@addmotions');
+
+Route::get('motions/{id}','MotionsController@show');
