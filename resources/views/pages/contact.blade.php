@@ -10,13 +10,12 @@
 
 <h1>Contact Me</h1>
 
-<p>
+<p> Feel free to give any suggestions or ask any questions you may have. 
     <ul>
-        <li>Send me an email</li>
-        <li>Fill in the feedback form below</li> 
-        <li>Contribute</li>
+        <li><a href="http://goo.gl/forms/9mK4fRpIQI">Contact form here</a>.</li> 
+        <li><a href="mailto:jy357@cam.ac.uk">Send me an email</a>.</li>
     </ul>
 </p>
-
+ 
 
 @endsection
