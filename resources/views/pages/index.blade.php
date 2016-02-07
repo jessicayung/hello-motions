@@ -47,7 +47,6 @@
       </div> <!-- /container -->
 
       <div class="container">
-        <div class="row">
 
           <h2> Recent Motions </h2>
 
@@ -70,7 +69,6 @@
           </table>
 
       <p><a href="motions2015"> Show Full List for 2015</a></p>
-      </div> <!-- /row -->
       </div> <!-- /container -->
 
 @endsection
