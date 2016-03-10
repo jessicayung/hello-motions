@@ -24,8 +24,7 @@
 		</p>
 	</form>
 
-
-
+<!--
 {!! Form::open(array('route' => 'pages.search’, 'class'=>'form-group, col-md-6')) !!}
     {!! Form::text('search', null,
                            array('required',
@@ -34,7 +33,7 @@
      {!! Form::submit('Search',
                                 array('class'=>'btn btn-default')) !!}
  {!! Form::close() !!}
-
+-->
 	@if (count($motions) === 0)
 
 		<p> Your query returned 0 results.</p>

@@ -38,37 +38,8 @@ class PagesController extends Controller
 
 		$query = Request::get('q');
 
-		if ($query)
-
-		{
 			$motions = DB::table('motions')->where('Motion','LIKE','%query%')->get();
-		}
 
-
-		"""
-		// $query = Request::input('search');
-		$motions = DB::table('motions')
-							-> where('Motion', 'LIKE', '%'. $query . '%')
-							/*
-							-> orwhere('Circuit', 'LIKE', $term)
-							-> orwhere('Country', 'LIKE', $term)
-							-> orwhere('Tournament', 'LIKE', $term)
-							-> orwhere('CA_1', 'LIKE', $term)
-							-> orwhere('CA_2', 'LIKE', $term)
-							-> orwhere('CA_3', 'LIKE', $term)
-							-> orwhere('CA_4', 'LIKE', $term)
-							-> orwhere('CA_5', 'LIKE', $term)
-							-> orwhere('CA_6', 'LIKE', $term)
-							-> orwhere('CA_7', 'LIKE', $term)
-							-> orwhere('Round_Code', 'LIKE', $term)
-							-> orwhere('Round', 'LIKE', $term)
-							-> orwhere('Infoslide', 'LIKE', $term)
-							-> orwhere('Topic_Area_1', 'LIKE', $term)
-							-> orwhere('Topic_Area_2', 'LIKE', $term)
-
-							*/
-							-> get();
-		"""
 		return view('pages.search')->with('motions', $motions);
 	}
 
