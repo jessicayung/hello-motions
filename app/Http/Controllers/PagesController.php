@@ -45,7 +45,7 @@ class PagesController extends Controller
 		$query = Request::input('q');
 
 			$motions = DB::table('motions')
-				->where('Motion','LIKE','%' .$query.'%')
+				-> where('Motion','LIKE','%' .$query.'%')
 				-> orwhere('Circuit', 'LIKE', '%' .$query.'%')
 				-> orwhere('Country', 'LIKE','%' .$query.'%')
 				-> orwhere('Tournament', 'LIKE', '%' .$query.'%')
@@ -61,7 +61,10 @@ class PagesController extends Controller
 				-> orwhere('Infoslide', 'LIKE', '%' .$query.'%')
 				-> orwhere('Topic_Area_1', 'LIKE', '%' .$query.'%')
 				-> orwhere('Topic_Area_2', 'LIKE', '%' .$query.'%')
-				->get();
+				-> orderby('Date', 'desc')
+				-> orderby('Tournament', 'asc')
+				-> orderby('Round_Code', 'asc')
+				-> get();
 
 		return view('pages.search')->with('motions', $motions);
 	}
