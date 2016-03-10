@@ -25,4 +25,6 @@ Route::get('addmotions', 'PagesController@addmotions');
 
 Route::get('motions/{id}','MotionsController@show');
 
+/*
 Route::post('motions', 'MotionsController@addMotion')
+*/
