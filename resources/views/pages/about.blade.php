@@ -50,6 +50,7 @@
             </ul>
           </div>
         </div>  
+<!--
           <p>The aim of these categories is to give an average-intelligent-voter view of what areas the debate is primarily about. I have tried to include topics that are neither too general nor too specific. 'Rights and Freedoms' is on the edge of too general, but the motions in mind for that could be focused on e.g. privacy or freedom of speech.</p>
           <p>Each motion may be included under one or two of these umbrellas. The aim of these categories is not to provide a comprehensive reading of the motion, i.e. what areas it could possibly cover, else they would be useless for filtering. E.g. I could probably tag almost every single motion with 'Economics', but then that would not help people searching for Economics motions to practice with. </p>
           <p>Note again that these are not the same as clashes. E.g. Artificial Intelligence / manipulation of genomes would both fall under Science and Technology as opposed to 'whether humans should meddle with tech'. Also, tagging clashes would be reading too much into the debate for my liking.</p>
@@ -74,7 +75,7 @@
             Reparations (Moral, owing)
             Imposing standards
           </p>
-
+-->
     
       </div>
       
