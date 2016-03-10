@@ -14,13 +14,6 @@
         <h1>Hello, motions!</h1>
         <p>Search for motions by keyword, category, Chief Adjudicator, tournament, or timeframe. <a href="https://docs.google.com/spreadsheets/d/1qQlqFeJ3iYbzXYrLBMgbmT6LcJLj6JcG3LJyZSbkAJY/edit?usp=sharing">Access the motions spreadsheet directly here</a>. </p>
 
-        {{ Form:: open() }}
-
-          {{Form::input('search', 'q', null, ['placeholder => 'International Relations, WUDC, Cambridge IV'])}}
-
-        {{ Form:: close() }}
-
-        <!--
           <form action="search.php" method="get" id="search-motions" >
             <div class="form-group, col-md-6">
                 <input class="form-control" type="text" name="q" placeholder="e.g. International Relations, WUDC, Cambridge IV">
@@ -29,7 +22,7 @@
             <button type="submit" name="search-motions" class="btn btn-primary">Search</button>
             </div></p>
           </form>
-        -->
+
           <!-- <a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a> -->
       </div>
     </div>
