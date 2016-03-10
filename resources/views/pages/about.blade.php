@@ -83,9 +83,13 @@
         <h2>Development Notes</h2>
         <table class="table table-striped">
           <tr><th>Date</th><th>Notes<th></tr>
+
+          <tr><td>7 Feb 2016</td><td><ul>
+            <li>Working on search form and functionality.</li>
+          </ul></td></tr>
           
           <tr><td>6 Feb 2016</td><td><ul>
-            <li>Site has been deployed to public server and is functioning!</li>
+            <li>Site deployed to public server! Index, 2015 motions and static pages working.</li>
             <li>Fixed CSS link and padding-top problems.</li>
             <li>Fixed database query problems (wasn't compatible with Laravel).</li>
           </ul></td></tr>

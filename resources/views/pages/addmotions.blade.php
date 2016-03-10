@@ -35,7 +35,7 @@
                       <tr><td>1</td><td><input name="Motion" type="text" class="form-control" required></td><td><input name="Infoslide" type="text" class="form-control"></td></tr>
                     </table>
                     
-                    <button type="submit" name = "submit" value=1 class="btn btn-success">Submit</button>
+                    <button type="submit" name = "add-motions" value=1 class="btn btn-primary">Submit</button>
                 </div>
 
     </form>

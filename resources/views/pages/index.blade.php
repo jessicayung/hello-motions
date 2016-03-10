@@ -13,14 +13,23 @@
       <div class="container">
         <h1>Hello, motions!</h1>
         <p>Search for motions by keyword, category, Chief Adjudicator, tournament, or timeframe. <a href="https://docs.google.com/spreadsheets/d/1qQlqFeJ3iYbzXYrLBMgbmT6LcJLj6JcG3LJyZSbkAJY/edit?usp=sharing">Access the motions spreadsheet directly here</a>. </p>
+
+        {{ Form:: open() }}
+
+          {{Form::input('search', 'q', null, ['placeholder => 'International Relations, WUDC, Cambridge IV'])}}
+
+        {{ Form:: close() }}
+
+        <!--
           <form action="search.php" method="get" id="search-motions" >
             <div class="form-group, col-md-6">
                 <input class="form-control" type="text" name="q" placeholder="e.g. International Relations, WUDC, Cambridge IV">
             </div>
             <p><div class="form-group">
-            <button type="submit" name="submit" value=1 class="btn btn-success">Search</button>
+            <button type="submit" name="search-motions" class="btn btn-primary">Search</button>
             </div></p>
           </form>
+        -->
           <!-- <a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a> -->
       </div>
     </div>
@@ -45,7 +54,7 @@
         </div>
         
       </div> <!-- /container -->
-
+<!--
       <div class="container">
         <div class="row">
 
@@ -58,7 +67,6 @@
              <th>Round</th>
              <th>Motion</th>
             </tr>
-            <!--Output data of each row-->
             @foreach ($recentmotions as $motion)
             <tr>
               <td> {{ $motion ->Date }} </td>
@@ -68,7 +76,7 @@
             </tr>
             @endforeach
           </table>
-
+-->
       <p><a href="motions2015"> Show Full List for 2015</a></p>
       </div> <!-- /row -->
       </div> <!-- /container -->

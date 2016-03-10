@@ -3,12 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class MotionsController extends Controller
+class TournamentsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,13 +16,7 @@ class MotionsController extends Controller
      */
     public function index()
     {
-        $motions=DB::table('motions')
-                            -> take(25)
-                            -> select('Date', 'Round_Code', 'Round', 'Motion', 'Tournament') 
-                            -> orderby('Date', 'desc') 
-                            -> orderby('Round_Code', 'asc') 
-                            -> get();
-        return view(articles.index, compact('motions'));
+        //
     }
 
     /**
@@ -44,7 +37,7 @@ class MotionsController extends Controller
      */
     public function store(Request $request)
     {
-        return $request->all()
+        //
     }
 
     /**
@@ -55,14 +48,7 @@ class MotionsController extends Controller
      */
     public function show($id)
     {
-
-        $motion = DB::table('motions')->where('id','=', $id);
-
-        if (! $motion) {
-            abort(404);
-        }
-        return view('motions.show')->with('motion', $motion);
-
+        //
     }
 
     /**
