@@ -14,7 +14,7 @@
         <h1>Hello, motions!</h1>
         <p>Search for motions by keyword, category, Chief Adjudicator, tournament, or timeframe. <a href="https://docs.google.com/spreadsheets/d/1qQlqFeJ3iYbzXYrLBMgbmT6LcJLj6JcG3LJyZSbkAJY/edit?usp=sharing">Access the motions spreadsheet directly here</a>. </p>
 
-          <form action="search.php" method="get" id="search-motions" >
+          <form action="search" method="get" id="search-motions" >
             <div class="form-group, col-md-6">
                 <input class="form-control" type="text" name="q" placeholder="e.g. International Relations, WUDC, Cambridge IV">
             </div>
