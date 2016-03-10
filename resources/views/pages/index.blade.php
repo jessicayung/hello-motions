@@ -70,6 +70,7 @@
             @endforeach
           </table>
 
+      <p><a href="motions2016"> Show Full List for 2016</a></p>
       <p><a href="motions2015"> Show Full List for 2015</a></p>
       </div> <!-- /row -->
       </div> <!-- /container -->

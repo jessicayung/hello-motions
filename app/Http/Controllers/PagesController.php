@@ -34,6 +34,7 @@ class PagesController extends Controller
 							-> take(25)
 							-> select('Date', 'Round_Code', 'Round', 'Motion', 'Tournament') 
 							-> orderby('Date', 'desc') 
+							-> orderby('Tournament', 'asc')
 							-> orderby('Round_Code', 'asc') 
 							-> get();
         return view('pages.index')->with('recentmotions', $recentmotions);
