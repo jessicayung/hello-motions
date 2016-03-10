@@ -25,6 +25,10 @@ class PagesController extends Controller
 		return view('pages.addmotions');
 	}	
 
+    public function missingmotions() {
+		return view('pages.missingmotions');
+	}	
+
 	public function index() {
 		$recentmotions = DB::table('motions')
 							-> take(25)
@@ -64,26 +68,57 @@ class PagesController extends Controller
 	public function motions2015() {
 		
 		$motions2015 = DB::table('motions')
-				->having('Date','>=',20120151201)
+				->having('Date','>=',20150101)
 				->having('Date','<',20160101)
 				->select('Date', 'Round_Code', 'Round', 'Motion', 'Tournament')
 				->orderby('Date', 'desc')
+				->orderby('Tournament', 'asc')
 				->orderby('Round_Code', 'asc')
 				->get();
         return view('pages.motions2015')->with('motions2015', $motions2015);
 
 	}
 
-		public function motions2015mobile() {
+	public function motions2015mobile() {
 		
 		$motions2015 = DB::table('motions')
-				->having('Date','>=',20120151201)
+				->having('Date','>=',20150101)
 				->having('Date','<',20160101)
 				->select('Date', 'Round_Code', 'Round', 'Motion', 'Tournament')
 				->orderby('Date', 'desc')
+				->orderby('Tournament', 'asc')
 				->orderby('Round_Code', 'asc')
 				->get();
         return view('pages.motions2015-mobile')->with('motions2015', $motions2015);
 
 	}
+
+	public function motions2016() {
+			
+		$motions2016 = DB::table('motions')
+				->having('Date','>=',20160101)
+				->having('Date','<',20170101)
+				->select('Date', 'Round_Code', 'Round', 'Motion', 'Tournament')
+				->orderby('Date', 'desc')
+				->orderby('Tournament', 'asc')
+				->orderby('Round_Code', 'asc')
+				->get();
+        return view('pages.motions2015')->with('motions2016', $motions2016);
+
+	}
+
+	public function motions2016mobile() {
+		
+		$motions2016 = DB::table('motions')
+				->having('Date','>=',20160101)
+				->having('Date','<',20170101)
+				->select('Date', 'Round_Code', 'Round', 'Motion', 'Tournament')
+				->orderby('Date', 'desc')
+				->orderby('Tournament', 'asc')
+				->orderby('Round_Code', 'asc')
+				->get();
+        return view('pages.motions2015-mobile')->with('motions2016', $motions2016);
+
+	}
+
 }

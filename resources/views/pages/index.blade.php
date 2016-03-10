@@ -12,7 +12,7 @@
 <div class="jumbotron">
       <div class="container">
         <h1>Hello, motions!</h1>
-        <p>Search for motions by keyword, category, Chief Adjudicator, tournament, or timeframe. <a href="https://docs.google.com/spreadsheets/d/1qQlqFeJ3iYbzXYrLBMgbmT6LcJLj6JcG3LJyZSbkAJY/edit?usp=sharing">Access the motions spreadsheet directly here</a>. </p>
+        <p>Search for motions by keyword, category, Chief Adjudicator or tournament. <a href="https://docs.google.com/spreadsheets/d/1qQlqFeJ3iYbzXYrLBMgbmT6LcJLj6JcG3LJyZSbkAJY/edit?usp=sharing">Access the motions spreadsheet directly here</a>. </p>
 
           <form action="search" method="get" id="search-motions" >
             <div class="form-group, col-md-6">
@@ -32,18 +32,18 @@
       <div class="row">
         <div class="col-md-4">
           <h2>Want to contribute?</h2>
-          <p>We need <b>your help</b> to make sure these motions are comprehensive and up-to-date. <a href="https://docs.google.com/forms/d/14v5RuG6NHjDySrLN8zJC97-e761sRBivhOoPxjt0K6I/viewform?c=0&w=1">Tell us about motions from tournaments here.</a> Or <a href="mailto:jy357@cam.ac.uk">contact me directly</a> if you have other questions / suggestions. Thanks a lot!</p>
+          <p>We need <b>your help</b> to make sure these motions are comprehensive and up-to-date. <a href="https://docs.google.com/forms/d/14v5RuG6NHjDySrLN8zJC97-e761sRBivhOoPxjt0K6I/viewform?c=0&w=1">Tell us about motions from tournaments here.</a> Or <a href="mailto:jy357@cam.ac.uk">contact me directly</a> if you have other questions / suggestions. <a href="missingmotions">Here is a list of motions we are missing.</a> Thanks a lot!</p>
         </div>
 
         <div class="col-md-4">
           <h2>Our Aim</h2>
-          <p> No more clicking through a bajillion sites or blog posts to find motions on feminism - we can give you a list of high quality recent ones. You can even <a href="#">generate a random motion from a category for debating practice.</a> </p>
+          <p> No more clicking through a bajillion sites or blog posts to find motions on feminism - we can give you a list of high quality recent ones.</a> </p>
         </div>
 
         <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Full list of <a href="#">categories</a> and <a href="#">tournaments</a> available.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details</a></p>
+          <h2>More info</h2>
+          <p><a href="about">Full list of categories and development notes</a>available.</p> <a href="http://goo.gl/forms/9mK4fRpIQI">We are looking for people to help classify motions!</a>
+          <p><a class="btn btn-default" href="about" role="button">View details</a></p>
         </div>
         
       </div> <!-- /container -->
