@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-// use Illuminate\Http\Request;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Request;
+//use Illuminate\Support\Facades\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -48,7 +48,6 @@ class PagesController extends Controller
 
 	public function motions2015() {
 		
-
 		$motions2015 = DB::table('motions')
 				->having('Date','>=',20120151201)
 				->having('Date','<',20160101)
