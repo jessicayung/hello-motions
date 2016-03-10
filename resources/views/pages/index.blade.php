@@ -19,7 +19,7 @@
                 <input class="form-control" type="text" name="q" placeholder="e.g. International Relations, WUDC, Cambridge IV">
             </div>
             <p><div class="form-group">
-            <button type="submit" name="search-motions" class="btn btn-primary">Search</button>
+            <button type="submit" name="search-motions" class="btn btn-success">Search</button>
             </div></p>
           </form>
 
@@ -47,7 +47,7 @@
         </div>
         
       </div> <!-- /container -->
-<!--
+
       <div class="container">
         <div class="row">
 
@@ -69,7 +69,7 @@
             </tr>
             @endforeach
           </table>
--->
+
       <p><a href="motions2015"> Show Full List for 2015</a></p>
       </div> <!-- /row -->
       </div> <!-- /container -->
