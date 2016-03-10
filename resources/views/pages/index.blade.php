@@ -42,7 +42,7 @@
 
         <div class="col-md-4">
           <h2>More info</h2>
-          <p><a href="about">Full list of categories and development notes</a>available.</p> <a href="http://goo.gl/forms/9mK4fRpIQI">We are looking for people to help classify motions!</a>
+          <p><a href="about">Full list of categories and development notes</a> available.<a href="http://goo.gl/forms/9mK4fRpIQI">We are looking for people to help classify motions!</a></p>
           <p><a class="btn btn-default" href="about" role="button">View details</a></p>
         </div>
         
