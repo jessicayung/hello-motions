@@ -37,7 +37,7 @@ class PagesController extends Controller
 
 	public function search(Request $request) {
 
-		$query = Request::get('q');
+		$query = Request::input('q');
 
 			$motions = DB::table('motions')
 				->where('Motion','LIKE','%' .$query.'%')
