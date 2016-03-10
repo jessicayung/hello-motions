@@ -85,7 +85,10 @@
           <tr><th>Date</th><th>Notes<th></tr>
 
           <tr><td>10 Mar 2016</td><td><ul>
-            <li>Yay search is finally working!</li>
+            <li>Yay search is finally working on Laravel!</li>
+            <li>Added Motions 2016 (full and mobile) and Missing Motions pages.</li>
+            <li>Updated motions database.</li>
+            <li>Updated index page (content).</li>
           </ul></td></tr>
 
           <tr><td>7 Feb 2016</td><td><ul>
