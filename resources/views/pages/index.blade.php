@@ -2,7 +2,7 @@
 
 @section('title')
 
-  Home
+  Debating Motions
 
 @endsection
 
