@@ -39,7 +39,9 @@ class PagesController extends Controller
 
 		$query = Request::get('q');
 
-			$motions = DB::table('motions')->where('Motion','LIKE','%query%')->get();
+			$motions = DB::table('motions')
+				->where('Motion','LIKE','%' .$query.'%')
+				->get();
 
 		return view('pages.search')->with('motions', $motions);
 	}
