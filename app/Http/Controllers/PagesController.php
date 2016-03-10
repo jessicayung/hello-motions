@@ -104,7 +104,7 @@ class PagesController extends Controller
 				->orderby('Tournament', 'asc')
 				->orderby('Round_Code', 'asc')
 				->get();
-        return view('pages.motions2015')->with('motions2016', $motions2016);
+        return view('pages.motions2016')->with('motions2016', $motions2016);
 
 	}
 
@@ -118,7 +118,7 @@ class PagesController extends Controller
 				->orderby('Tournament', 'asc')
 				->orderby('Round_Code', 'asc')
 				->get();
-        return view('pages.motions2015-mobile')->with('motions2016', $motions2016);
+        return view('pages.motions2016-mobile')->with('motions2016', $motions2016);
 
 	}
 
