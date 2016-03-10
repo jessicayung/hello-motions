@@ -84,6 +84,10 @@
         <table class="table table-striped">
           <tr><th>Date</th><th>Notes<th></tr>
 
+          <tr><td>10 Mar 2016</td><td><ul>
+            <li>Yay search is finally working!</li>
+          </ul></td></tr>
+
           <tr><td>7 Feb 2016</td><td><ul>
             <li>Working on search form and functionality.</li>
           </ul></td></tr>

@@ -23,6 +23,9 @@ Route::get('search/{$request}','PagesController@search');
 
 Route::get('motions2015', 'PagesController@motions2015');
 
+Route::get('motions2015-mobile', 'PagesController@motions2015mobile');
+
+
 /*
 Route::get('addmotions', 'PagesController@addmotions');
 
