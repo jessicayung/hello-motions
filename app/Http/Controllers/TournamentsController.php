@@ -37,7 +37,7 @@ class TournamentsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // $tournament->
     }
 
     /**

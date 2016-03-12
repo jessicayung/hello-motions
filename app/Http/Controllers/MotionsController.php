@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Motion;
 
 class MotionsController extends Controller
 {
@@ -44,7 +45,10 @@ class MotionsController extends Controller
      */
     public function store(Request $request)
     {
-        return $request->all()
+        $motion = new Motion;
+
+        $motion->Motion = $request->Motion;
+        $motion->
     }
 
     /**

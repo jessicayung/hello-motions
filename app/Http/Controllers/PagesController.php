@@ -50,7 +50,7 @@ class PagesController extends Controller
 
 			$query_term = $query[1];
 
-			if (if_null($query_term)) {
+			if (is_null($query_term) == FALSE) {
 
 				$query_two = DB::table('motions')
 					-> where('Motion','LIKE','%' .$query_term.'%')
@@ -78,7 +78,7 @@ class PagesController extends Controller
 
 			$query_term = $query[2];
 
-			if (if_null($query_term)) {
+			if (is_null($query_term) == FALSE) {
 
 				$query_three = DB::table('motions')
 					-> where('Motion','LIKE','%' .$query_term.'%')

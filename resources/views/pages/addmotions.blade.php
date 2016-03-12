@@ -12,7 +12,7 @@
         <h1>Add Motions</h1>
         <p>Add your motions to our database.</p>
 
-    <form action="#" method="#" id="addmotions" >
+    <form method="POST" action="/motions"id="addmotions" >
                 <div class="form-group">
                     <h3>Tournament Information</h3>
                     <table class="table table-striped">
