@@ -42,8 +42,9 @@ class PagesController extends Controller
 
 	public function search(Request $request) {
 
-		$query = Request::input('q');
+		$query_term = Request::input('q');
 
+/*
 		$query = explode(',', $query);
 
 		if (count($query) >= 2) {
@@ -123,6 +124,30 @@ class PagesController extends Controller
 			-> orwhere('Topic_Area_2', 'LIKE', '%' .$query_term.'%')
 			-> union($query_two)
 			-> union($query_three)
+			-> orderby('Date', 'desc')
+			-> orderby('Tournament', 'asc')
+			-> orderby('Round_Code', 'asc')
+			-> get();
+*/
+
+
+		$motions = DB::table('motions')
+			-> where('Motion','LIKE','%' .$query_term.'%')
+			-> orwhere('Circuit', 'LIKE', '%' .$query_term.'%')
+			-> orwhere('Country', 'LIKE','%' .$query_term.'%')
+			-> orwhere('Tournament', 'LIKE', '%' .$query_term.'%')
+			-> orwhere('CA_1', 'LIKE', '%' .$query_term.'%')
+			-> orwhere('CA_2', 'LIKE', '%' .$query_term.'%')
+			-> orwhere('CA_3', 'LIKE', '%' .$query_term.'%')
+			-> orwhere('CA_4', 'LIKE', '%' .$query_term.'%')
+			-> orwhere('CA_5', 'LIKE', '%' .$query_term.'%')
+			-> orwhere('CA_6', 'LIKE', '%' .$query_term.'%')
+			-> orwhere('CA_7', 'LIKE', '%' .$query_term.'%')
+			-> orwhere('Round_Code', 'LIKE', '%' .$query_term.'%')
+			-> orwhere('Round', 'LIKE', '%' .$query_term.'%')
+			-> orwhere('Infoslide', 'LIKE', '%' .$query_term.'%')
+			-> orwhere('Topic_Area_1', 'LIKE', '%' .$query_term.'%')
+			-> orwhere('Topic_Area_2', 'LIKE', '%' .$query_term.'%')
 			-> orderby('Date', 'desc')
 			-> orderby('Tournament', 'asc')
 			-> orderby('Round_Code', 'asc')
