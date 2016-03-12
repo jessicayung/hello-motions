@@ -71,7 +71,7 @@ class PagesController extends Controller
 
 		} else {
 
-			$query_two = array();
+			$query_two = NULL;
 		}
 
 		if (count($query) >= 3) {
@@ -99,7 +99,7 @@ class PagesController extends Controller
 
 		} else {
 
-			$query_three = array();
+			$query_three = NULL;
 		}
 
 		$query_term = $query[0];
