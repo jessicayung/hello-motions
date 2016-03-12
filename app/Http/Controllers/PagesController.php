@@ -46,9 +46,9 @@ class PagesController extends Controller
 
 		$query = explode(',', $query);
 
-		$query_term = $query[1];
+		if (count($query) >= 2) {
 
-		if (is_null($query_term) == FALSE) {
+		$query_term = $query[1];
 
 			$query_two = DB::table('motions')
 				-> where('Motion','LIKE','%' .$query_term.'%')
@@ -74,9 +74,9 @@ class PagesController extends Controller
 			$query_two = array();
 		}
 
-		$query_term = $query[2];
+		if (count($query) >= 3) {
 
-		if (is_null($query_term) == FALSE) {
+			$query_term = $query[2];
 
 			$query_three = DB::table('motions')
 				-> where('Motion','LIKE','%' .$query_term.'%')
