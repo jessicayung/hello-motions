@@ -121,8 +121,10 @@
       </div>
       <div class="container">
         <h2>New Feature Backlog</h2>
-          <li>Generate a Random Motion</li>
-          <li>Add motions to the database directly</li>
+          <ul>  
+            <li>Generate a Random Motion</li>
+            <li>Add motions to the database directly</li>
+          </ul>
       </div>
 
 @endsection

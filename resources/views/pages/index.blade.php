@@ -18,9 +18,11 @@
             <div class="form-group, col-md-6">
                 <input class="form-control" type="text" name="q" placeholder="e.g. International Relations, WUDC, Cambridge IV">
             </div>
-            <p><div class="form-group">
-            <button type="submit" name="search-motions" class="btn btn-success">Search</button>
-            </div></p>
+            <p>
+              <div class="form-group">
+                <button type="submit" name="search-motions" class="btn btn-success">Search</button>
+              </div>
+            </p>
           </form>
 
           <!-- <a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a> -->
@@ -37,7 +39,7 @@
 
         <div class="col-md-4">
           <h2>Our Aim</h2>
-          <p> No more clicking through a bajillion sites or blog posts to find motions on feminism - we can give you a list of high quality recent ones.</a> </p>
+          <p> No more clicking through a bajillion sites or blog posts to find motions on feminism - we can give you a list of high quality recent ones.</p>
         </div>
 
         <div class="col-md-4">
@@ -46,33 +48,33 @@
           <p><a class="btn btn-default" href="about" role="button">View details</a></p>
         </div>
         
-      </div> <!-- /container -->
-
-      <div class="container">
-        <div class="row">
-
-          <h2> Recent Motions </h2>
-
-          <table class="table table-striped">
-            <tr>
-             <th>Date</th>
-             <th>Tournament</th>
-             <th>Round</th>
-             <th>Motion</th>
-            </tr>
-            @foreach ($recentmotions as $motion)
-            <tr>
-              <td> {{ $motion ->Date }} </td>
-              <td> {{ $motion ->Tournament }} </td>
-              <td> {{ $motion ->Round }} </td>
-              <td> {{ $motion ->Motion }} </td>
-            </tr>
-            @endforeach
-          </table>
-
-      <p><a href="motions2016"> Show Full List for 2016</a></p>
-      <p><a href="motions2015"> Show Full List for 2015</a></p>
       </div> <!-- /row -->
-      </div> <!-- /container -->
+    </div> <!-- /container -->
+    <div class="container">
+      <div class="row">
+
+        <h2> Recent Motions </h2>
+
+        <table class="table table-striped">
+          <tr>
+           <th>Date</th>
+           <th>Tournament</th>
+           <th>Round</th>
+           <th>Motion</th>
+          </tr>
+          @foreach ($recentmotions as $motion)
+          <tr>
+            <td> {{ $motion ->Date }} </td>
+            <td> {{ $motion ->Tournament }} </td>
+            <td> {{ $motion ->Round }} </td>
+            <td> {{ $motion ->Motion }} </td>
+          </tr>
+          @endforeach
+        </table>
+
+        <p><a href="motions2016"> Show Full List for 2016</a></p>
+        <p><a href="motions2015"> Show Full List for 2015</a></p>
+      </div> <!-- /row -->
+    </div> <!-- /container -->
 
 @endsection
