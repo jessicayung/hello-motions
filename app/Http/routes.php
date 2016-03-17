@@ -29,17 +29,12 @@ Route::get('motions2016', 'PagesController@motions2016');
 
 Route::get('motions2016-mobile', 'PagesController@motions2016mobile');
 
-
 Route::get('missingmotions', 'PagesController@missingmotions');
-
-
-
 
 /*
 Route::get('addmotions', 'PagesController@addmotions');
 
 Route::get('motions/{id}','MotionsController@show');
-
 
 Route::post('motions', 'MotionsController@addMotion')
 */
