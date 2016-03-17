@@ -84,6 +84,10 @@
         <table class="table table-striped">
           <tr><th>Date</th><th>Notes<th></tr>
 
+          <tr><td>17 Mar 2016</td><td><ul>
+            <li>You can now search for multiple things at the same time, e.g. 'WUDC, Cambridge, Politics'. Woohoo!</li>
+          </ul></td></tr>
+
           <tr><td>10 Mar 2016</td><td><ul>
             <li>Yay search is finally working on Laravel!</li>
             <li>Added Motions 2016 (full and mobile) and Missing Motions pages.</li>
