@@ -46,6 +46,8 @@ class PagesController extends Controller
 
 		$queries = explode(',', $queries);
 
+		$motions = [];
+
 		foreach ($queries as $query){
 
 			$motionquery = DB::table('motions')
