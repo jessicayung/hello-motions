@@ -42,33 +42,39 @@ class PagesController extends Controller
 
 	public function search(Request $request) {
 
-		$query = Request::input('q');
+		$queries = Request::input('q');
 
-		$query = explode(',', $query);
+		$queries = explode(',', $queries);
 
-		$motions = DB::table('motions')
-			-> where('Motion','LIKE','%' .$query.'%')
-			-> orwhere('Circuit', 'LIKE', '%' .$query.'%')
-			-> orwhere('Country', 'LIKE','%' .$query.'%')
-			-> orwhere('Tournament', 'LIKE', '%' .$query.'%')
-			-> orwhere('CA_1', 'LIKE', '%' .$query.'%')
-			-> orwhere('CA_2', 'LIKE', '%' .$query.'%')
-			-> orwhere('CA_3', 'LIKE', '%' .$query.'%')
-			-> orwhere('CA_4', 'LIKE', '%' .$query.'%')
-			-> orwhere('CA_5', 'LIKE', '%' .$query.'%')
-			-> orwhere('CA_6', 'LIKE', '%' .$query.'%')
-			-> orwhere('CA_7', 'LIKE', '%' .$query.'%')
-			-> orwhere('Round_Code', 'LIKE', '%' .$query.'%')
-			-> orwhere('Round', 'LIKE', '%' .$query.'%')
-			-> orwhere('Infoslide', 'LIKE', '%' .$query.'%')
-			-> orwhere('Topic_Area_1', 'LIKE', '%' .$query.'%')
-			-> orwhere('Topic_Area_2', 'LIKE', '%' .$query.'%')
-			-> union($query_two)
-			-> union($query_three)
-			-> orderby('Date', 'desc')
-			-> orderby('Tournament', 'asc')
-			-> orderby('Round_Code', 'asc')
-			-> get();
+		foreach ($queries as $query){
+
+			$motionquery = DB::table('motions')
+				-> where('Motion','LIKE','%' .$query.'%')
+				-> orwhere('Circuit', 'LIKE', '%' .$query.'%')
+				-> orwhere('Country', 'LIKE','%' .$query.'%')
+				-> orwhere('Tournament', 'LIKE', '%' .$query.'%')
+				-> orwhere('CA_1', 'LIKE', '%' .$query.'%')
+				-> orwhere('CA_2', 'LIKE', '%' .$query.'%')
+				-> orwhere('CA_3', 'LIKE', '%' .$query.'%')
+				-> orwhere('CA_4', 'LIKE', '%' .$query.'%')
+				-> orwhere('CA_5', 'LIKE', '%' .$query.'%')
+				-> orwhere('CA_6', 'LIKE', '%' .$query.'%')
+				-> orwhere('CA_7', 'LIKE', '%' .$query.'%')
+				-> orwhere('Round_Code', 'LIKE', '%' .$query.'%')
+				-> orwhere('Round', 'LIKE', '%' .$query.'%')
+				-> orwhere('Infoslide', 'LIKE', '%' .$query.'%')
+				-> orwhere('Topic_Area_1', 'LIKE', '%' .$query.'%')
+				-> orwhere('Topic_Area_2', 'LIKE', '%' .$query.'%')
+				-> union($query_two)
+				-> union($query_three)
+				-> orderby('Date', 'desc')
+				-> orderby('Tournament', 'asc')
+				-> orderby('Round_Code', 'asc')
+				-> get();
+
+		$motions = array_merge($motionquery, $motions);
+		
+		}
 
 		return view('pages.search')->with('motions', $motions);
 	}
