@@ -44,7 +44,7 @@ class PagesController extends Controller
 
 		$queries = Request::input('q');
 
-		$queries = explode(',', $queries);
+		$queries = preg_split('/\s*,\s*/', trim($queries));
 
 		$motions = [];
 
