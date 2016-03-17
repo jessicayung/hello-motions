@@ -65,8 +65,6 @@ class PagesController extends Controller
 				-> orwhere('Infoslide', 'LIKE', '%' .$query.'%')
 				-> orwhere('Topic_Area_1', 'LIKE', '%' .$query.'%')
 				-> orwhere('Topic_Area_2', 'LIKE', '%' .$query.'%')
-				-> union($query_two)
-				-> union($query_three)
 				-> orderby('Date', 'desc')
 				-> orderby('Tournament', 'asc')
 				-> orderby('Round_Code', 'asc')
