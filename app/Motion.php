@@ -1,3 +1,8 @@
+<!-- 
+Is not currently being used. 
+Will be relevant when we implement on-site motion adding form. 
+-->
+
 <?php
 
 namespace App;

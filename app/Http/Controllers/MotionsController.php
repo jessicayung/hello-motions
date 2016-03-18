@@ -1,3 +1,9 @@
+<!--
+
+This controller is a mess. It is not currently in use.
+
+-->
+
 <?php
 
 namespace App\Http\Controllers;
