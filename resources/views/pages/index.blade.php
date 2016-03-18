@@ -6,6 +6,10 @@
 
 @endsection
 
+@section('description')
+Search for motions by keyword, category, Chief Adjudicator or tournament.
+@endsection
+
 
 @section('content')
 
