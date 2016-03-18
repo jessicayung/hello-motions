@@ -81,6 +81,7 @@
 
       <div class="container">
         <h2>Development Notes</h2>
+        <p><a href="https://github.com/jessicayung/hello-motions.git">Github repository</a></p>
         <table class="table table-striped">
           <tr><th>Date</th><th>Notes<th></tr>
 
