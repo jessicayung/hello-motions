@@ -78,6 +78,9 @@ Search for motions by keyword, category, Chief Adjudicator or tournament.
 
         <p><a href="motions2016"> Show Full List for 2016</a></p>
         <p><a href="motions2015"> Show Full List for 2015</a></p>
+        <p><a href="motions2014"> Show Full List for 2014</a></p>
+        <p><a href="motions-2013-and-earlier"> Show Full List for 2013 and earlier</a></p>
+        <p><a href="search"> Show All Motions</a></p>
       </div> <!-- /row -->
     </div> <!-- /container -->
 

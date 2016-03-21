@@ -29,6 +29,8 @@
               <li>Environment</li>
               <li>Family</li>
               <li>Feminism</li>
+              <li>Freedoms</li>
+              <li>Funny</li>
               <li>International Relations</li>
               <li>LGBT+</li>
             </ul>
@@ -44,8 +46,10 @@
               <li>Science and Technology</li>
               <li>Security, War and Military</li>
               <li>Social Policy</li>
+              <li>Social Movements</li>
               <li>Sports</li>
               <li>Terrorism</li>
+              <li>The Human Experience</li>
             </ul>
           </div>
         </div>  
@@ -78,12 +82,45 @@
     
       </div>
       
+      <div>
+        <h2>Contributors</h2>
+        <p>Recommendations and feedback</p>
+        <ul>
+          <li>Philip Belesky</li>
+          <li>Raluca Velaru</li>
+          <li>Filip Muki Dobranic</li>
+          <li>Matt Hankin</li>
+        </ul>
+        <p>Motions</p>
+        <ul>
+          <li>Daan Welling, John Harper, Milla Huuskonen (European Debate Blog)</li>
+          <li>Tuule Sober (Tartu University Debating Club)</li>
+          <li>Olivia Sundberg</li>
+          <li>Dee Courtney</li>
+          <li>Lamine Kane</li>
+          <li>Raluca Velaru</li>
+          <li>Thomas Simpson</li>
+        </ul>
+
+        <!--
+        <p>Development</p>
+        <ul>
+          <li>Benjamin Muschol (Web Scrapers)</li>
+        </ul>
+        -->
+      </div>
+
 
       <div class="container">
         <h2>Development Notes</h2>
         <p><a href="https://github.com/jessicayung/hello-motions.git">Github repository</a></p>
         <table class="table table-striped">
           <tr><th>Date</th><th>Notes<th></tr>
+
+          <tr><td>18-19 Mar 2016</td><td><ul>
+            <li>Launched on Facebook!</li>
+            <li>We've got more than 500 motions now (and another 3k pending formatting), keep them coming!</li>
+          </ul></td></tr>
 
           <tr><td>17 Mar 2016</td><td><ul>
             <li>You can now search for multiple things at the same time, e.g. 'WUDC, Cambridge, Politics'. Woohoo!</li>

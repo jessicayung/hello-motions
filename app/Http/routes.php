@@ -21,6 +21,20 @@ Route::get('search','PagesController@search');
 
 Route::get('search/{$request}','PagesController@search');
 
+/* 
+| Motions by year
+*/
+
+Route::get('motions-2013-and-earlier', 'PagesController@motions2013andearlier');
+
+Route::get('motions-2013-and-earlier-mobile', 'PagesController@motions2013andearliermobile');
+
+Route::get('motions2014-mobile', 'PagesController@motions2014mobile');
+
+Route::get('motions2014', 'PagesController@motions2014');
+
+Route::get('motions2014-mobile', 'PagesController@motions2014mobile');
+
 Route::get('motions2015', 'PagesController@motions2015');
 
 Route::get('motions2015-mobile', 'PagesController@motions2015mobile');

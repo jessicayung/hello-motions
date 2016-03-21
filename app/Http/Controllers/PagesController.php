@@ -79,6 +79,60 @@ class PagesController extends Controller
 		return view('pages.search')->with('motions', $motions);
 	}
 
+	public function motions2013andearlier() {
+		
+		$motions2013andearlier = DB::table('motions')
+				->having('Date','<',20140101)
+				->select('Date', 'Round_Code', 'Round', 'Motion', 'Tournament')
+				->orderby('Date', 'desc')
+				->orderby('Tournament', 'asc')
+				->orderby('Round_Code', 'asc')
+				->get();
+        return view('pages.motions-2013-and-earlier')->with('motions2013andearlier', $motions2013andearlier);
+
+	}
+
+	public function motions2013andearliermobile() {
+		
+		$motions2013andearlier = DB::table('motions')
+				->having('Date','<',20140101)
+				->select('Date', 'Round_Code', 'Round', 'Motion', 'Tournament')
+				->orderby('Date', 'desc')
+				->orderby('Tournament', 'asc')
+				->orderby('Round_Code', 'asc')
+				->get();
+        return view('pages.motions-2013-and-earlier-mobile')->with('motions2013andearlier', $motions2013andearlier);
+
+	}
+
+	public function motions2014() {
+		
+		$motions2015 = DB::table('motions')
+				->having('Date','>=',20140101)
+				->having('Date','<',20150101)
+				->select('Date', 'Round_Code', 'Round', 'Motion', 'Tournament')
+				->orderby('Date', 'desc')
+				->orderby('Tournament', 'asc')
+				->orderby('Round_Code', 'asc')
+				->get();
+        return view('pages.motions2014')->with('motions2014', $motions2014);
+
+	}
+
+	public function motions2014mobile() {
+		
+		$motions2015 = DB::table('motions')
+				->having('Date','>=',20140101)
+				->having('Date','<',20150101)
+				->select('Date', 'Round_Code', 'Round', 'Motion', 'Tournament')
+				->orderby('Date', 'desc')
+				->orderby('Tournament', 'asc')
+				->orderby('Round_Code', 'asc')
+				->get();
+        return view('pages.motions2014-mobile')->with('motions2014', $motions2014);
+
+	}
+
 	public function motions2015() {
 		
 		$motions2015 = DB::table('motions')
