@@ -107,7 +107,7 @@ class PagesController extends Controller
 
 	public function motions2014() {
 		
-		$motions2015 = DB::table('motions')
+		$motions2014 = DB::table('motions')
 				->having('Date','>=',20140101)
 				->having('Date','<',20150101)
 				->select('Date', 'Round_Code', 'Round', 'Motion', 'Tournament')
@@ -121,7 +121,7 @@ class PagesController extends Controller
 
 	public function motions2014mobile() {
 		
-		$motions2015 = DB::table('motions')
+		$motions2014 = DB::table('motions')
 				->having('Date','>=',20140101)
 				->having('Date','<',20150101)
 				->select('Date', 'Round_Code', 'Round', 'Motion', 'Tournament')
