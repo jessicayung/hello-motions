@@ -95,6 +95,7 @@
         <ul>
           <li>Daan Welling, John Harper, Milla Huuskonen (European Debate Blog)</li>
           <li>Tuule Sober (Tartu University Debating Club)</li>
+          <li>Ryan James</li>
           <li>Olivia Sundberg</li>
           <li>Dee Courtney</li>
           <li>Lamine Kane</li>
@@ -116,6 +117,10 @@
         <p><a href="https://github.com/jessicayung/hello-motions.git">Github repository</a></p>
         <table class="table table-striped">
           <tr><th>Date</th><th>Notes<th></tr>
+
+          <tr><td>24 Mar 2016</td><td><ul>
+            <li>Over 1000 motions in our database. Woop!</li>
+          </ul></td></tr>
 
           <tr><td>18-19 Mar 2016</td><td><ul>
             <li>Launched on Facebook!</li>
