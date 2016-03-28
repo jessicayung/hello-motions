@@ -95,12 +95,13 @@
         <ul>
           <li>Daan Welling, John Harper, Milla Huuskonen (European Debate Blog)</li>
           <li>Tuule Sober (Tartu University Debating Club)</li>
-          <li>Ryan James</li>
+          <li>Ryan James Howson</li>
           <li>Olivia Sundberg</li>
           <li>Dee Courtney</li>
           <li>Lamine Kane</li>
           <li>Raluca Velaru</li>
           <li>Thomas Simpson</li>
+          <li>Leiden Debating Union</li>
         </ul>
 
         <!--

@@ -19,7 +19,6 @@
 
 <p> Motions: 
     <ul>
-        <li>NorthAms 2016 Novice Final, Open Semis</li> 
         <li>Warwick IV 2016 Round 4, Semis, Final</li>
         <li>London Pro-Am 2016 Semis, Final</li>
         <li>John Smith Memorial Mace - English Leg Semis, Final</li>
