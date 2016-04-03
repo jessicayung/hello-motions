@@ -96,6 +96,7 @@
           <li>Daan Welling, John Harper, Milla Huuskonen (European Debate Blog)</li>
           <li>Tuule Sober (Tartu University Debating Club)</li>
           <li>Ryan James Howson</li>
+          <li>Stefan Vukojević</li>
           <li>Olivia Sundberg</li>
           <li>Dee Courtney</li>
           <li>Lamine Kane</li>
