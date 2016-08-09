@@ -120,6 +120,10 @@
         <table class="table table-striped">
           <tr><th>Date</th><th>Notes<th></tr>
 
+          <tr><td>9 Aug 2016</td><td><ul>
+            <li>You can now filter motions based on whether they are from International tournaments.</li>
+          </ul></td></tr>
+
           <tr><td>24 Mar 2016</td><td><ul>
             <li>Over 1000 motions in our database. Woop!</li>
           </ul></td></tr>

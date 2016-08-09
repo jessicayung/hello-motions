@@ -46,11 +46,24 @@ class PagesController extends Controller
 
 		$queries = preg_split('/\s*,\s*/', trim($queries));
 
+		$international = Request::input('intl');
+		
+		if ($international == 3) {
+
+		} else if ($international == 2) {
+
+		} else if ($international == 1) {
+
+		} else {
+			$international = 0;
+		}
+
 		$motions = [];
 
 		foreach ($queries as $query){
 
 			$motionquery = DB::table('motions')
+				-> having('International', '>=', $international)
 				-> where('Motion','LIKE','%' .$query.'%')
 				-> orwhere('Circuit', 'LIKE', '%' .$query.'%')
 				-> orwhere('Country', 'LIKE','%' .$query.'%')
@@ -180,6 +193,19 @@ class PagesController extends Controller
 		$motions2016 = DB::table('motions')
 				->having('Date','>=',20160101)
 				->having('Date','<',20170101)
+				->select('Date', 'Round_Code', 'Round', 'Motion', 'Tournament')
+				->orderby('Date', 'desc')
+				->orderby('Tournament', 'asc')
+				->orderby('Round_Code', 'asc')
+				->get();
+        return view('pages.motions2016-mobile')->with('motions2016', $motions2016);
+
+	}
+
+	public function internationalmotions() {
+		
+		$motions2016 = DB::table('motions')
+				->having('International', '>=', 1)
 				->select('Date', 'Round_Code', 'Round', 'Motion', 'Tournament')
 				->orderby('Date', 'desc')
 				->orderby('Tournament', 'asc')

@@ -12,12 +12,20 @@
 	<p>Search for motions by keyword, category, Chief Adjudicator or tournament. <a href="https://docs.google.com/spreadsheets/d/1qQlqFeJ3iYbzXYrLBMgbmT6LcJLj6JcG3LJyZSbkAJY/edit?usp=sharing">Access the motions spreadsheet directly here</a>. </p>
 
     <form action="search" method="get" id="search-motions" >
-	    <div class="form-group, col-md-6">
-	        <input class="form-control" type="text" name="q" placeholder="e.g. International Relations, WUDC, Cambridge IV">
+	    <div class="row">
+		    <div class="form-group, col-md-6">
+		        <input class="form-control" type="text" name="q" placeholder="e.g. International Relations, WUDC, Cambridge IV">
+		    </div>
+		    <div class="form-group col-md-3">
+		    	<select name="intl" class="form-control">
+                    <option value="0">All Tournaments</option>
+                    <option value="1">Internationals Only</option>
+            	</select>
+		    </div>
+		    <div>
+		    	<button type="submit" class="btn btn-primary">Search</button>
+		    </div>
 	    </div>
-	    <p><div class="form-group">
-	    <button type="submit" name="search-motions" class="btn btn-primary">Search</button>
-	    </div></p>
     </form>
 
 	@if (count($motions) === 0)
