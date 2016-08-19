@@ -10,7 +10,8 @@
 
 <div class="container">
         <h1>About</h1>
-        <p>Search for motions by keyword, category, Chief Adjudicator or tournament. <a href="https://docs.google.com/spreadsheets/d/1qQlqFeJ3iYbzXYrLBMgbmT6LcJLj6JcG3LJyZSbkAJY/edit?usp=sharing">Access the motions spreadsheet directly here</a>. </p>
+        <p>Search for motions by keyword, category, Chief Adjudicator or tournament. No more clicking through a bajillion sites or blog posts to find motions on feminism!</p>
+        <p><a href="https://docs.google.com/spreadsheets/d/1qQlqFeJ3iYbzXYrLBMgbmT6LcJLj6JcG3LJyZSbkAJY/edit?usp=sharing">Access the motions spreadsheet directly here</a>.</p>
     
       </div>
       
@@ -120,8 +121,12 @@
         <table class="table table-striped">
           <tr><th>Date</th><th>Notes<th></tr>
 
+          <tr><td>19 Aug 2016</td><td><ul>
+            <li>New feature: You can now generate a random motion. Card format adapted from Tabbie2 website. </li>
+          </ul></td></tr>
+
           <tr><td>9 Aug 2016</td><td><ul>
-            <li>You can now filter motions based on whether they are from International tournaments.</li>
+            <li>New feature: You can now filter motions based on whether they are from International tournaments.</li>
           </ul></td></tr>
 
           <tr><td>24 Mar 2016</td><td><ul>
@@ -175,7 +180,8 @@
       <div class="container">
         <h2>New Feature Backlog</h2>
           <ul>  
-            <li>Generate a Random Motion</li>
+            <li>Generate a Random Motion filtered by category, tournament or CA (e.g. for Worlds prep).</li>
+            <li>Generate e.g. a dozen random motions at a time.</li>
             <li>Add motions to the database directly</li>
           </ul>
       </div>

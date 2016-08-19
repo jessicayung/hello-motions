@@ -45,6 +45,8 @@ Route::get('motions2016-mobile', 'PagesController@motions2016mobile');
 
 Route::get('missingmotions', 'PagesController@missingmotions');
 
+Route::get('random-motion', 'PagesController@randommotion');
+
 /* Pages not being used at the moment
 
 Route::get('addmotions', 'PagesController@addmotions');
