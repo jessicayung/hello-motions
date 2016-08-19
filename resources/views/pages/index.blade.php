@@ -44,12 +44,15 @@ Search for motions by keyword, category, Chief Adjudicator or tournament.
         <div class="col-md-4">
           <h2>Our Aim</h2>
           <p> No more clicking through a bajillion sites or blog posts to find motions on feminism - we can give you a list of high quality recent ones.</p>
+          <p><a class="btn btn-default" href="about" role="button">Read More</a></p>
         </div>
 
         <div class="col-md-4">
-          <h2>More info</h2>
-          <p><a href="about">Full list of categories and development notes</a> available.<a href="http://goo.gl/forms/9mK4fRpIQI">We are looking for people to help classify motions!</a></p>
-          <p><a class="btn btn-default" href="about" role="button">View details</a></p>
+          <h2>New Features</h2>
+          <p><ol>
+            <li><a href="random-motion">Random Motion</a></li>
+            <li><a href="search">Filter for only international tournaments</a></li>
+          </ol></p>
         </div>
         
       </div> <!-- /row -->
