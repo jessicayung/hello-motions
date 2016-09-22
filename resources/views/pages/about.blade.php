@@ -16,7 +16,7 @@
       </div>
       
       <div class="container">
-        <h2>Motion Categories</h2>
+        <h2>Motion Catqegories</h2>
         <p><b>General:</b></p>
         <div class="row">
           <div class="col-md-4">

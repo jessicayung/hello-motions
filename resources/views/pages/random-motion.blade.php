@@ -13,12 +13,12 @@
 		@foreach ($randommotions as $motion) 
 		<div class="panel panel-default col-md-6">
 			<div class="panel-body">
-				<b>{{ $motion -> Motion}}</b>
+				<b>{{ $motion -> Motion }}</b>
 				<div>
-					<p>{{ $motion -> Infoslide}}</p>	
+					<p>{{ $motion -> Infoslide }}</p>	
 				</div>
 				<div class="text-right">
-					<p><a href="/search?q={{ $motion -> Tournament}}">{{ $motion -> Tournament}}</a> / {{ $motion -> Round }} / {{ $motion -> Date }}</p>
+					<p><a href="/search?q={{ $motion -> Tournament}}">{{ $motion -> Tournament }}</a> / {{ $motion -> Round }} / {{ $motion -> Date }}</p>
 				</div>
 			</div>
 		</div>

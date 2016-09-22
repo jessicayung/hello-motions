@@ -230,4 +230,16 @@ class PagesController extends Controller
 
 	}
 
+	public function eudcmotions() {
+
+		$eudcmotions = DB::table('motions')
+				->having('Tournament', 'LIKE', "EUDC")
+				->select('Date', 'Round_Code', 'Round', 'Motion', 'Tournament')
+				->orderby('Date', 'desc')
+				->orderby('Round_Code', 'asc')
+				->get();
+        return view('pages.eudcmotions')->with('eudcmotions', $eudcmotions);
+
+	}
+
 }
