@@ -42,42 +42,9 @@
   <h3>2015 Malaysia WUDC</h3>
   <p>CA Team: Shafiq Bazari, Jonathan Leader Maynard, Danique Van Koppenhagen, Sebastian Templeton, Engin Arikan, Brett Frazer, Madeline Schultz</p>
 
-<!--
-  <table class="table table-striped">
-    <tr>
-     <th>Round</th>
-     <th>Motion</th>
-     <th>Infoslide</th>
-    </tr>
-    @foreach ($wudc2015motions as $motion)
-      <tr>
-        <td> {{ $motion ->Round }} </td>
-        <td> {{ $motion ->Motion }} </td>
-        <td> {{ $motion ->Infoslide }} </td>
-      </tr>
-    @endforeach 
-   </table>
--->
   <h3>2014 Chennai WUDC</h3>
   <p>CA team: Michael Baer, Harish Natarajan, Ely Zosa, Stephen Whittington, Fiona Prowse, Michael Shapira
 	</p>
-
-<!--
- <table class="table table-striped">
-    <tr>
-     <th>Round</th>
-     <th>Motion</th>
-     <th>Infoslide</th>
-    </tr>
-    @foreach ($wudc2014motions as $motion)
-      <tr>
-        <td> {{ $motion ->Round }} </td>
-        <td> {{ $motion ->Motion }} </td>
-        <td> {{ $motion ->Infoslide }} </td>
-      </tr>
-    @endforeach 
-   </table>
--->
 
   <h3>2013 Berlin WUDC</h3>
   <p>CA Team: Sharmila Parmanand, Douglas Cochran, Victor Finkel, Isabelle Fischer, James Kilcup, Jens Fischer</p>
