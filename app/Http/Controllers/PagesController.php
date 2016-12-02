@@ -261,7 +261,7 @@ class PagesController extends Controller
 			'wudc2015motions' => $wudc2015motions,
 			);
 
-		return view('pages.wudc-motions')->with('wudc2016motions', $wudc2016motions)
+		return view('pages.wudc-motions')->with('wudc2016motions', $wudc2016motions);
 
         // return view('pages.wudc-motions')->with($wudcmotions);
 
