@@ -245,7 +245,7 @@ class PagesController extends Controller
 	public function wudcmotions() {
 
 		$wudc2016motions = DB::table('motions')
-				->where('Tournament', 'LIKE', 'WUDC 2016')
+				->where('Tournament', 'LIKE', '%WUDC 2016')
 				->select('Round_Code', 'Round', 'Motion', 'Infoslide')
 				->orderby('Round_Code', 'asc')
 				->get();
