@@ -249,7 +249,7 @@ class PagesController extends Controller
 				->select('Round_Code', 'Round', 'Motion', 'Infoslide')
 				->orderby('Round_Code', 'asc')
 				->get();
-        
+
         $wudc2015motions = DB::table('motions')
 				->where('Tournament', 'LIKE', 'WUDC 2015')
 				->select('Round_Code', 'Round', 'Motion', 'Infoslide')
@@ -261,7 +261,9 @@ class PagesController extends Controller
 			'wudc2015motions' => $wudc2015motions,
 			);
 
-        return view('pages.wudc-motions')->with($wudcmotions);
+		return view('pages.wudc-motions')->with('wudc2016motions', $wudc2016motions)
+
+        // return view('pages.wudc-motions')->with($wudcmotions);
 
 	}
 

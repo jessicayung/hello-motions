@@ -13,13 +13,19 @@
   <h3>2017 Dutch WUDC</h3>
   <p>CA Team: Syed Saddiq, Karin Merckens, Hyewon Rho, Michael Dunn Goekjian, Omer Nevo, Jodie O'Neill, Veenu Goswami, Yashodhan Nair, Ingrid Rodriguez</p>
   <p>Motions: We'll find out soon! :) For more info visit <a href="http://dutchwudc.nl/">the Dutch WUDC website</a>.</p>
-  <p><a href="http://hellomotions.com/search?q=Syed+Saddiq%2C+Karin+Merckens%2C+Hyewon+Rho%2C+Michael+Dunn+Goekjian%2C+Omer+Nevo%2C+Jodie+O%27Neill%2C+Veenu+Goswami%2C+Yashodhan+Nair%2C+Ingrid+Rodriguez&intl=0">Motions set by members of the Dutch WUDC CA Team</a>
-  <a href="http://hellomotions.com/search?q=Syed+Saddiq%2C+Karin+Merckens&intl=0">Motions set by Dutch WUDC CAs</a>
+  <p>
+  <ul>
+  	<li><a href="http://hellomotions.com/search?q=Syed+Saddiq%2C+Karin+Merckens%2C+Hyewon+Rho%2C+Michael+Dunn+Goekjian%2C+Omer+Nevo%2C+Jodie+O%27Neill%2C+Veenu+Goswami%2C+Yashodhan+Nair%2C+Ingrid+Rodriguez&intl=0">Motions set by members of the Dutch WUDC CA Team</a></li>
+  	<li><a href="http://hellomotions.com/search?q=Syed+Saddiq%2C+Karin+Merckens&intl=0">Motions set by Dutch WUDC CAs</a></li>
+  </ul>
+  
   </p>
 
   <h3>2016 Thessaloniki WUDC</h3>  
   <p>CA Team: Manos Moschopoulos, Arinah Najwa, Chris Bisset, John McKee, Josh Zoffer, Sarah Balakrishnan, Tasneem Elias</p>
  
+	{{ $wudc2016motions }}
+
   <table class="table table-striped">
     <tr>
      <th>Round</th>
@@ -37,6 +43,8 @@
 
   <h3>2015 Malaysia WUDC</h3>
   <p>CA Team: Shafiq Bazari, Jonathan Leader Maynard, Danique Van Koppenhagen, Sebastian Templeton, Engin Arikan, Brett Frazer, Madeline Schultz</p>
+
+  {{ $wudc2015motions }}
 
   <table class="table table-striped">
     <tr>
