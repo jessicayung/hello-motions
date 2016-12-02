@@ -206,7 +206,7 @@ class PagesController extends Controller
 	public function randommotion() {
 		
 		$total = DB::table('motions')->count();
-		$randomindex = rand(0,$total - 1);
+		$randomindex = rand(2136,$total - 1);
 		$randommotion = DB::table('motions')
 					->skip($randomindex)
 					->take(1)
@@ -239,6 +239,31 @@ class PagesController extends Controller
 				->orderby('Round_Code', 'asc')
 				->get();
         return view('pages.eudcmotions')->with('eudcmotions', $eudcmotions);
+
+	}
+
+	public function wudcmotions() {
+
+		$wudc2016motions = DB::table('motions')
+				->having('Tournament', 'LIKE', 'WUDC')
+				->having('Date', '==', '2016-01-01')
+				->select('Round_Code', 'Round', 'Motion', 'Infoslide')
+				->orderby('Round_Code', 'asc')
+				->get();
+        
+        $wudc2015motions = DB::table('motions')
+				->having('Tournament', 'LIKE', 'WUDC')
+				->having('Date', '==', '2016-01-01')
+				->select('Round_Code', 'Round', 'Motion', 'Infoslide')
+				->orderby('Round_Code', 'asc')
+				->get();
+
+		$wudcmotions = array(
+			'wudc2016motions' => $wudc2016motions,
+			'wudc2015motions' => $wudc2015motions,
+			);
+
+        return view('pages.wudc-motions')->with($wudcmotions);
 
 	}
 
