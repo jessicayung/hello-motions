@@ -48,7 +48,7 @@
      <th>Motion</th>
      <th>Infoslide</th>
     </tr>
-    @foreach ($wudc2016motions as $motion)
+    @foreach ($wudc2015motions as $motion)
       <tr>
         <td> {{ $motion ->Round }} </td>
         <td> {{ $motion ->Motion }} </td>
@@ -67,7 +67,7 @@
      <th>Motion</th>
      <th>Infoslide</th>
     </tr>
-    @foreach ($wudc2016motions as $motion)
+    @foreach ($wudc2014motions as $motion)
       <tr>
         <td> {{ $motion ->Round }} </td>
         <td> {{ $motion ->Motion }} </td>
@@ -85,7 +85,7 @@
      <th>Motion</th>
      <th>Infoslide</th>
     </tr>
-    @foreach ($wudc2016motions as $motion)
+    @foreach ($wudc2013motions as $motion)
       <tr>
         <td> {{ $motion ->Round }} </td>
         <td> {{ $motion ->Motion }} </td>
@@ -103,7 +103,7 @@
      <th>Motion</th>
      <th>Infoslide</th>
     </tr>
-    @foreach ($wudc2016motions as $motion)
+    @foreach ($wudc2012motions as $motion)
       <tr>
         <td> {{ $motion ->Round }} </td>
         <td> {{ $motion ->Motion }} </td>
@@ -123,7 +123,7 @@
      <th>Motion</th>
      <th>Infoslide</th>
     </tr>
-    @foreach ($wudc2016motions as $motion)
+    @foreach ($wudc2011motions as $motion)
       <tr>
         <td> {{ $motion ->Round }} </td>
         <td> {{ $motion ->Motion }} </td>
@@ -142,7 +142,7 @@
      <th>Motion</th>
      <th>Infoslide</th>
     </tr>
-    @foreach ($wudc2016motions as $motion)
+    @foreach ($wudc2010motions as $motion)
       <tr>
         <td> {{ $motion ->Round }} </td>
         <td> {{ $motion ->Motion }} </td>
@@ -160,7 +160,7 @@
      <th>Motion</th>
      <th>Infoslide</th>
     </tr>
-    @foreach ($wudc2016motions as $motion)
+    @foreach ($wudc2009motions as $motion)
       <tr>
         <td> {{ $motion ->Round }} </td>
         <td> {{ $motion ->Motion }} </td>
@@ -179,7 +179,7 @@
      <th>Motion</th>
      <th>Infoslide</th>
     </tr>
-    @foreach ($wudc2016motions as $motion)
+    @foreach ($wudc2008motions as $motion)
       <tr>
         <td> {{ $motion ->Round }} </td>
         <td> {{ $motion ->Motion }} </td>
@@ -198,7 +198,7 @@
      <th>Motion</th>
      <th>Infoslide</th>
     </tr>
-    @foreach ($wudc2016motions as $motion)
+    @foreach ($wudc2007motions as $motion)
       <tr>
         <td> {{ $motion ->Round }} </td>
         <td> {{ $motion ->Motion }} </td>
