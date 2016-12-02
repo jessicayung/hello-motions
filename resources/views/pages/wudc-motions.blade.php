@@ -24,8 +24,6 @@
   <h3>2016 Thessaloniki WUDC</h3>  
   <p>CA Team: Manos Moschopoulos, Arinah Najwa, Chris Bisset, John McKee, Josh Zoffer, Sarah Balakrishnan, Tasneem Elias</p>
  
-	{{ $wudc2016motions }}
-
   <table class="table table-striped">
     <tr>
      <th>Round</th>
@@ -44,8 +42,7 @@
   <h3>2015 Malaysia WUDC</h3>
   <p>CA Team: Shafiq Bazari, Jonathan Leader Maynard, Danique Van Koppenhagen, Sebastian Templeton, Engin Arikan, Brett Frazer, Madeline Schultz</p>
 
-  {{ $wudc2015motions }}
-
+<!--
   <table class="table table-striped">
     <tr>
      <th>Round</th>
@@ -60,32 +57,27 @@
       </tr>
     @endforeach 
    </table>
-
+-->
   <h3>2014 Chennai WUDC</h3>
   <p>CA team: Michael Baer, Harish Natarajan, Ely Zosa, Stephen Whittington, Fiona Prowse, Michael Shapira
 	</p>
 
-  <p>
-  1 THBT the United States of America should fund moderate Madrassas (schools of Islamic study) throughout the Islamic world
-  2 THW allow first-time offenders to, with the consent of the victims, pay compensation to them in place of a prison sentence
-  3 TH regrets the rise of a 'hookup culture' (one which accepts and encourages casual sexual encounters focused on physical pleasure, without necessarily including emotional bonding)
-  4 THBT developing countries should ban members of political dynasties from standing for elected office
-  5 THBT the Trans-Pacific Partnership is in the interests of the small and medium-sized negotiating countries. (Infoslide: A number of countries are currently negotiating to establish the world's largest free trade area by comprehensively liberalising trade in the Asia-Pacific region. This proposed agreement, known as the Trans-Pacific Partnership (TPP), would include the following countries: United States, Japan, Australia, Vietnam, Mexico, Chile, Canada, Singapore, Malaysia, New Zeland, Peru and Brunei. China is NOT included in these negotiations.)
-  6 THW make the receipt of welfare payments to raise children conditional on the use of long-term, but reversible, contraception
-  7 First, "safe", does the drug pose an unacceptable health risk? Second, "effective", does the drug do what it claims to do? Motion: THBT government agencies that regulate drugs should only test whether a drug is safe, not whether it is effective, before approving it for public use.
-  8 THBT NATO should unconditionally offer membership to the states of the former Soviet Union, excluding Russia
-  9 TH regrets the commodification of indigenous cultures
-  EFL_Semis THBT the gay rights movement should abandon the claim that sexuality is not a choice
-  EFL_Final THBT multinational companies should be liable for human rights abuses that occur anywhere in their supply chain
-  ESL_Quarters  THW remove all copyright protection for material deemed to be morally objectionable
-  ESL_Semis THBT Pope Francis should publicly encourage Catholics to support radically redistributive government policies
-  ESL_Final THW allow countries to pay other countries to settle asylum-seekers who reach their borders
-  Open_Partial_Double_Octos THW abolish gated communities in the developing world
-  Open_Octos  THBT Japan should shame its soldiers who participated in WWII, including those who did not commit war crimes themselves
-  Open_Quarters THW auction off the long-term right to govern bankrupt cities for profit
-  Open_Semis  THBT women should reject practices that alter the appearance of their genitalia, such as waxing and labiaplasty
-  Open_Final  THBT India should adopt aggressive free market policies.
-  </p>
+<!--
+ <table class="table table-striped">
+    <tr>
+     <th>Round</th>
+     <th>Motion</th>
+     <th>Infoslide</th>
+    </tr>
+    @foreach ($wudc2014motions as $motion)
+      <tr>
+        <td> {{ $motion ->Round }} </td>
+        <td> {{ $motion ->Motion }} </td>
+        <td> {{ $motion ->Infoslide }} </td>
+      </tr>
+    @endforeach 
+   </table>
+-->
 
   <h3>2013 Berlin WUDC</h3>
   <p>CA Team: Sharmila Parmanand, Douglas Cochran, Victor Finkel, Isabelle Fischer, James Kilcup, Jens Fischer</p>
