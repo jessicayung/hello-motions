@@ -251,7 +251,55 @@ class PagesController extends Controller
 				->get();
 
         $wudc2015motions = DB::table('motions')
-				->where('Tournament', 'LIKE', 'WUDC 2015')
+				->where('Tournament', 'LIKE', '%WUDC 2015')
+				->select('Round_Code', 'Round', 'Motion', 'Infoslide')
+				->orderby('Round_Code', 'asc')
+				->get();
+
+		$wudc2014motions = DB::table('motions')
+				->where('Tournament', 'LIKE', '%WUDC 2014')
+				->select('Round_Code', 'Round', 'Motion', 'Infoslide')
+				->orderby('Round_Code', 'asc')
+				->get();
+
+		$wudc2013motions = DB::table('motions')
+				->where('Tournament', 'LIKE', '%WUDC 2013')
+				->select('Round_Code', 'Round', 'Motion', 'Infoslide')
+				->orderby('Round_Code', 'asc')
+				->get();
+
+		$wudc2012motions = DB::table('motions')
+				->where('Tournament', 'LIKE', '%WUDC 2012')
+				->select('Round_Code', 'Round', 'Motion', 'Infoslide')
+				->orderby('Round_Code', 'asc')
+				->get();
+
+		$wudc2011motions = DB::table('motions')
+				->where('Tournament', 'LIKE', '%WUDC 2011')
+				->select('Round_Code', 'Round', 'Motion', 'Infoslide')
+				->orderby('Round_Code', 'asc')
+				->get();
+
+		$wudc2010motions = DB::table('motions')
+				->where('Tournament', 'LIKE', '%WUDC 2010')
+				->select('Round_Code', 'Round', 'Motion', 'Infoslide')
+				->orderby('Round_Code', 'asc')
+				->get();
+
+		$wudc2009motions = DB::table('motions')
+				->where('Tournament', 'LIKE', '%WUDC 2009')
+				->select('Round_Code', 'Round', 'Motion', 'Infoslide')
+				->orderby('Round_Code', 'asc')
+				->get();
+
+		$wudc2008motions = DB::table('motions')
+				->where('Tournament', 'LIKE', '%WUDC 2008')
+				->select('Round_Code', 'Round', 'Motion', 'Infoslide')
+				->orderby('Round_Code', 'asc')
+				->get();
+
+		$wudc2007motions = DB::table('motions')
+				->where('Tournament', 'LIKE', '%WUDC 2007')
 				->select('Round_Code', 'Round', 'Motion', 'Infoslide')
 				->orderby('Round_Code', 'asc')
 				->get();
@@ -259,11 +307,19 @@ class PagesController extends Controller
 		$wudcmotions = array(
 			'wudc2016motions' => $wudc2016motions,
 			'wudc2015motions' => $wudc2015motions,
+			'wudc2014motions' => $wudc2014motions,
+			'wudc2013motions' => $wudc2013motions,
+			'wudc2012motions' => $wudc2012motions,
+			'wudc2011motions' => $wudc2011motions,
+			'wudc2010motions' => $wudc2010motions,
+			'wudc2009motions' => $wudc2009motions,
+			'wudc2008motions' => $wudc2008motions,
+			'wudc2007motions' => $wudc2007motions,
 			);
 
-		return view('pages.wudc-motions')->with('wudc2016motions', $wudc2016motions);
+		// return view('pages.wudc-motions')->with('wudc2016motions', $wudc2016motions);
 
-        // return view('pages.wudc-motions')->with($wudcmotions);
+        return view('pages.wudc-motions')->with($wudcmotions);
 
 	}
 
