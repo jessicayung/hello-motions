@@ -32,7 +32,7 @@ Thanks for considering contributing to Hello Motions! :)
 [branch]: https://help.github.com/articles/creating-and-deleting-branches-within-your-repository/
 [pr]: https://help.github.com/articles/using-pull-requests/
 
-Hello Motions was developed in 2016 and is maintained by [Jessica Yung](jessicayung.com).
+Hello Motions was developed in 2016 and is maintained by [Jessica Yung](http://www.jessicayung.com).
 
 ### License
 _________
