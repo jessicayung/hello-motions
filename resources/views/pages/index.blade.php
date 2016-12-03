@@ -37,24 +37,33 @@ Search for motions by keyword, category, Chief Adjudicator or tournament.
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-4">
-          <h2>Want to contribute?</h2>
-          <p>We need <b>your help</b> to make sure these motions are comprehensive and up-to-date. <a href="https://docs.google.com/forms/d/14v5RuG6NHjDySrLN8zJC97-e761sRBivhOoPxjt0K6I/viewform?c=0&w=1">Tell us about motions from tournaments here.</a> Or <a href="mailto:jy357@cam.ac.uk">contact me directly</a> if you have other questions / suggestions. <a href="missingmotions">Here is a list of motions we are missing.</a> Thanks a lot!</p>
-        </div>
 
-        <div class="col-md-4">
-          <h2>Our Aim</h2>
-          <p> No more clicking through a bajillion sites or blog posts to find motions on feminism - we can give you a list of high quality recent ones.</p>
-          <p><a class="btn btn-default" href="about" role="button">Read More</a></p>
-        </div>
-
-        <div class="col-md-4">
-          <h2>New Features</h2>
+        <h2>New Features</h2>
           <p><ol>
+            <li><a href="http://hellomotions.com/search?q=Syed+Saddiq%2C+Karin+Merckens%2C+Hyewon+Rho%2C+Michael+Dunn+Goekjian%2C+Omer+Nevo%2C+Jodie+O%27Neill%2C+Veenu+Goswami%2C+Yashodhan+Nair%2C+Ingrid+Rodriguez&intl=0">Motions set by Dutch WUDC CA team</a></li>
+            <li><a href="wudc-motions">WUDC Motions</a></li>
             <li><a href="random-motion">Random Motion</a></li>
             <li><a href="search">Filter for only international tournaments</a></li>
           </ol></p>
         </div>
-        
+
+        <div class="col-md-4">
+          <h2>Want to contribute?</h2>
+          <p>
+            <ul>
+              <li>We need <b>your help</b> to make sure these motions are comprehensive and up-to-date. <a href="https://docs.google.com/forms/d/14v5RuG6NHjDySrLN8zJC97-e761sRBivhOoPxjt0K6I/viewform?c=0&w=1">Tell us about motions from tournaments here.</a> <a href="missingmotions">Here is a list of motions we are missing.</a></li>
+              <li>We're also looking for <b>donations or sponsorship</b> to maintain server costs of US$150 per year. Every dollar helps - <a href="http://paypal.me/JessicaYung"><b>donate now here</b></a>!</li>
+              <li><a href="mailto:jy357@cam.ac.uk">Contact me directly</a> if you have other questions / suggestions. Thanks a lot!</li>
+            </ul>
+          </p>
+        </div>
+
+        <div class="col-md-4">
+          <h2>Our Aim</h2>
+          <p> No more clicking through a bajillion sites or blog posts to find motions on feminism - we can give you a list of recent ones.</p>
+          <p><a class="btn btn-default" href="about" role="button">Read More</a></p>
+        </div>
+
       </div> <!-- /row -->
     </div> <!-- /container -->
     <div class="container">

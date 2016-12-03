@@ -121,8 +121,13 @@
         <table class="table table-striped">
           <tr><th>Date</th><th>Notes<th></tr>
 
+          <tr><td>2 Dec 2016</td><td><ul>
+            <li>New feature: Addad <a href="wudc-motions">a page with WUDC motions from 2007</a> . The page also includes who was on the CA team for each year. You can now generate a random motion. Card format adapted from Tabbie2 website. </li>
+            <li>Nearly 4000 motions on our database.</li>
+          </ul></td></tr>
+
           <tr><td>19 Aug 2016</td><td><ul>
-            <li>New feature: You can now generate a random motion. Card format adapted from Tabbie2 website. </li>
+            <li>New feature: You can now <a href="random-motion">generate a random motion</a>. Card format adapted from Tabbie2 website. </li>
           </ul></td></tr>
 
           <tr><td>9 Aug 2016</td><td><ul>

@@ -42,6 +42,7 @@
 	              <li class="active"><a href="search">Search<span class="sr-only">(current)</span></a></li>
 	              <li><a href="about">About</a></li>
 	              <li><a href="random-motion">Random Motion</a></li>
+	              <li><a href="wudc-motions">WUDC Motions</a></li>
 	              <li><a href="contact">Contact</a></li>
 	          </ul>
 	          <!-- <form class="navbar-form navbar-right">
