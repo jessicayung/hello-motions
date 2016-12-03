@@ -52,7 +52,6 @@ Search for motions by keyword, category, Chief Adjudicator or tournament.
           <p>
             <ul>
               <li>We need <b>your help</b> to make sure these motions are comprehensive and up-to-date. <a href="https://docs.google.com/forms/d/14v5RuG6NHjDySrLN8zJC97-e761sRBivhOoPxjt0K6I/viewform?c=0&w=1">Tell us about motions from tournaments here.</a> <a href="missingmotions">Here is a list of motions we are missing.</a></li>
-              <li>We're also looking for <b>donations or sponsorship</b> to maintain server costs of US$150 per year. Every dollar helps - <a href="http://paypal.me/JessicaYung"><b>donate now here</b></a>!</li>
               <li><a href="mailto:jy357@cam.ac.uk">Contact me directly</a> if you have other questions / suggestions. Thanks a lot!</li>
             </ul>
           </p>
