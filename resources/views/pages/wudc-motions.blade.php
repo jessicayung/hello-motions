@@ -17,11 +17,18 @@
   <ul>
   	<li><a href="http://hellomotions.com/search?q=Syed+Saddiq%2C+Karin+Merckens%2C+Hyewon+Rho%2C+Michael+Dunn+Goekjian%2C+Omer+Nevo%2C+Jodie+O%27Neill%2C+Veenu+Goswami%2C+Yashodhan+Nair%2C+Ingrid+Rodriguez&intl=0">Motions set by members of the Dutch WUDC CA Team</a></li>
   	<li><a href="http://hellomotions.com/search?q=Syed+Saddiq%2C+Karin+Merckens&intl=0">Motions set by Dutch WUDC CAs</a></li>
-  </ul>
-  
+  </ul>  
   </p>
 
-  <h3>2016 Thessaloniki WUDC</h3>  
+  <p><b>Shortcuts to 2007-2016 WUDC motions</b></p>
+  <p>
+  <ul>
+  	<li><a href="#wudc2016">2016</a> <a href="#wudc2015">2015</a> <a href="#wudc2014">2014</a> <a href="#wudc2013">2013</a> <a href="#wudc2012">2012</a> <a href="#wudc2011">2011</a></li>
+  	<li><a href="#wudc2010">2010</a> <a href="#wudc2009">2009</a> <a href="#wudc2008">2008</a> <a href="#wudc2007">2007</a></li>
+  </ul>
+  </p>
+
+  <h3 id="wudc2016">2016 Thessaloniki WUDC</h3>  
   <p>CA Team: Manos Moschopoulos, Arinah Najwa, Chris Bisset, John McKee, Josh Zoffer, Sarah Balakrishnan, Tasneem Elias</p>
  
   <table class="table table-striped">
@@ -39,7 +46,7 @@
     @endforeach 
    </table>
 
-  <h3>2015 Malaysia WUDC</h3>
+  <h3 id="wudc2015">2015 Malaysia WUDC</h3>
   <p>CA Team: Shafiq Bazari, Jonathan Leader Maynard, Danique Van Koppenhagen, Sebastian Templeton, Engin Arikan, Brett Frazer, Madeline Schultz</p>
 
   <table class="table table-striped">
@@ -57,7 +64,7 @@
     @endforeach 
    </table>
 
-  <h3>2014 Chennai WUDC</h3>
+  <h3 id="wudc2014">2014 Chennai WUDC</h3>
   <p>CA team: Michael Baer, Harish Natarajan, Ely Zosa, Stephen Whittington, Fiona Prowse, Michael Shapira
 	</p>
 
@@ -76,7 +83,7 @@
     @endforeach 
    </table>
 
-  <h3>2013 Berlin WUDC</h3>
+  <h3 id="wudc2013">2013 Berlin WUDC</h3>
   <p>CA Team: Sharmila Parmanand, Douglas Cochran, Victor Finkel, Isabelle Fischer, James Kilcup, Jens Fischer</p>
 
   <table class="table table-striped">
@@ -94,7 +101,7 @@
     @endforeach 
    </table>
 
-  <h3>2012 Manila WUDC</h3>
+  <h3 id="wudc2012">2012 Manila WUDC</h3>
   <p>CA Team: Sam Block, Lucinda David, Joe Roussos, Tim Mooney, Cormac Early, Masako Suzuki, Art Ward</p>
 
   <table class="table table-striped">
@@ -112,7 +119,7 @@
     @endforeach 
    </table>
 
-	<h3>2011 Botswana WUDC</h3>
+	<h3 id="wudc2011">2011 Botswana WUDC</h3>
 	<p>CA Team: Logandran Balavijendran, Pearl Mathumo, James Dray, Anat Gelber, Richard Lizius, Tim Jeffrie
 	</p>
 	<!--From http://idebate.org/node/7365-->
@@ -132,7 +139,7 @@
     @endforeach 
    </table>
 
-	<h3>2010 Vehbi Koc WUDC</h3>
+	<h3 id="wudc2010">2010 Vehbi Koc WUDC</h3>
 	<p>CA Team: Can Okar, Josh Bone, Julia Bowes, Suthen Tate Thomas, Will Jones, Handan Orel, Ozan Mert Ondes.</p>
 	<!-- http://worlddebating.blogspot.co.uk/2009/12/koc-wudc-debating-guide-speaker-scale.html-->
 
@@ -151,7 +158,7 @@
     @endforeach 
    </table>
 
-	<h3>2009 Cork WUDC</h3>
+	<h3 id="wudc2009">2009 Cork WUDC</h3>
 	<p>CA Team: Derek Lande, Erin O'Brien, Ivan Ah Sam, Rory Gillis, Daniel Patrick McCarthy</p>
 	
 	<table class="table table-striped">
@@ -169,7 +176,7 @@
     @endforeach 
    </table>
 
-	<h3>2008 Assumption WUDC</h3>
+	<h3 id="wudc2008">2008 Assumption WUDC</h3>
 	<p>CA Team: Rajesh Krishnan, Ciaran Lawlor, Beth O’Connor, Joanna Nairn</p>
 	<!--CA info from http://worlddebating.blogspot.co.uk/2008/01/full-results-from-worlds-2008.html-->
 
@@ -188,7 +195,7 @@
     @endforeach 
    </table>
 
-	<h3>2007 UBC WUDC</h3>
+	<h3 id="wudc2007">2007 UBC WUDC</h3>
 	<p>CA Team: Kevin Massie, Derek Lande, Tim Sonnreich, Alex Deane</p>
 	<!-- CA Team info from idebate.org -->
 
