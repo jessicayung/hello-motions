@@ -104,6 +104,8 @@
           <li>Raluca Velaru</li>
           <li>Thomas Simpson</li>
           <li>Leiden Debating Union</li>
+          <li>Ameena Sullivan</li> <!-- Surrey IV -->
+          <li>Matt Barry</li> <!-- Tourneys in Africa -->
         </ul>
 
         <!--
