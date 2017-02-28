@@ -19,8 +19,7 @@
 
 <p> Motions: 
     <ul>
-        <li>Warwick IV 2016 Round 4, Semis, Final</li>
-        <li>London Pro-Am 2016 Semis, Final</li>
+        <li>Dutch WUDC 2017 EFL Semis, Open Quarters</li>
         <li>John Smith Memorial Mace - English Leg Semis, Final</li>
     </ul>
 
