@@ -107,6 +107,7 @@
           <li>Jevon Henry</li> <!-- Jamaica JADE Cup motions -->
           <li>Ameena Sullivan</li> <!-- Surrey IV -->
           <li>Matt Barry</li> <!-- Tourneys in Africa -->
+          <li>Bexley Brown</li> <!-- NAmerica -->
           <li>Tim Squirrell</li> <!--Galway Open 2017, Sheffield IV 2016-->
           <li>Simon Sallstrom</li> <!-- Trinity IV 2017 -->
         </ul>
