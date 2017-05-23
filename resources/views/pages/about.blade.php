@@ -127,8 +127,17 @@
         <table class="table table-striped">
           <tr><th>Date</th><th>Notes<th></tr>
 
+          <tr><td>23 May 2017</td><td><ul>
+            <li>Over 500 motions have been labelled with category tags.</li>
+            <li>Over 4250 motions in database.</li>
+          </ul></td></tr>
+
+          <tr><td>X April 2017</td><td><ul>
+            <li>Wrote scripts (Google AppScript) to convert motions entered via the Google Form to the Hello Motions database format. Only 1 manual checking step.</li>
+          </ul></td></tr>
+
           <tr><td>2 Dec 2016</td><td><ul>
-            <li>New feature: Addad <a href="wudc-motions">a page with WUDC motions from 2007</a> . The page also includes who was on the CA team for each year. You can now generate a random motion. Card format adapted from Tabbie2 website. </li>
+            <li>New feature: Added <a href="wudc-motions">a page with WUDC motions from 2007-2016</a> . The page also includes who was on the CA team for each year. You can now generate a random motion. Card format adapted from Tabbie2 website. </li>
             <li>Nearly 4000 motions on our database.</li>
           </ul></td></tr>
 
