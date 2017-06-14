@@ -11,19 +11,19 @@
   <h1>EUDC Motions</h1>
 
   <h3>2017 Tallinn EUDC</h3>
-  <p>CA Team: Steven Ramesh Rajavinothan, Helena Ivanov, Dan Lahav, Rebecca Irvine, Thomas Simpson, Olivia Sundberg</p>
-  <p>Motions: We'll find out soon! :) For more info visit <a href="http://tallinneudc.com/">the Tallinn EUDC website</a>.</p>
+  <p><b>CA Team</b>: Steven Ramesh Rajavinothan, Helena Ivanov, Dan Lahav, Rebecca Irvine, Thomas Simpson, Olivia Sundberg</p>
+  <p><b>Motions</b>: We'll find out soon! :) For more info visit <a href="http://tallinneudc.com/">the Tallinn EUDC website</a>.</p>
   <p>
   <ul>
-  	<li><a href="http://hellomotions.com/search?q=Steven+Ramesh+Rajavinothan%2C+Dan+Lahav%2C+Thomas+Simpson%2C+Helena+Ivanov%2C+Rebecca+Irvine%2C+Olivia+Sundberg&search-motions=">Motions set by members of the Tallinn eudc CA Team</a></li>
+  	<li><a href="http://hellomotions.com/search?q=Steven+Ramesh+Rajavinothan%2C+Dan+Lahav%2C+Thomas+Simpson%2C+Helena+Ivanov%2C+Rebecca+Irvine%2C+Olivia+Sundberg&search-motions=">Motions set by members of the Tallinn EUDC CA Team</a></li>
   </ul>  
   </p>
 
-  <p><b>Shortcuts to 2007-2016 EUDC motions</b></p>
+  <p><b>Shortcuts to 2012-2016 EUDC motions</b></p>
   <p>
   <ul>
-  	<li><a href="#eudc2016">2016</a> <a href="#eudc2015">2015</a> <a href="#eudc2014">2014</a> <a href="#eudc2013">2013</a> <a href="#eudc2012">2012</a> <a href="#eudc2011">2011</a></li>
-  	<li><a href="#eudc2010">2010</a> <a href="#eudc2009">2009</a> <a href="#eudc2008">2008</a> <a href="#eudc2007">2007</a></li>
+  	<li><a href="#eudc2016">2016</a> <a href="#eudc2015">2015</a> <a href="#eudc2014">2014</a> <a href="#eudc2013">2013</a> <a href="#eudc2012">2012</a> <!--<a href="#eudc2011">2011</a>--></li>
+  	<!--<li><a href="#eudc2010">2010</a> <a href="#eudc2009">2009</a> <a href="#eudc2008">2008</a> <a href="#eudc2007">2007</a></li>-->
   </ul>
   </p>
 
