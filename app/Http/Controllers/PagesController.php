@@ -232,6 +232,12 @@ class PagesController extends Controller
 
 	public function wudcmotions() {
 
+		$wudc2017motions = DB::table('motions')
+				->where('Tournament', 'LIKE', '%WUDC 2017')
+				->select('Round_Code', 'Round', 'Motion', 'Infoslide')
+				->orderby('Round_Code', 'asc')
+				->get();
+
 		$wudc2016motions = DB::table('motions')
 				->where('Tournament', 'LIKE', '%WUDC 2016')
 				->select('Round_Code', 'Round', 'Motion', 'Infoslide')
@@ -293,6 +299,7 @@ class PagesController extends Controller
 				->get();
 
 		$wudcmotions = array(
+			'wudc2017motions' => $wudc2017motions,
 			'wudc2016motions' => $wudc2016motions,
 			'wudc2015motions' => $wudc2015motions,
 			'wudc2014motions' => $wudc2014motions,

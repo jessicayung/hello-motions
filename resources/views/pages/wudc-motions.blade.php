@@ -12,13 +12,21 @@
 
   <h3>2017 Dutch WUDC</h3>
   <p>CA Team: Syed Saddiq, Karin Merckens, Hyewon Rho, Michael Dunn Goekjian, Omer Nevo, Jodie O'Neill, Veenu Goswami, Yashodhan Nair, Ingrid Rodriguez</p>
-  <p>Motions: We'll find out soon! :) For more info visit <a href="http://dutchwudc.nl/">the Dutch WUDC website</a>.</p>
-  <p>
-  <ul>
-  	<li><a href="http://hellomotions.com/search?q=Syed+Saddiq%2C+Karin+Merckens%2C+Hyewon+Rho%2C+Michael+Dunn+Goekjian%2C+Omer+Nevo%2C+Jodie+O%27Neill%2C+Veenu+Goswami%2C+Yashodhan+Nair%2C+Ingrid+Rodriguez&intl=0">Motions set by members of the Dutch WUDC CA Team</a></li>
-  	<li><a href="http://hellomotions.com/search?q=Syed+Saddiq%2C+Karin+Merckens&intl=0">Motions set by Dutch WUDC CAs</a></li>
-  </ul>  
-  </p>
+  
+  <table class="table table-striped">
+    <tr>
+     <th>Round</th>
+     <th>Motion</th>
+     <th>Infoslide</th>
+    </tr>
+    @foreach ($wudc2017motions as $motion)
+      <tr>
+        <td> {{ $motion ->Round }} </td>
+        <td> {{ $motion ->Motion }} </td>
+        <td> {{ $motion ->Infoslide }} </td>
+      </tr>
+    @endforeach 
+   </table>
 
   <p><b>Shortcuts to 2007-2016 WUDC motions</b></p>
   <p>
