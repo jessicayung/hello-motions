@@ -40,7 +40,8 @@ Search for motions by keyword, category, Chief Adjudicator or tournament.
 
         <h2>New Features</h2>
           <p><ol>
-            <li><a href="http://hellomotions.com/search?q=Syed+Saddiq%2C+Karin+Merckens%2C+Hyewon+Rho%2C+Michael+Dunn+Goekjian%2C+Omer+Nevo%2C+Jodie+O%27Neill%2C+Veenu+Goswami%2C+Yashodhan+Nair%2C+Ingrid+Rodriguez&intl=0">Motions set by Dutch WUDC CA team</a></li>
+            <li><a href="http://hellomotions.com/search?q=Steven+Ramesh+Rajavinothan%2C+Dan+Lahav%2C+Thomas+Simpson%2C+Helena+Ivanov%2C+Rebecca+Irvine%2C+Olivia+Sundberg&search-motions=">Motions set by Tallinn EUDC CA Team</a></li>
+            <li><a href="eudc-motions">EUDC Motions</a></li>
             <li><a href="wudc-motions">WUDC Motions</a></li>
             <li><a href="random-motion">Random Motion</a></li>
             <li><a href="search">Filter for only international tournaments</a></li>
