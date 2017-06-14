@@ -10,7 +10,15 @@
 
   <h1>WUDC Motions</h1>
 
-  <h3>2017 Dutch WUDC</h3>
+  <p><b>Shortcuts to 2007-2017 WUDC motions</b></p>
+  <p>
+  <ul>
+    <li><a href="#wudc2017">2017</a> <a href="#wudc2016">2016</a> <a href="#wudc2015">2015</a> <a href="#wudc2014">2014</a> <a href="#wudc2013">2013</a> <a href="#wudc2012">2012</a> <a href="#wudc2011">2011</a></li>
+    <li><a href="#wudc2010">2010</a> <a href="#wudc2009">2009</a> <a href="#wudc2008">2008</a> <a href="#wudc2007">2007</a></li>
+  </ul>
+  </p>
+
+  <h3 id="wudc2017">2017 Dutch WUDC</h3>
   <p>CA Team: Syed Saddiq, Karin Merckens, Hyewon Rho, Michael Dunn Goekjian, Omer Nevo, Jodie O'Neill, Veenu Goswami, Yashodhan Nair, Ingrid Rodriguez</p>
   
   <table class="table table-striped">
@@ -27,14 +35,6 @@
       </tr>
     @endforeach 
    </table>
-
-  <p><b>Shortcuts to 2007-2016 WUDC motions</b></p>
-  <p>
-  <ul>
-  	<li><a href="#wudc2016">2016</a> <a href="#wudc2015">2015</a> <a href="#wudc2014">2014</a> <a href="#wudc2013">2013</a> <a href="#wudc2012">2012</a> <a href="#wudc2011">2011</a></li>
-  	<li><a href="#wudc2010">2010</a> <a href="#wudc2009">2009</a> <a href="#wudc2008">2008</a> <a href="#wudc2007">2007</a></li>
-  </ul>
-  </p>
 
   <h3 id="wudc2016">2016 Thessaloniki WUDC</h3>  
   <p>CA Team: Manos Moschopoulos, Arinah Najwa, Chris Bisset, John McKee, Josh Zoffer, Sarah Balakrishnan, Tasneem Elias</p>
