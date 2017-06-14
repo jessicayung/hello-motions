@@ -19,6 +19,15 @@
   </ul>  
   </p>
 
+  <h3>2017 London EUWDC</h3>
+  <p><b>CA Team</b>: Helena Ivanov, Rebecca Meredith, Emilia Carlqvist, Dee Courtney, Stav Singer, Yael Bezalel</p>
+  <p><b>Motions</b>: We'll find out soon! :) For more info visit <a href="https://en-gb.facebook.com/EUWDC/">the London EUWDC Facebook page</a>.</p>
+  <p>
+  <ul>
+    <li><a href="http://hellomotions.com/search?q=Helena+Ivanov%2C+Rebecca+Meredith%2C+Emilia+Carlqvist%2C+Dee+Courtney%2C+Stav+Singer%2C+Yael+Bezalel&search-motions=">Motions set by members of the London EUWDC CA Team</a></li>
+  </ul>  
+  </p>
+
   <p><b>Shortcuts to 2012-2016 EUDC motions</b></p>
   <p>
   <ul>
