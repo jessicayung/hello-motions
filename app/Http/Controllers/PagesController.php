@@ -230,16 +230,6 @@ class PagesController extends Controller
 
 	}
 
-	public function eudcmotions() {
-
-		$eudcmotions = DB::table('motions')
-				->having('Tournament', 'LIKE', "EUDC")
-				->select('Date', 'Round_Code', 'Round', 'Motion', 'Tournament')
-				->orderby('Date', 'desc')
-				->orderby('Round_Code', 'asc')
-				->get();
-        return view('pages.eudcmotions')->with('eudcmotions', $eudcmotions);
-
 	}
 
 	public function wudcmotions() {
@@ -322,5 +312,100 @@ class PagesController extends Controller
         return view('pages.wudc-motions')->with($wudcmotions);
 
 	}
+
+	public function eudcmotions() {
+
+		$eudc2016motions = DB::table('motions')
+				->where('Tournament', 'LIKE', '%eudc 2016')
+				->select('Round_Code', 'Round', 'Motion', 'Infoslide')
+				->orderby('Round_Code', 'asc')
+				->get();
+
+        $eudc2015motions = DB::table('motions')
+				->where('Tournament', 'LIKE', '%eudc 2015')
+				->select('Round_Code', 'Round', 'Motion', 'Infoslide')
+				->orderby('Round_Code', 'asc')
+				->get();
+
+		$eudc2014motions = DB::table('motions')
+				->where('Tournament', 'LIKE', '%eudc 2014')
+				->select('Round_Code', 'Round', 'Motion', 'Infoslide')
+				->orderby('Round_Code', 'asc')
+				->get();
+
+		$eudc2013motions = DB::table('motions')
+				->where('Tournament', 'LIKE', '%eudc 2013')
+				->select('Round_Code', 'Round', 'Motion', 'Infoslide')
+				->orderby('Round_Code', 'asc')
+				->get();
+
+		$eudc2012motions = DB::table('motions')
+				->where('Tournament', 'LIKE', '%eudc 2012')
+				->select('Round_Code', 'Round', 'Motion', 'Infoslide')
+				->orderby('Round_Code', 'asc')
+				->get();
+		/*
+		$eudc2011motions = DB::table('motions')
+				->where('Tournament', 'LIKE', '%eudc 2011')
+				->select('Round_Code', 'Round', 'Motion', 'Infoslide')
+				->orderby('Round_Code', 'asc')
+				->get();
+
+		$eudc2010motions = DB::table('motions')
+				->where('Tournament', 'LIKE', '%eudc 2010')
+				->select('Round_Code', 'Round', 'Motion', 'Infoslide')
+				->orderby('Round_Code', 'asc')
+				->get();
+
+		$eudc2009motions = DB::table('motions')
+				->where('Tournament', 'LIKE', '%eudc 2009')
+				->select('Round_Code', 'Round', 'Motion', 'Infoslide')
+				->orderby('Round_Code', 'asc')
+				->get();
+
+		$eudc2008motions = DB::table('motions')
+				->where('Tournament', 'LIKE', '%eudc 2008')
+				->select('Round_Code', 'Round', 'Motion', 'Infoslide')
+				->orderby('Round_Code', 'asc')
+				->get();
+
+		$eudc2007motions = DB::table('motions')
+				->where('Tournament', 'LIKE', '%eudc 2007')
+				->select('Round_Code', 'Round', 'Motion', 'Infoslide')
+				->orderby('Round_Code', 'asc')
+				->get();
+		*/
+		$eudcmotions = array(
+			'eudc2016motions' => $eudc2016motions,
+			'eudc2015motions' => $eudc2015motions,
+			'eudc2014motions' => $eudc2014motions,
+			'eudc2013motions' => $eudc2013motions,
+			'eudc2012motions' => $eudc2012motions,
+			/*
+			'eudc2011motions' => $eudc2011motions,
+			'eudc2010motions' => $eudc2010motions,
+			'eudc2009motions' => $eudc2009motions,
+			'eudc2008motions' => $eudc2008motions,
+			'eudc2007motions' => $eudc2007motions,
+			*/
+			);
+
+		// return view('pages.eudc-motions')->with('eudc2016motions', $eudc2016motions);
+
+        return view('pages.eudc-motions')->with($eudcmotions);
+
+	}
+	/*
+	public function eudcmotions() {
+
+		$eudcmotions = DB::table('motions')
+				->having('Tournament', 'LIKE', "EUDC")
+				->select('Date', 'Round_Code', 'Round', 'Motion', 'Tournament')
+				->orderby('Date', 'desc')
+				->orderby('Round_Code', 'asc')
+				->get();
+        return view('pages.eudcmotions')->with('eudcmotions', $eudcmotions);
+    }
+    */
 
 }

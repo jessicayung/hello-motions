@@ -49,6 +49,8 @@ Route::get('random-motion', 'PagesController@randommotion');
 
 Route::get('wudc-motions', 'PagesController@wudcmotions');
 
+Route::get('eudc-motions', 'PagesController@eudcmotions');
+
 /* Pages not being used at the moment
 
 Route::get('addmotions', 'PagesController@addmotions');
