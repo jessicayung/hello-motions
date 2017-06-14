@@ -230,8 +230,6 @@ class PagesController extends Controller
 
 	}
 
-	}
-
 	public function wudcmotions() {
 
 		$wudc2016motions = DB::table('motions')
