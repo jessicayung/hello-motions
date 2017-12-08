@@ -10,7 +10,16 @@
 
   <h1>WUDC Motions</h1>
 
-  <p><b>Shortcuts to 2007-2017 WUDC motions</b></p>
+  <h3>2018 Mexico WUDC</h3>
+  <p><b>CA Team</b>: Michael Dunn Goekjian, Mifzal Mohammed, Emma Johnstone, Sella Nevo, Wasifa Noshin, Steven Penner, Paul Smith, Evan Lynyak, Nicholas Ferezin</p>
+  <p><b>Motions</b>: We'll find out soon! :) For more info visit <a href="http://www.wudc2018.mx/">the Mexico WUDC website</a>.</p>
+  <p>
+  <ul>
+    <li><a href="http://hellomotions.com/search?q=Michael+Dunn+Goekjian%2C+Mifzal+Mohammed%2C+Emma+Johnstone%2C+Sella+Nevo%2C+Wasifa+Noshin%2C+Steven+Penner%2C+Paul+Smith%2C+Evan+Lynyak%2C+Nicholas+Ferezin&search-motions=">Motions set by members of the Mexico WUDC CA Team</a></li>
+  </ul>  
+  </p>
+
+  <h3>Shortcuts to 2007-2017 WUDC motions</h3>
   <p>
   <ul>
     <li><a href="#wudc2017">2017</a> <a href="#wudc2016">2016</a> <a href="#wudc2015">2015</a> <a href="#wudc2014">2014</a> <a href="#wudc2013">2013</a> <a href="#wudc2012">2012</a> <a href="#wudc2011">2011</a></li>
