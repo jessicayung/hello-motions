@@ -10,16 +10,15 @@
 
   <h1>EUDC Motions</h1>
 
-  <h3>2017 Tallinn EUDC</h3>
-  <p><b>CA Team</b>: Steven Ramesh Rajavinothan, Helena Ivanov, Dan Lahav, Rebecca Irvine, Thomas Simpson, Olivia Sundberg</p>
-  <p><b>Motions</b>: We'll find out soon! :) For more info visit <a href="http://tallinneudc.com/">the Tallinn EUDC website</a>.</p>
+  <h3>Shortcuts to 2012-2017 EUDC motions</h3>
   <p>
   <ul>
-  	<li><a href="http://hellomotions.com/search?q=Steven+Ramesh+Rajavinothan%2C+Dan+Lahav%2C+Thomas+Simpson%2C+Helena+Ivanov%2C+Rebecca+Irvine%2C+Olivia+Sundberg&search-motions=">Motions set by members of the Tallinn EUDC CA Team</a></li>
-  </ul>  
+  	<li><a href="#eudc2017">2017</a><a href="#eudc2016">2016</a> <a href="#eudc2015">2015</a> <a href="#eudc2014">2014</a> <a href="#eudc2013">2013</a> <a href="#eudc2012">2012</a> <!--<a href="#eudc2011">2011</a>--></li>
+  	<!--<li><a href="#eudc2010">2010</a> <a href="#eudc2009">2009</a> <a href="#eudc2008">2008</a> <a href="#eudc2007">2007</a></li>-->
+  </ul>
   </p>
 
-  <h3>2017 London EUWDC</h3>
+  <h3>2018 London EUWDC</h3>
   <p><b>CA Team</b>: Helena Ivanov, Rebecca Meredith, Emilia Carlqvist, Dee Courtney, Stav Singer, Yael Bezalel</p>
   <p><b>Motions</b>: We'll find out soon! :) For more info visit <a href="https://en-gb.facebook.com/EUWDC/">the London EUWDC Facebook page</a>.</p>
   <p>
@@ -28,13 +27,23 @@
   </ul>  
   </p>
 
-  <p><b>Shortcuts to 2012-2016 EUDC motions</b></p>
-  <p>
-  <ul>
-  	<li><a href="#eudc2016">2016</a> <a href="#eudc2015">2015</a> <a href="#eudc2014">2014</a> <a href="#eudc2013">2013</a> <a href="#eudc2012">2012</a> <!--<a href="#eudc2011">2011</a>--></li>
-  	<!--<li><a href="#eudc2010">2010</a> <a href="#eudc2009">2009</a> <a href="#eudc2008">2008</a> <a href="#eudc2007">2007</a></li>-->
-  </ul>
-  </p>
+  <h3 id="eudc2017">2017 Tallinn EUDC</h3>  
+  <p>CA Team: Steven Ramesh Rajavinothan, Helena Ivanov, Dan Lahav, Rebecca Irvine, Thomas Simpson, Olivia Sundberg</p>
+ 
+  <table class="table table-striped">
+    <tr>
+     <th>Round</th>
+     <th>Motion</th>
+     <th>Infoslide</th>
+    </tr>
+    @foreach ($eudc2017motions as $motion)
+      <tr>
+        <td> {{ $motion ->Round }} </td>
+        <td> {{ $motion ->Motion }} </td>
+        <td> {{ $motion ->Infoslide }} </td>
+      </tr>
+    @endforeach 
+   </table>
 
   <h3 id="eudc2016">2016 Warsaw EUDC</h3>  
   <p>CA Team: Emilia Carlqvist, Harish Natarajan, Adam Hawksbee, Helena Ivanov, Radu Cotarcea, Yael Bezalel</p>

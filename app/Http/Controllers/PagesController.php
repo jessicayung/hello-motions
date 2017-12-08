@@ -320,6 +320,12 @@ class PagesController extends Controller
 
 	public function eudcmotions() {
 
+		$eudc2017motions = DB::table('motions')
+				->where('Tournament', 'LIKE', '%eudc 2017')
+				->select('Round_Code', 'Round', 'Motion', 'Infoslide')
+				->orderby('Round_Code', 'asc')
+				->get();
+
 		$eudc2016motions = DB::table('motions')
 				->where('Tournament', 'LIKE', '%eudc 2016')
 				->select('Round_Code', 'Round', 'Motion', 'Infoslide')
