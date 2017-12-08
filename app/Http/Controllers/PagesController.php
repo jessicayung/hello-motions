@@ -387,6 +387,7 @@ class PagesController extends Controller
 				->get();
 		*/
 		$eudcmotions = array(
+			'eudc2017motions' => $eudc2017motions,
 			'eudc2016motions' => $eudc2016motions,
 			'eudc2015motions' => $eudc2015motions,
 			'eudc2014motions' => $eudc2014motions,
