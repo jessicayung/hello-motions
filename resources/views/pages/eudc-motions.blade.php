@@ -13,7 +13,7 @@
   <h3>Shortcuts to 2012-2017 EUDC motions</h3>
   <p>
   <ul>
-  	<li><a href="#eudc2017">2017</a><a href="#eudc2016">2016</a> <a href="#eudc2015">2015</a> <a href="#eudc2014">2014</a> <a href="#eudc2013">2013</a> <a href="#eudc2012">2012</a> <!--<a href="#eudc2011">2011</a>--></li>
+  	<li><a href="#eudc2017">2017</a> <a href="#eudc2016">2016</a> <a href="#eudc2015">2015</a> <a href="#eudc2014">2014</a> <a href="#eudc2013">2013</a> <a href="#eudc2012">2012</a> <!--<a href="#eudc2011">2011</a>--></li>
   	<!--<li><a href="#eudc2010">2010</a> <a href="#eudc2009">2009</a> <a href="#eudc2008">2008</a> <a href="#eudc2007">2007</a></li>-->
   </ul>
   </p>
