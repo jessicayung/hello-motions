@@ -81,6 +81,7 @@ class PagesController extends Controller
 				-> orwhere('Topic_Area_1', 'LIKE', '%' .$query.'%')
 				-> orwhere('Topic_Area_2', 'LIKE', '%' .$query.'%')
 				-> orwhere('Topic_Area_3', 'LIKE', '%' .$query.'%')
+				// -> groupby('Motion')
 				-> orderby('Date', 'desc')
 				-> orderby('Tournament', 'asc')
 				-> orderby('Round_Code', 'asc')
@@ -172,6 +173,34 @@ class PagesController extends Controller
 				->orderby('Round_Code', 'asc')
 				->get();
         return view('pages.motions2015-mobile')->with('motions2015', $motions2015);
+
+	}
+
+	public function motions2017() {
+			
+		$motions2017 = DB::table('motions')
+				->having('Date','>=',20170101)
+				->having('Date','<',20180101)
+				->select('Date', 'Round_Code', 'Round', 'Motion', 'Tournament')
+				->orderby('Date', 'desc')
+				->orderby('Tournament', 'asc')
+				->orderby('Round_Code', 'asc')
+				->get();
+        return view('pages.motions2017')->with('motions2017', $motions2017);
+
+	}
+
+	public function motions2017mobile() {
+		
+		$motions2017 = DB::table('motions')
+				->having('Date','>=',20170101)
+				->having('Date','<',20180101)
+				->select('Date', 'Round_Code', 'Round', 'Motion', 'Tournament')
+				->orderby('Date', 'desc')
+				->orderby('Tournament', 'asc')
+				->orderby('Round_Code', 'asc')
+				->get();
+        return view('pages.motions2017-mobile')->with('motions2017', $motions2017);
 
 	}
 
