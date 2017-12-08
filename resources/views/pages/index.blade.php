@@ -44,7 +44,7 @@ Search for motions by keyword, category, Chief Adjudicator or tournament.
             <li><a href="wudc-motions">WUDC Motions</a></li>
             <li><a href="eudc-motions">EUDC Motions</a></li>
             <li><a href="random-motion">Random Motion</a></li>
-            <li><a href="search">Filter for only international tournaments</a></li>
+            <li><a href="search?q=&intl=1">Filter for only international tournaments</a></li>
           </ol></p>
         </div>
 
