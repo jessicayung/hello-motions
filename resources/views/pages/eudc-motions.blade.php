@@ -10,22 +10,32 @@
 
   <h1>EUDC Motions</h1>
 
-  <h3>Shortcuts to 2012-2017 EUDC motions</h3>
+  <h3>Shortcuts to 2012-2018 EUDC motions</h3>
   <p>
   <ul>
-  	<li><a href="#eudc2017">2017</a> <a href="#eudc2016">2016</a> <a href="#eudc2015">2015</a> <a href="#eudc2014">2014</a> <a href="#eudc2013">2013</a> <a href="#eudc2012">2012</a> <!--<a href="#eudc2011">2011</a>--></li>
+  	<li><a href="#eudc2018">2018</a> <a href="#eudc2017">2017</a> <a href="#eudc2016">2016</a> <a href="#eudc2015">2015</a> <a href="#eudc2014">2014</a> <a href="#eudc2013">2013</a> <a href="#eudc2012">2012</a> <!--<a href="#eudc2011">2011</a>--></li>
   	<!--<li><a href="#eudc2010">2010</a> <a href="#eudc2009">2009</a> <a href="#eudc2008">2008</a> <a href="#eudc2007">2007</a></li>-->
   </ul>
   </p>
 
-  <h3>2018 London EUWDC</h3>
-  <p><b>CA Team</b>: Helena Ivanov, Rebecca Meredith, Emilia Carlqvist, Dee Courtney, Stav Singer, Yael Bezalel</p>
-  <p><b>Motions</b>: We'll find out soon! :) For more info visit <a href="https://en-gb.facebook.com/EUWDC/">the London EUWDC Facebook page</a>.</p>
-  <p>
-  <ul>
-    <li><a href="http://hellomotions.com/search?q=Helena+Ivanov%2C+Rebecca+Meredith%2C+Emilia+Carlqvist%2C+Dee+Courtney%2C+Stav+Singer%2C+Yael+Bezalel&search-motions=">Motions set by members of the London EUWDC CA Team</a></li>
-  </ul>  
-  </p>
+  <h3 id="eudc2018">2018 Novi Sad EUDC</h3>  
+  <p>CA Team: Duncan Crowe, Olivia Sundberg Diez, Daan Welling, Dee Courtney, Gigi Gil, Ilija Ivanisevic, Yair Har-Oz</p>
+ 
+  <table class="table table-striped">
+    <tr>
+     <th>Round</th>
+     <th>Motion</th>
+     <th>Infoslide</th>
+    </tr>
+    @foreach ($eudc2018motions as $motion)
+      <tr>
+        <td> {{ $motion ->Round }} </td>
+        <td> {{ $motion ->Motion }} </td>
+        <td> {{ $motion ->Infoslide }} </td>
+      </tr>
+    @endforeach 
+   </table>
+
 
   <h3 id="eudc2017">2017 Tallinn EUDC</h3>  
   <p>CA Team: Steven Ramesh Rajavinothan, Helena Ivanov, Dan Lahav, Rebecca Irvine, Thomas Simpson, Olivia Sundberg</p>
