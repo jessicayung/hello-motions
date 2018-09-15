@@ -88,6 +88,7 @@ Search for motions by keyword, category, Chief Adjudicator or tournament.
           @endforeach
         </table>
 
+        <p><a href="motions2018"> Show Full List for 2018</a></p>
         <p><a href="motions2017"> Show Full List for 2017</a></p>
         <p><a href="motions2016"> Show Full List for 2016</a></p>
         <p><a href="motions2015"> Show Full List for 2015</a></p>
