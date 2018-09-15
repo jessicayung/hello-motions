@@ -287,7 +287,7 @@ class PagesController extends Controller
 					->select('Date', 'Round_Code', 'Round', 'Motion', 'Tournament', 'Infoslide')
 					->get();
 
-			array_push($tenrandommotions, $randommotion);
+			$tenrandommotions = array_merge($tenrandommotions, $randommotion);
 
 		};
 
