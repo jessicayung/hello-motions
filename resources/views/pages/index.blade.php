@@ -53,7 +53,7 @@ Search for motions by keyword, category, Chief Adjudicator or tournament.
           <p>
             <ul>
               <li>We need <b>your help</b> to make sure these motions are comprehensive and up-to-date. <a href="https://docs.google.com/forms/d/14v5RuG6NHjDySrLN8zJC97-e761sRBivhOoPxjt0K6I/viewform?c=0&w=1">Tell us about motions from tournaments here.</a> <a href="missingmotions">Here is a list of motions we are missing.</a></li>
-              <li><a href="mailto:jy357@cam.ac.uk">Contact me directly</a> if you have other questions / suggestions. Thanks a lot!</li>
+              <li><a href="mailto:j.yung357@gmail.com">Contact me directly</a> if you have other questions or suggestions. Thanks a lot!</li>
             </ul>
           </p>
         </div>
