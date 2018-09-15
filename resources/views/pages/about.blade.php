@@ -127,6 +127,12 @@
         <table class="table table-striped">
           <tr><th>Date</th><th>Notes<th></tr>
 
+          <tr><td>15 Sept 2018</td><td><ul>
+            <li>Added <a href="/ten-random-motions">Ten Random Motions</a> page: you can now load ten random motions at a time. Thanks to Assaph Hanany for prompting this. I understand that the random motions generated are not always great (or debatable) and think that adding the option to rate motions seems like a good idea, but think that will take a while to implement (if it happens at all). I have thus added this page to try to improve the experience for now. It's actually something I've wanted to do for over 2 years, so I'm very happy it's up. :)</li>
+            <li>Added 2018 WUDC and EUDC motions</li>
+            <li>Added 2019 Cape Town WUDC CA list.</li>
+          </ul></td></tr>
+
           <tr><td>23 May 2017</td><td><ul>
             <li>Over 500 motions have been labelled with category tags.</li>
             <li>Over 4250 motions in database.</li>
