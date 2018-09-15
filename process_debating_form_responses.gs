@@ -6,13 +6,14 @@ var tgt_sheet = form_responses_ss.getSheetByName("target_sheet");
 var sheet = tgt_sheet;
 
 motion_col = 19;
-motion_copied_to_col = 21;
+motion_copied_to_col = 20;
 num_tournament_info_columns = 16;
 
 var responses_start_row = 58; // TODO: Edit as needed
-var responses_end_row = 76; // TODO: Edit as needed
+var responses_end_row = 75; // TODO: Edit as needed
 
-var row_end = 146; // TODO: edit as required (last row with a motion in it in `target_sheets`)
+// prev 171
+var row_end = 100; // TODO: edit as required (last row with a motion in it in `target_sheets`)
 
 
 function testFn() {  
@@ -46,7 +47,6 @@ function stepTwo() {
   shiftCAs(2, row_end, sheet);
   fillBlankTournamentInfo(2, row_end, sheet);
   deleteAllMotionsRowPerTournament(2, row_end, sheet);
-  // shiftMotions(2, row_end, sheet);
 }
 
 // TODO: need to make sure motions are in format Round: Motion or Round: Infoslide: ---, Motion: ---.
@@ -60,17 +60,15 @@ function stepThree() {
 function stepFour() {
   // row below sometimes throws error bc row out of bounds by the time it's 
   // deleted some
-  // removeBlankRows(19, 2, row_end, sheet);
+  removeBlankRows(19, 2, row_end, sheet);
   clearRoundMotionTextCell(2, row_end, sheet);
   parseRoundRow(2, row_end, sheet);
 }
 
 // TODO: CHECK cells with highlighted (yellow) backgrounds before continuing. i.e. Round_Code and Round (correct Round value in RoundCode column)
 
-row_end = 112;
-
 function stepFive() {
-  // fillRoundCodes(2, row_end, sheet);
+  fillRoundCodes(2, row_end, sheet);
   changeDateFormat(2, row_end, sheet);
 }
 
@@ -96,7 +94,7 @@ function rearrangeColumns(rows_start, rows_end) {
     5: 3, // E: C Country
     6: 2, // F: B Circuit
     7: 16, // G: P Event Link
-    8: 21 // H: U  Motions (in Topic_Area_1 column)
+    8: 20 // H: T  Motions (in Topic_Area_1 column)
   }
   // for row
   for (i = 0; i < rows_to_edit; i++) {
@@ -256,9 +254,10 @@ function fillBlankTournamentInfo(row_start, row_end, sheet) {
 // Delete rows with all motions in a tournament
 function deleteAllMotionsRowPerTournament(row_start, row_end, sheet) {
   for (i = row_start; i < row_end + 1; i++) {
-    motions_barrage = sheet.getRange(i, motion_copied_to_col+1);
+    motions_barrage = sheet.getRange(i, motion_copied_to_col);
     if (!(motions_barrage.isBlank())) {
-      sheet.deleteRow(i); 
+      sheet.deleteRow(i);
+      i -= 1;
     }
   }
 }
@@ -324,11 +323,14 @@ function splitMotionsWithInfoslides(row_start, row_end, sheet) {
 // IMPORTANT: Copy and paste sheet as values before continuing
 
 function removeBlankRows(col, row_start, row_end, sheet) {
-  for (i = row_start; i < row_end + 1; i++) {
+  i = row_start
+  for (j = row_start; j < row_end + 1; j++) {
+    i += 1;
     motion_cell = sheet.getRange(i, col);
     if (motion_cell) {
       if (motion_cell.isBlank()) {
         sheet.deleteRow(i);
+        i -= 1;
       }
     }
   }
