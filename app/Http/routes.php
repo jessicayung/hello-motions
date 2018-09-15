@@ -47,6 +47,10 @@ Route::get('motions2017', 'PagesController@motions2017');
 
 Route::get('motions2017-mobile', 'PagesController@motions2017mobile');
 
+Route::get('motions2018', 'PagesController@motions2018');
+
+Route::get('motions2018-mobile', 'PagesController@motions2018mobile');
+
 Route::get('missingmotions', 'PagesController@missingmotions');
 
 Route::get('random-motion', 'PagesController@randommotion');
