@@ -176,6 +176,34 @@ class PagesController extends Controller
 
 	}
 
+	public function motions2016() {
+			
+		$motions2016 = DB::table('motions')
+				->having('Date','>=',20160101)
+				->having('Date','<',20170101)
+				->select('Date', 'Round_Code', 'Round', 'Motion', 'Tournament')
+				->orderby('Date', 'desc')
+				->orderby('Tournament', 'asc')
+				->orderby('Round_Code', 'asc')
+				->get();
+        return view('pages.motions2016')->with('motions2016', $motions2016);
+
+	}
+
+	public function motions2016mobile() {
+		
+		$motions2016 = DB::table('motions')
+				->having('Date','>=',20160101)
+				->having('Date','<',20170101)
+				->select('Date', 'Round_Code', 'Round', 'Motion', 'Tournament')
+				->orderby('Date', 'desc')
+				->orderby('Tournament', 'asc')
+				->orderby('Round_Code', 'asc')
+				->get();
+        return view('pages.motions2016-mobile')->with('motions2016', $motions2016);
+
+	}
+
 	public function motions2017() {
 			
 		$motions2017 = DB::table('motions')
@@ -204,31 +232,31 @@ class PagesController extends Controller
 
 	}
 
-	public function motions2016() {
+	public function motions2018() {
 			
-		$motions2016 = DB::table('motions')
-				->having('Date','>=',20160101)
-				->having('Date','<',20170101)
+		$motions2017 = DB::table('motions')
+				->having('Date','>=',20180101)
+				->having('Date','<',20190101)
 				->select('Date', 'Round_Code', 'Round', 'Motion', 'Tournament')
 				->orderby('Date', 'desc')
 				->orderby('Tournament', 'asc')
 				->orderby('Round_Code', 'asc')
 				->get();
-        return view('pages.motions2016')->with('motions2016', $motions2016);
+        return view('pages.motions2018')->with('motions2018', $motions2018);
 
 	}
 
-	public function motions2016mobile() {
+	public function motions2018mobile() {
 		
-		$motions2016 = DB::table('motions')
-				->having('Date','>=',20160101)
-				->having('Date','<',20170101)
+		$motions2017 = DB::table('motions')
+				->having('Date','>=',20180101)
+				->having('Date','<',20190101)
 				->select('Date', 'Round_Code', 'Round', 'Motion', 'Tournament')
 				->orderby('Date', 'desc')
 				->orderby('Tournament', 'asc')
 				->orderby('Round_Code', 'asc')
 				->get();
-        return view('pages.motions2016-mobile')->with('motions2016', $motions2016);
+        return view('pages.motions2018-mobile')->with('motions2018', $motions2018);
 
 	}
 
@@ -260,6 +288,12 @@ class PagesController extends Controller
 	}
 
 	public function wudcmotions() {
+
+		$wudc2018motions = DB::table('motions')
+				->where('Tournament', 'LIKE', '%WUDC 2018')
+				->select('Round_Code', 'Round', 'Motion', 'Infoslide')
+				->orderby('Round_Code', 'asc')
+				->get();
 
 		$wudc2017motions = DB::table('motions')
 				->where('Tournament', 'LIKE', '%WUDC 2017')
@@ -328,6 +362,7 @@ class PagesController extends Controller
 				->get();
 
 		$wudcmotions = array(
+			'wudc2018motions' => $wudc2018motions,
 			'wudc2017motions' => $wudc2017motions,
 			'wudc2016motions' => $wudc2016motions,
 			'wudc2015motions' => $wudc2015motions,
@@ -348,6 +383,12 @@ class PagesController extends Controller
 	}
 
 	public function eudcmotions() {
+
+		$eudc2018motions = DB::table('motions')
+				->where('Tournament', 'LIKE', '%eudc 2018')
+				->select('Round_Code', 'Round', 'Motion', 'Infoslide')
+				->orderby('Round_Code', 'asc')
+				->get();
 
 		$eudc2017motions = DB::table('motions')
 				->where('Tournament', 'LIKE', '%eudc 2017')
@@ -416,6 +457,7 @@ class PagesController extends Controller
 				->get();
 		*/
 		$eudcmotions = array(
+			'eudc2018motions' => $eudc2018motions,
 			'eudc2017motions' => $eudc2017motions,
 			'eudc2016motions' => $eudc2016motions,
 			'eudc2015motions' => $eudc2015motions,
