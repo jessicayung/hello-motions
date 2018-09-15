@@ -263,7 +263,7 @@ class PagesController extends Controller
 	public function randommotion() {
 		
 		$total = DB::table('motions')->count();
-		$randomindex = rand(2136,$total - 1);
+		$randomindex = rand(1,$total - 1);
 		$randommotion = DB::table('motions')
 					->skip($randomindex)
 					->take(1)
@@ -271,6 +271,27 @@ class PagesController extends Controller
 					->get();
 
         return view('pages.random-motion')->with('randommotions', $randommotion);
+
+	}
+
+	public function tenrandommotions() {
+		
+		$total = DB::table('motions')->count();
+		$tenrandommotions = array();
+		for ($i = 0; $i < 10; $i++) {
+			$randomindex = rand(1,$total-1);
+
+			$randommotion = DB::table('motions')
+					->skip($randomindex)
+					->take(1)
+					->select('Date', 'Round_Code', 'Round', 'Motion', 'Tournament', 'Infoslide')
+					->get();
+
+			array_push($tenrandommotions, $randommotion);
+
+		};
+
+        return view('pages.ten-random-motions')->with('tenrandommotions', $tenrandommotions);
 
 	}
 

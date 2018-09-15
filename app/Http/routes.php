@@ -55,6 +55,8 @@ Route::get('missingmotions', 'PagesController@missingmotions');
 
 Route::get('random-motion', 'PagesController@randommotion');
 
+Route::get('ten-random-motions', 'PagesController@tenrandommotions');
+
 Route::get('wudc-motions', 'PagesController@wudcmotions');
 
 Route::get('eudc-motions', 'PagesController@eudcmotions');
