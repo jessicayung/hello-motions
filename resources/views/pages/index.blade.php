@@ -40,6 +40,7 @@ Search for motions by keyword, category, Chief Adjudicator or tournament.
 
         <h2>New Features</h2>
           <p><ol>
+            <li><a href="ten-random-motions">Ten Random Motions</a></li>
             <li><a href="http://hellomotions.com/search?q=Ameera+Natasha+Moore%2C+Fanele+Mashwama%2C+Dan+Lahav%2C+Elisha+Kunene%2C+Enting+Lee%2C+Raffy+Marshall%2C+Steph+White&search-motions=">Motions set by Cape Town WUDC CA Team</a></li>
             <li><a href="wudc-motions">WUDC Motions</a></li>
             <li><a href="eudc-motions">EUDC Motions</a></li>

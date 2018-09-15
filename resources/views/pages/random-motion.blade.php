@@ -10,6 +10,8 @@
 
 	<h1>Random Motion</h1>
 
+	<p><a href="/ten-random-motions">Ten Random Motions</a></p>
+
 		@foreach ($randommotions as $motion) 
 		<div class="col-md-6">
 		<div class="panel panel-default">
