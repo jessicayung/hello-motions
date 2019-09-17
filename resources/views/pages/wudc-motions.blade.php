@@ -10,22 +10,41 @@
 
   <h1>WUDC Motions</h1>
 
-  <h3>2019 Cape Town WUDC</h3>
-  <p><b>CA Team</b>: Ameera Natasha Moore, Fanele Mashwama, Dan Lahav, Elisha Kunene, Enting Lee, Raffy Marshall, Steph White</p>
-  <p><b>Motions</b>: We'll find out soon! :) For more info visit <a href="http://www.wudc2019.uct.ac.za/">the Cape Town WUDC website</a> or <a href="https://en-gb.facebook.com/capetown2019/">their Facebook page</a>.</p>
+  <h3>2020 Thailand WUDC</h3>
+  <p><b>CA Team</b>: Ashish Kumar, Jasmine Ho, Michael Dunn-Goekjian, Ayal Hayut-Man, Archie Hall, Mayu Arimoto, Lucia Arce, Julio Meyer, Evan Lynyak, Cliff Simataa, Jessica Musulin</p>
+
+  <p><b>Motions</b>: We'll find out soon! :) For more info visit <a href="https://www.facebook.com/THAILANDWORLDS/">the Thailand WUDC facebook page</a>.</p>
   <p>
   <ul>
-    <li><a href="http://hellomotions.com/search?q=Ameera+Natasha+Moore%2C+Fanele+Mashwama%2C+Dan+Lahav%2C+Elisha+Kunene%2C+Enting+Lee%2C+Raffy+Marshall%2C+Steph+White&search-motions=">Motions set by members of the Mexico WUDC CA Team</a></li>
+    <li><a href="http://hellomotions.com/search?q=Ashish+Kumar%2C+Jasmine+Ho%2C+Michael+Dunn-Goekjian%2C+Ayal+Hayut-Man%2C+Archie+Hall%2C+Mayu+Arimoto%2C+Lucia+Arce%2C+Julio+Meyer%2C+Evan+Lynyak%2C+Cliff+Simataa%2C+Jessica+Musulin&search-motions=">Motions set by members of the Thailand WUDC CA Team</a></li>
   </ul>  
   </p>
 
-  <h3>Shortcuts to 2007-2018 WUDC motions</h3>
+  <h3>Shortcuts to 2007-2019 WUDC motions</h3>
   <p>
   <ul>
-    <li><a href="#wudc2018">2018</a> <a href="#wudc2017">2017</a> <a href="#wudc2016">2016</a> <a href="#wudc2015">2015</a> <a href="#wudc2014">2014</a> <a href="#wudc2013">2013</a> <a href="#wudc2012">2012</a> <a href="#wudc2011">2011</a></li>
+    <li><a href="#wudc2019">2019</a>, <a href="#wudc2018">2018</a> <a href="#wudc2017">2017</a> <a href="#wudc2016">2016</a> <a href="#wudc2015">2015</a> <a href="#wudc2014">2014</a> <a href="#wudc2013">2013</a> <a href="#wudc2012">2012</a> <a href="#wudc2011">2011</a></li>
     <li><a href="#wudc2010">2010</a> <a href="#wudc2009">2009</a> <a href="#wudc2008">2008</a> <a href="#wudc2007">2007</a></li>
   </ul>
   </p>
+
+  <h3 id="wudc2019">2019 Cape Town WUDC</h3>
+  <p><b>CA Team</b>: Ameera Natasha Moore, Fanele Mashwama, Dan Lahav, Elisha Kunene, Enting Lee, Raffy Marshall, Steph White</p>
+
+  <table class="table table-striped">
+    <tr>
+     <th>Round</th>
+     <th>Motion</th>
+     <th>Infoslide</th>
+    </tr>
+    @foreach ($wudc2019motions as $motion)
+      <tr>
+        <td> {{ $motion ->Round }} </td>
+        <td> {{ $motion ->Motion }} </td>
+        <td> {{ $motion ->Infoslide }} </td>
+      </tr>
+    @endforeach 
+   </table>
 
   <h3 id="wudc2018">2018 Mexico WUDC</h3>
   <p>CA Team: Michael Dunn Goekjian, Mifzal Mohammed, Emma Johnstone, Sella Nevo, Wasifa Noshin, Steven Penner, Paul Smith, Evan Lynyak, Nicholas Ferezin</p>
