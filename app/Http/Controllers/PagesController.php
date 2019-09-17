@@ -440,6 +440,12 @@ class PagesController extends Controller
 
 	public function eudcmotions() {
 
+		$eudc2019motions = DB::table('motions')
+				->where('Tournament', 'LIKE', '%eudc 2019')
+				->select('Round_Code', 'Round', 'Motion', 'Infoslide')
+				->orderby('Round_Code', 'asc')
+				->get();
+
 		$eudc2018motions = DB::table('motions')
 				->where('Tournament', 'LIKE', '%eudc 2018')
 				->select('Round_Code', 'Round', 'Motion', 'Infoslide')
@@ -513,6 +519,7 @@ class PagesController extends Controller
 				->get();
 		*/
 		$eudcmotions = array(
+			'eudc2019motions' => $eudc2019motions,
 			'eudc2018motions' => $eudc2018motions,
 			'eudc2017motions' => $eudc2017motions,
 			'eudc2016motions' => $eudc2016motions,
