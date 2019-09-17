@@ -23,7 +23,7 @@
   <h3>Shortcuts to 2007-2019 WUDC motions</h3>
   <p>
   <ul>
-    <li><a href="#wudc2019">2019</a>, <a href="#wudc2018">2018</a> <a href="#wudc2017">2017</a> <a href="#wudc2016">2016</a> <a href="#wudc2015">2015</a> <a href="#wudc2014">2014</a> <a href="#wudc2013">2013</a> <a href="#wudc2012">2012</a> <a href="#wudc2011">2011</a></li>
+    <li><a href="#wudc2019">2019</a> <a href="#wudc2018">2018</a> <a href="#wudc2017">2017</a> <a href="#wudc2016">2016</a> <a href="#wudc2015">2015</a> <a href="#wudc2014">2014</a> <a href="#wudc2013">2013</a> <a href="#wudc2012">2012</a> <a href="#wudc2011">2011</a></li>
     <li><a href="#wudc2010">2010</a> <a href="#wudc2009">2009</a> <a href="#wudc2008">2008</a> <a href="#wudc2007">2007</a></li>
   </ul>
   </p>
@@ -47,7 +47,7 @@
    </table>
 
   <h3 id="wudc2018">2018 Mexico WUDC</h3>
-  <p>CA Team: Michael Dunn Goekjian, Mifzal Mohammed, Emma Johnstone, Sella Nevo, Wasifa Noshin, Steven Penner, Paul Smith, Evan Lynyak, Nicholas Ferezin</p>
+  <p><b>CA Team</b>: Michael Dunn Goekjian, Mifzal Mohammed, Emma Johnstone, Sella Nevo, Wasifa Noshin, Steven Penner, Paul Smith, Evan Lynyak, Nicholas Ferezin</p>
   
   <table class="table table-striped">
     <tr>
@@ -65,7 +65,7 @@
    </table>
 
   <h3 id="wudc2017">2017 Dutch WUDC</h3>
-  <p>CA Team: Syed Saddiq, Karin Merckens, Hyewon Rho, Michael Dunn Goekjian, Omer Nevo, Jodie O'Neill, Veenu Goswami, Yashodhan Nair, Ingrid Rodriguez</p>
+  <p><b>CA Team</b>: Syed Saddiq, Karin Merckens, Hyewon Rho, Michael Dunn Goekjian, Omer Nevo, Jodie O'Neill, Veenu Goswami, Yashodhan Nair, Ingrid Rodriguez</p>
   
   <table class="table table-striped">
     <tr>
@@ -83,7 +83,7 @@
    </table>
 
   <h3 id="wudc2016">2016 Thessaloniki WUDC</h3>  
-  <p>CA Team: Manos Moschopoulos, Arinah Najwa, Chris Bisset, John McKee, Josh Zoffer, Sarah Balakrishnan, Tasneem Elias</p>
+  <p><b>CA Team</b>: Manos Moschopoulos, Arinah Najwa, Chris Bisset, John McKee, Josh Zoffer, Sarah Balakrishnan, Tasneem Elias</p>
  
   <table class="table table-striped">
     <tr>
@@ -101,7 +101,7 @@
    </table>
 
   <h3 id="wudc2015">2015 Malaysia WUDC</h3>
-  <p>CA Team: Shafiq Bazari, Jonathan Leader Maynard, Danique Van Koppenhagen, Sebastian Templeton, Engin Arikan, Brett Frazer, Madeline Schultz</p>
+  <p><b>CA Team</b>: Shafiq Bazari, Jonathan Leader Maynard, Danique Van Koppenhagen, Sebastian Templeton, Engin Arikan, Brett Frazer, Madeline Schultz</p>
 
   <table class="table table-striped">
     <tr>
@@ -119,7 +119,7 @@
    </table>
 
   <h3 id="wudc2014">2014 Chennai WUDC</h3>
-  <p>CA team: Michael Baer, Harish Natarajan, Ely Zosa, Stephen Whittington, Fiona Prowse, Michael Shapira
+  <p><b>CA Team</b>: Michael Baer, Harish Natarajan, Ely Zosa, Stephen Whittington, Fiona Prowse, Michael Shapira
 	</p>
 
 	<table class="table table-striped">
@@ -138,7 +138,7 @@
    </table>
 
   <h3 id="wudc2013">2013 Berlin WUDC</h3>
-  <p>CA Team: Sharmila Parmanand, Douglas Cochran, Victor Finkel, Isabelle Fischer, James Kilcup, Jens Fischer</p>
+  <p><b>CA Team</b>: Sharmila Parmanand, Douglas Cochran, Victor Finkel, Isabelle Fischer, James Kilcup, Jens Fischer</p>
 
   <table class="table table-striped">
     <tr>
@@ -156,7 +156,7 @@
    </table>
 
   <h3 id="wudc2012">2012 Manila WUDC</h3>
-  <p>CA Team: Sam Block, Lucinda David, Joe Roussos, Tim Mooney, Cormac Early, Masako Suzuki, Art Ward</p>
+  <p><b>CA Team</b>: Sam Block, Lucinda David, Joe Roussos, Tim Mooney, Cormac Early, Masako Suzuki, Art Ward</p>
 
   <table class="table table-striped">
     <tr>
@@ -174,7 +174,7 @@
    </table>
 
 	<h3 id="wudc2011">2011 Botswana WUDC</h3>
-	<p>CA Team: Logandran Balavijendran, Pearl Mathumo, James Dray, Anat Gelber, Richard Lizius, Tim Jeffrie
+	<p><b>CA Team</b>: Logandran Balavijendran, Pearl Mathumo, James Dray, Anat Gelber, Richard Lizius, Tim Jeffrie
 	</p>
 	<!--From http://idebate.org/node/7365-->
 
@@ -194,7 +194,7 @@
    </table>
 
 	<h3 id="wudc2010">2010 Vehbi Koc WUDC</h3>
-	<p>CA Team: Can Okar, Josh Bone, Julia Bowes, Suthen Tate Thomas, Will Jones, Handan Orel, Ozan Mert Ondes.</p>
+	<p><b>CA Team</b>: Can Okar, Josh Bone, Julia Bowes, Suthen Tate Thomas, Will Jones, Handan Orel, Ozan Mert Ondes.</p>
 	<!-- http://worlddebating.blogspot.co.uk/2009/12/koc-wudc-debating-guide-speaker-scale.html-->
 
 	<table class="table table-striped">
@@ -213,7 +213,7 @@
    </table>
 
 	<h3 id="wudc2009">2009 Cork WUDC</h3>
-	<p>CA Team: Derek Lande, Erin O'Brien, Ivan Ah Sam, Rory Gillis, Daniel Patrick McCarthy</p>
+	<p><b>CA Team</b>: Derek Lande, Erin O'Brien, Ivan Ah Sam, Rory Gillis, Daniel Patrick McCarthy</p>
 	
 	<table class="table table-striped">
     <tr>
@@ -231,7 +231,7 @@
    </table>
 
 	<h3 id="wudc2008">2008 Assumption WUDC</h3>
-	<p>CA Team: Rajesh Krishnan, Ciaran Lawlor, Beth O’Connor, Joanna Nairn</p>
+	<p><b>CA Team</b>: Rajesh Krishnan, Ciaran Lawlor, Beth O’Connor, Joanna Nairn</p>
 	<!--CA info from http://worlddebating.blogspot.co.uk/2008/01/full-results-from-worlds-2008.html-->
 
 	<table class="table table-striped">
@@ -250,7 +250,7 @@
    </table>
 
 	<h3 id="wudc2007">2007 UBC WUDC</h3>
-	<p>CA Team: Kevin Massie, Derek Lande, Tim Sonnreich, Alex Deane</p>
+	<p><b>CA Team</b>: Kevin Massie, Derek Lande, Tim Sonnreich, Alex Deane</p>
 	<!-- CA Team info from idebate.org -->
 
 	<table class="table table-striped">
@@ -292,7 +292,7 @@
 	</p>
 
 	<h3>2005 Malaysia (Multimedia University) Worlds</h3>
-	<p>CA Team: Logan Balavijendran, Kevin Massie, Praba Ganesan, Jeremy Brier </p>
+	<p><b>CA Team</b>: Logan Balavijendran, Kevin Massie, Praba Ganesan, Jeremy Brier </p>
 	Final This House Supports Corporal Punishment in Schools
 	Semi-Final This House Would Use Gambling To Rejuvenate Depressed Economic Zones
 	Quarter Final This House Believes That Mentally Handicapped People Are Better Cared For In The Community Than In Institutions
