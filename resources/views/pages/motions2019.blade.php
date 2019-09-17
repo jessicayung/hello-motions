@@ -10,7 +10,7 @@
 
   <h1>2019 Motions</h1>
     <p>Listed with most recent tournaments first. Can't find a tournament? <a href="https://docs.google.com/forms/d/14v5RuG6NHjDySrLN8zJC97-e761sRBivhOoPxjt0K6I/viewform?c=0&w=1">Send us the motions here</a>. </p>
-    <p> <a href="motions2018-mobile">Mobile version</a></p>
+    <p> <a href="motions2019-mobile">Mobile version</a></p>
 
   <table class="table table-striped">
     <tr>
