@@ -10,6 +10,16 @@
 
   <h1>EUDC Motions</h1>
 
+  <h3>2020 Astana EUDC</h3>
+  <p><b>CA Team</b>: Raffy Marshall, Monica Forman, Melda Eren, Tin Puljic, Tom Manor</p>
+
+  <p><b>Motions</b>: We'll find out soon! :) For more info visit <a href="https://www.facebook.com/astanaeudc2020/">the Astana WUDC facebook page</a>.</p>
+  <p>
+  <ul>
+    <li><a href="http://hellomotions.com/search?q=Raffy+Marshall%2C+Monica+Forman%2C+Melda+Eren%2C+Tin+Puljic%2C+Tom+Manor&search-motions=">Motions set by members of the Astana EUDC CA Team</a></li>
+  </ul>  
+  </p>
+
   <h3>Shortcuts to 2012-2019 EUDC motions</h3>
   <p>
   <ul>
