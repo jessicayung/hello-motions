@@ -41,7 +41,8 @@ Search for motions by keyword, category, Chief Adjudicator or tournament.
         <h2>New Features</h2>
           <p><ol>
             <li><a href="ten-random-motions">Ten Random Motions</a></li>
-            <li><a href="http://hellomotions.com/search?q=Ameera+Natasha+Moore%2C+Fanele+Mashwama%2C+Dan+Lahav%2C+Elisha+Kunene%2C+Enting+Lee%2C+Raffy+Marshall%2C+Steph+White&search-motions=">Motions set by Cape Town WUDC CA Team</a></li>
+            <li><a href="http://hellomotions.com/search?q=Dan+Lahav%2C+Mubarrat+Wassey%2C+Bobbi+Leet%2C+Boemo+Delano+Phirinyane%2C+Connor+O%27Brien%2C+Milos+Marjanovic%2C+Sebastian+Dasso%2C+Sooyoung+Park%2C+Teck+Wei+Tan%2C+Tejal+Patwardhan&intl=0">Motions set by the 2021 Korea WUDC CA Team</a></li>
+            <li><a href="http://hellomotions.com/search?q=Raffy+Marshall%2C+Monica+Forman%2C+Melda+Eren%2C+Tin+Puljic%2C+Tom+Manor&search-motions=">Motions set by the 2020 Astana EUDC CA Team</a></li>
             <li><a href="wudc-motions">WUDC Motions</a></li>
             <li><a href="eudc-motions">EUDC Motions</a></li>
             <li><a href="random-motion">Random Motion</a></li>
