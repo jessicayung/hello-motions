@@ -288,6 +288,34 @@ class PagesController extends Controller
 
 	}
 
+	public function motions2020() {
+			
+		$motions2019 = DB::table('motions')
+				->having('Date','>=',20200101)
+				->having('Date','<',20210101)
+				->select('Date', 'Round_Code', 'Round', 'Motion', 'Tournament')
+				->orderby('Date', 'desc')
+				->orderby('Tournament', 'asc')
+				->orderby('Round_Code', 'asc')
+				->get();
+        return view('pages.motions2020')->with('motions2020', $motions2020);
+
+	}
+
+	public function motions2020mobile() {
+		
+		$motions2020 = DB::table('motions')
+				->having('Date','>=',20200101)
+				->having('Date','<',20210101)
+				->select('Date', 'Round_Code', 'Round', 'Motion', 'Tournament')
+				->orderby('Date', 'desc')
+				->orderby('Tournament', 'asc')
+				->orderby('Round_Code', 'asc')
+				->get();
+        return view('pages.motions2020-mobile')->with('motions2020', $motions2020);
+
+	}
+
 	public function randommotion() {
 		
 		$total = DB::table('motions')->count();

@@ -55,6 +55,10 @@ Route::get('motions2019', 'PagesController@motions2019');
 
 Route::get('motions2019-mobile', 'PagesController@motions2019mobile');
 
+Route::get('motions2020', 'PagesController@motions2020');
+
+Route::get('motions2020-mobile', 'PagesController@motions2020mobile');
+
 Route::get('missingmotions', 'PagesController@missingmotions');
 
 Route::get('random-motion', 'PagesController@randommotion');
