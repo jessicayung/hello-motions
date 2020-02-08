@@ -290,7 +290,7 @@ class PagesController extends Controller
 
 	public function motions2020() {
 			
-		$motions2019 = DB::table('motions')
+		$motions2020 = DB::table('motions')
 				->having('Date','>=',20200101)
 				->having('Date','<',20210101)
 				->select('Date', 'Round_Code', 'Round', 'Motion', 'Tournament')
