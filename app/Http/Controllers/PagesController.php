@@ -338,6 +338,12 @@ class PagesController extends Controller
 
 	public function wudcmotions() {
 
+		$wudc2020motions = DB::table('motions')
+				->where('Tournament', 'LIKE', '%WUDC 2020')
+				->select('Round_Code', 'Round', 'Motion', 'Infoslide')
+				->orderby('Round_Code', 'asc')
+				->get();
+
 		$wudc2019motions = DB::table('motions')
 				->where('Tournament', 'LIKE', '%WUDC 2019')
 				->select('Round_Code', 'Round', 'Motion', 'Infoslide')
@@ -417,6 +423,7 @@ class PagesController extends Controller
 				->get();
 
 		$wudcmotions = array(
+			'wudc2020motions' => $wudc2020motions,
 			'wudc2019motions' => $wudc2019motions,
 			'wudc2018motions' => $wudc2018motions,
 			'wudc2017motions' => $wudc2017motions,
