@@ -1,0 +1,9 @@
+{% extends "template.jinja" %}
+{% block title %}Page Not Found{% endblock %}
+{% block description %}This page does not exist.{% endblock %}
+{% block content %}
+
+<p> This page does not exist.</p>
+<p> {% block extra_info %}{% endblock %}</p>
+
+{% endblock %}

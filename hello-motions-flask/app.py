@@ -63,11 +63,21 @@ def add_motions():
         is_motion_added = True
     return render_template("add_motions.jinja", motion_added=is_motion_added)
 
-@app.route("/motions_2020/", methods=["GET"])
-def motions_2020():
+@app.route("/motions<year>/", methods=["GET"])
+def motions_year(year):
     # or: Motion.category.ilike("%family%")
-    motions = Motion.query.filter(Motion.date >= '2020-01-01').filter(Motion.date <= '2020-12-31').all()
-    return render_template("motions_2020.jinja", motions=motions)
+    try:
+        year_num = int(year)
+        if year_num >= 1999 and year_num <= int(datetime.now().year):
+            motions = Motion.query.filter(Motion.date >= f'{year}-01-01') \
+                                .filter(Motion.date <= f'{year}-12-31') \
+                                .order_by(Motion.date.asc()).all()
+            return render_template("motions_year.jinja", motions=motions, year=year)
+        else:
+            return render_template("page_not_found.jinja", extra_info="We have pages for \
+            motions from 1999 until today.")
+    except:
+        return render_template("page_not_found.jinja")
 
 @app.route("/search/")
 def search():
