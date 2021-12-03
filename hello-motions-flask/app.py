@@ -4,8 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    return render_template("template.jinja", title="Hello World", 
-                                                            description="My description")
+    return render_template("index.jinja")
 
 
 @app.route("/search/")

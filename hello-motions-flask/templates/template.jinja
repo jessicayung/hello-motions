@@ -4,8 +4,8 @@
 
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>{{title}}</title>
-		<meta name="description" content="{{description}}">	
+		<title>{% block title %}{% endblock %}</title>
+		<meta name="description" content={% block description %}{% endblock %}>	
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"> -->
@@ -58,13 +58,13 @@
     <div class="container">
     
     <div class="container">
-    @yield('content')
+    {% block content %}{% endblock %}
     </div>
 
       <hr>
 
       <footer>
-        <p>&copy; 2016 Jessica Yung.</p>
+        <p>&copy; 2021 Jessica Yung.</p>
       </footer>
 
     </div>
