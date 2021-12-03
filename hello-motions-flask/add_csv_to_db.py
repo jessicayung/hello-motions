@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+import datetime
 import numpy as np
 
 import pandas as pd
@@ -12,11 +13,11 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///motions.db'
 
 # Initialise the database
 db = SQLAlchemy(app)
+
 # in python: run from app import db, then db.create_all()
-class Motions(db.Model):
+class Motion(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     date = db.Column(db.Date, nullable=False)
-    category = db.Column(db.String(50), nullable=False)
     circuit = db.Column(db.String(20))
     country = db.Column(db.String(50))
     international = db.Column(db.Integer, nullable=False, default=0)
@@ -44,22 +45,18 @@ class Motions(db.Model):
     def __repr__(self):
         return f'<Motion {self.id}: {self.motion}>'
 
-"""
-engine = SQLAlchemy.create_engine(sa_url='sqlite:///motions.db', engine_opts='SQLALCHEMY_ENGINE_OPTIONS')
-sqlite_connection = engine.connect()
-sqlite_table = "motions"
-motions_df.to_sql(sqlite_table, sqlite_connection, if_exists='fail')
-"""
+# uncomment if db doesn't exist already
+db.create_all()
 
 # "Date,Circuit,City,Country,International,Tournament,CA_1,CA_2,CA_3,CA_4,CA_5,CA_6,CA_7,CA_8,CA_9,Event_Link,Round_Code,Round,Motion,Infoslide,Topic_Area_1,Topic_Area_2,Topic_Area_3,Topic_Area_Specific_1,Needs_updating,Topic_Area_Automated"
 num_motions_added = 0
 for i, row in motions_df.iterrows():
     if row['Motion'] is np.nan or row['Motion'] == "":
         continue
+    # if i > 5: break
     try:
-        new_motion = Motions(id=row.index,
-                            date=row['Date'], 
-                            category=row['Category'],
+        new_motion = Motion(id=i,
+                            date=datetime.datetime.strptime(row['Date'], "%Y-%m-%d"), 
                             circuit=row['Circuit'],
                                 country=row['Country'],
                                 international=row['International'],
@@ -73,19 +70,19 @@ for i, row in motions_df.iterrows():
                                 ca_7=row['CA_7'],
                                 ca_8=row['CA_8'],
                                 ca_9=row['CA_9'],
-                                event_link=row['Event_link'],
-                                round_code=row['Round_code'],
+                                event_link=row['Event_Link'],
+                                round_code=row['Round_Code'],
                                 motion=row['Motion'],
                                 infoslide=row['Infoslide'],
-                                topic_area_1=row['Topic_area_1'],
-                                topic_area_2=row['Topic_area_2'],
-                                topic_area_3=row['Topic_area_3'],
-                                topic_area_specific_1=row['Topic_area_specific_1'],
-                                topic_area_automated=row['Topic_area_automated'],
-                                needs_updating=row['Needs_updating'])
+                                topic_area_1=row['Topic_Area_1'],
+                                topic_area_2=row['Topic_Area_2'],
+                                topic_area_3=row['Topic_Area_3'],
+                                topic_area_specific_1=row['Topic_Area_Specific_1'],
+                                topic_area_automated=row['Topic_Area_Automated'],
+                                needs_updating=bool(row['Needs Updating?']))
         db.session.add(new_motion)
         num_motions_added += 1
     except:
         print("Error adding motion", row)
 db.session.commit()
-print("committed motions")   
+print("committed motions") 

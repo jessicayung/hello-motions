@@ -18,6 +18,8 @@
     {% for motion in motions %}
       <tr>
         <td> {{ motion.date }} </td>
+        <td> {{ motion.tournament }} </td>
+        <td> {{ motion.round }} </td>
         <td> {{ motion.motion }} </td>
       </tr>
     {% endfor %}

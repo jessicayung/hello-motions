@@ -9,10 +9,9 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///motions.db'
 # Initialise the database
 db = SQLAlchemy(app)
 # in python: run from app import db, then db.create_all()
-class Motions(db.Model):
+class Motion(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     date = db.Column(db.Date, nullable=False)
-    category = db.Column(db.String(50), nullable=False)
     circuit = db.Column(db.String(20))
     country = db.Column(db.String(50))
     international = db.Column(db.Integer, nullable=False, default=0)
@@ -52,7 +51,7 @@ def add_motions():
         category = request.form.get("category")
         date = request.form.get("date")
         print(motion, category, date)
-        new_motion = Motions(motion=motion, category=category)
+        new_motion = Motion(motion=motion, category=category)
         try:
             db.session.add(new_motion)
             print(new_motion)
@@ -66,8 +65,8 @@ def add_motions():
 
 @app.route("/motions_2020/", methods=["GET"])
 def motions_2020():
-    # or: Motions.category.ilike("%family%")
-    motions = Motions.query.filter(func.lower(Motions.category)=="family").all()
+    # or: Motion.category.ilike("%family%")
+    motions = Motion.query.filter(Motion.date >= '2020-01-01').filter(Motion.date <= '2020-12-31').all()
     return render_template("motions_2020.jinja", motions=motions)
 
 @app.route("/search/")
