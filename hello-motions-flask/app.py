@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy.sql.expression import func
 
 from datetime import datetime
 
@@ -43,7 +44,7 @@ class Motion(db.Model):
 def hello_world():
     return render_template("index.jinja")
 
-@app.route("/add_motions/", methods=["POST", "GET"])
+@app.route("/add-motions/", methods=["POST", "GET"])
 def add_motions():
     is_motion_added = False
     if request.method == "POST":
@@ -78,6 +79,14 @@ def motions_year(year):
             motions from 1999 until today.")
     except:
         return render_template("page_not_found.jinja")
+
+@app.route("/random-motions<num>/")
+def random_motions(num):
+    # might change num to be a request-based thing
+    # and change page to be just random-motions.
+    random_motions = Motion.query.order_by(func.random()).limit(num).all()
+    return render_template("random_motions.jinja", num=num, 
+            random_motions=random_motions)
 
 @app.route("/search/")
 def search():

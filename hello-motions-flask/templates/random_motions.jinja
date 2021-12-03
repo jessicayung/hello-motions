@@ -1,0 +1,25 @@
+{% extends "template.jinja" %}
+{% block title %}Random Motions{% endblock %}
+{% block description %}Shows {{num}} random motions.{% endblock %}
+{% block content %}
+
+<h1>{{num}} Random Motions</h1>
+
+        {% for motion in random_motions %}
+		<div class="col-md-6">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<b>{{ motion.motion }}</b>
+				<div>
+					<p>{{ motion.infoslide }}</p>	
+				</div>
+				<div class="text-right">
+					<p><a href="/search?q={{motion.tournament}}">{{motion.tournament}}</a> / {{motion.round_code}} / {{motion.date}}</p>
+				</div>
+			</div>
+		</div>
+		</div>
+		{% endfor %}
+
+{% endblock %}
+
