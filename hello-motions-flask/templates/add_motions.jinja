@@ -1,0 +1,19 @@
+{% extends "template.jinja" %}
+{% block title %}Add Motions{% endblock %}
+{% block description %}Add debating motions.{% endblock %}
+{% block content %}
+
+  <h1>Add Motions</h1>
+    <form action="/add_motions/" method="post">
+      <div class="form-group">
+        <input type="text" class="form-control" name="motion" placeholder="Motion">
+        <input type="text" class="form-control" name="category" placeholder="Category">
+        <input type="date" class="form-control" name="date" placeholder="Date">
+        <input type="submit" class="btn btn-primary" value="Add Motion">
+        </div>
+    </form>
+    {% if motion_added %}
+    <p>Motion added!</p>
+    {% endif %}
+
+{% endblock %}
