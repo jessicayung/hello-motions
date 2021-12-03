@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
-from flask_sqlalchemy import SQLAlchemy, func
+from flask_sqlalchemy import SQLAlchemy
 
 from datetime import datetime
 
@@ -11,9 +11,31 @@ db = SQLAlchemy(app)
 # in python: run from app import db, then db.create_all()
 class Motions(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    motion = db.Column(db.String(5000), nullable=False)
-    date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    date = db.Column(db.Date, nullable=False)
     category = db.Column(db.String(50), nullable=False)
+    circuit = db.Column(db.String(20))
+    country = db.Column(db.String(50))
+    international = db.Column(db.Integer, nullable=False, default=0)
+    tournament = db.Column(db.String(50), nullable=False)
+    ca_1 = db.Column(db.String(50))
+    ca_2 = db.Column(db.String(50))
+    ca_3 = db.Column(db.String(50))
+    ca_4 = db.Column(db.String(50))
+    ca_5 = db.Column(db.String(50))
+    ca_6 = db.Column(db.String(50))
+    ca_7 = db.Column(db.String(50))
+    ca_8 = db.Column(db.String(50))
+    ca_9 = db.Column(db.String(50))
+    event_link = db.Column(db.String(100))
+    round_code = db.Column(db.String(10))
+    motion = db.Column(db.String(5000), nullable=False)
+    infoslide = db.Column(db.String(5000), default="")
+    topic_area_1 = db.Column(db.String(50))
+    topic_area_2 = db.Column(db.String(50))
+    topic_area_3 = db.Column(db.String(50))
+    topic_area_specific_1 = db.Column(db.String(50))
+    topic_area_automated = db.Column(db.String(50))
+    needs_updating = db.Column(db.Boolean, default=False)
 
     def __repr__(self):
         return f'<Motion {self.id}: {self.motion}>'
