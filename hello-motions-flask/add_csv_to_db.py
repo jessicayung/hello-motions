@@ -5,7 +5,7 @@ import numpy as np
 
 import pandas as pd
 
-motions_df = pd.read_csv("motions_with_category_labels.csv")
+motions_df = pd.read_csv("motions_with_category_labels_clean.csv")
 motions_df.fillna('', inplace=True)
 
 app = Flask(__name__)
@@ -53,7 +53,6 @@ num_motions_added = 0
 for i, row in motions_df.iterrows():
     if row['Motion'] is np.nan or row['Motion'] == "":
         continue
-    # if i > 5: break
     try:
         new_motion = Motion(id=i,
                             date=datetime.datetime.strptime(row['Date'], "%Y-%m-%d"), 
