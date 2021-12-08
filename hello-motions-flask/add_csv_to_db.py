@@ -33,6 +33,7 @@ class Motion(db.Model):
     ca_9 = db.Column(db.String(50))
     event_link = db.Column(db.String(100))
     round_code = db.Column(db.String(10))
+    round = db.Column(db.String(10))
     motion = db.Column(db.String(5000), nullable=False)
     infoslide = db.Column(db.String(5000), default="")
     topic_area_1 = db.Column(db.String(50))
@@ -71,6 +72,7 @@ for i, row in motions_df.iterrows():
                                 ca_9=row['CA_9'],
                                 event_link=row['Event_Link'],
                                 round_code=row['Round_Code'],
+                                round=row['Round'],
                                 motion=row['Motion'],
                                 infoslide=row['Infoslide'],
                                 topic_area_1=row['Topic_Area_1'],
