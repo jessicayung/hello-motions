@@ -1,0 +1,67 @@
+{% extends "template.jinja" %}
+{% block title %}Search motions{% endblock %}
+{% block description %}Search for motions by keyword, category, Chief Adjudicator or tournament.{% endblock %}
+{% block content %}
+
+	<h1>Search for Motions</h1>
+	<p>Search for motions by keyword, category, Chief Adjudicator or tournament. <a href="https://docs.google.com/spreadsheets/d/1qQlqFeJ3iYbzXYrLBMgbmT6LcJLj6JcG3LJyZSbkAJY/edit?usp=sharing">Access the motions spreadsheet directly here</a>. </p>
+
+    <form method="get" id="search-motions">
+	    <div class="row">
+		    <div class="form-group, col-md-6">
+		        <input class="form-control" type="text" name="q" placeholder="e.g. International Relations, WUDC, Cambridge IV">
+		    </div>
+		    <div class="form-group col-md-3">
+		    	<select name="intl" class="form-control">
+                    <option value="0">All Tournaments</option>
+                    <option value="1">Internationals Only</option>
+                    <option value="2">Large Internationals Only</option>
+                    <option value="3">WUDC Only</option>
+            	</select>
+		    </div>
+		    <div class="col-md-1">
+		    	<button type="submit" class="btn btn-primary">Search</button>
+		    </div>
+	    </div>
+        <div class="row">
+            <h4>Filter by category</h3>
+            <div class="form-group col-md-2">
+                <input type="checkbox" name="All topics" value="All topics" Checked>All topics<br>
+                {% for category in categories %}
+                    {% if loop.index0 % 6 == 5 %}
+                        </div>
+                        <div class="form-group col-md-2">
+                    {% endif %}
+                <input type="checkbox" name="{{category}}" value="{{category}}">{{ category}}<br>
+                {% endfor %}
+            </div>
+        </div>
+    </form>
+
+    {% if query_exists %}
+        {% if motions %}
+            <h2>Results</h2>
+            <p>{{ motions|length }} motions found for query '{{ search_term }}'.</p>
+            <table class="table table-striped">
+                <tr>
+                <th>Date</th>
+                <th>Tournament</th>
+                <th>Round</th>
+                <th>Motion</th>
+                </tr>
+                <!--Output data of each row-->
+                {% for motion in motions %}
+                <tr>
+                    <td>{{ motion.date }}</td>
+                    <td>{{ motion.tournament }}</td>
+                    <td>{{ motion.round }}</td>
+                    <td>{{ motion.motion }}</td>
+                </tr>
+                {% endfor %}
+        </table>
+        {% else %}
+            <p>No motions found.</p>
+        {% endif %}
+    {% endif %}
+{% endblock %}
+

@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.sql.expression import func
+from sqlalchemy import or_
 
 from datetime import datetime
 
@@ -9,6 +10,33 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///motions.db'
 
 # Initialise the database
 db = SQLAlchemy(app)
+
+categories = ['Art and Culture',
+    'Business',
+    'Criminal Justice System',
+    'Economics and development',
+    'Education',
+    'Environment',
+    'Family',
+    'Feminism',
+    # 'Freedoms',
+    'Funny',
+    'International Relations',
+    'LGBT+',
+    'Media',
+    'Medical Ethics',
+    # 'Minority Communities',
+    'Morality',
+    'Politics',
+    'Religion',
+    'Science and Technology',
+    'Security, War, Military and Terrorism',
+    # 'Social Policy',
+    'Social Movements',
+    'Sports',
+    # 'The Human Experience'
+]
+
 # in python: run from app import db, then db.create_all()
 class Motion(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -80,7 +108,7 @@ def motions_year(year):
     except:
         return render_template("page_not_found.jinja")
 
-@app.route("/random-motions<num>/")
+@app.route("/random-motions<num>/", methods=["GET"])
 def random_motions(num):
     # might change num to be a request-based thing
     # and change page to be just random-motions.
@@ -88,9 +116,30 @@ def random_motions(num):
     return render_template("random_motions.jinja", num=num, 
             random_motions=random_motions)
 
-@app.route("/search/")
+@app.route("/search/", methods=["POST", "GET"])
 def search():
-    return "<p>Search</p>"
+    search_term = request.args.get("q")
+    query_exists = True
+    if search_term is not None:
+        intl = request.args.get("intl")
+        if intl is None:
+            intl = 0
+        motions = Motion.query.filter(Motion.international >= int(intl)).filter(or_(field.ilike(f'%{search_term}%') for field in [Motion.motion, 
+        Motion.tournament, Motion.ca_1, Motion.ca_2, Motion.ca_3, 
+        Motion.ca_4, Motion.ca_5, Motion.ca_6, Motion.ca_7, Motion.ca_8, Motion.ca_9, Motion.topic_area_1, 
+        Motion.topic_area_2, Motion.topic_area_3, Motion.topic_area_specific_1, Motion.topic_area_automated]))
+        if request.args.get("All topics") is None:
+            topics = []        
+            for category in categories:
+                if request.args.get(category) is not None:
+                    topics.append(category)
+            motions = motions.filter(or_(Motion.topic_area_automated.ilike(category) for category in topics))
+        motions = motions.all()
+    else:
+        motions = []
+        query_exists = False
+    return render_template("search.jinja", search_term=search_term, motions=motions,
+    query_exists=query_exists, categories=categories)
 
 @app.route("/about/")
 def about():
