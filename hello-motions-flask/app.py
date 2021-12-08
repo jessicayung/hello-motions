@@ -20,22 +20,18 @@ categories = ['Art and Culture',
     'Environment',
     'Family',
     'Feminism',
-    # 'Freedoms',
     'Funny',
     'International Relations',
     'LGBT+',
     'Media',
     'Medical Ethics',
-    # 'Minority Communities',
     'Morality',
     'Politics',
     'Religion',
     'Science and Technology',
     'Security, War, Military and Terrorism',
-    # 'Social Policy',
     'Social Movements',
     'Sports',
-    # 'The Human Experience'
 ]
 
 # in python: run from app import db, then db.create_all()
@@ -133,16 +129,25 @@ def search():
         request_args = list(request.args.keys())
         if intl is None:
             intl = 0
-        motions = Motion.query.filter(Motion.international >= int(intl)).filter(or_(field.ilike(f'%{search_term}%') for field in [Motion.motion, 
-        Motion.tournament, Motion.ca_1, Motion.ca_2, Motion.ca_3, 
-        Motion.ca_4, Motion.ca_5, Motion.ca_6, Motion.ca_7, Motion.ca_8, Motion.ca_9, Motion.topic_area_1, 
-        Motion.topic_area_2, Motion.topic_area_3, Motion.topic_area_specific_1, Motion.topic_area_automated]))
+        motions = Motion.query.filter(Motion.international >= int(intl)).filter(Motion.date >= f'{start_year}-01-01') \
+                    .filter(Motion.date <= f'{end_year}-12-31') \
+                    .filter(or_(field.ilike(f'%{search_term}%') for field in [Motion.motion, 
+                        Motion.tournament, Motion.ca_1, Motion.ca_2, Motion.ca_3, 
+                        Motion.ca_4, Motion.ca_5, Motion.ca_6, Motion.ca_7, Motion.ca_8, Motion.ca_9, Motion.topic_area_1, 
+                        Motion.topic_area_2, Motion.topic_area_3, Motion.topic_area_specific_1, Motion.topic_area_automated]))
         if request.args.get("All topics") is None:
             topics = []        
             for category in categories:
                 if request.args.get(category) is not None:
                     topics.append(category)
             motions = motions.filter(or_(Motion.topic_area_automated.ilike(category) for category in topics))
+        if cas:
+            if cas[-1] == ".":
+                cas = cas[:-1]
+            ca_names = [n.strip() for n in cas.split(",")]
+            ca_fields = [Motion.ca_1, Motion.ca_2, Motion.ca_3, 
+                        Motion.ca_4, Motion.ca_5, Motion.ca_6, Motion.ca_7, Motion.ca_8, Motion.ca_9]
+            motions = motions.filter(or_(ca_field.ilike(f'%{name}%') for name in ca_names for ca_field in ca_fields))
         motions = motions.all()
     else:
         motions = []

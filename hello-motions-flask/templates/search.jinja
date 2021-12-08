@@ -84,8 +84,7 @@
                 <div class="row col-md-6">
                 <h6>Chief Adjudicators</h6>
                     {% if cas %}
-                    {{cas}}
-                            <input class="form-control" type="text" name="cas" placeholder="Separate CA names with commas. E.g.: John Doe, Jane Doe", value="{{cas}}">
+                        <input class="form-control" type="text" name="cas" placeholder="Separate CA names with commas. E.g.: John Doe, Jane Doe", value="{{cas}}">
                     {% else %}
                         <input class="form-control" type="text" name="cas" placeholder="Separate CA names with commas. E.g.: John Doe, Jane Doe">
                     {% endif %}	
@@ -101,8 +100,8 @@
 
     <div class="row col-md-9">
         {% if query_exists %}
-            {% if motions %}
-                <h2>Results</h2>
+            <h2>Results</h2>
+            {% if motions %}                
                 <p>{{ motions|length }} motions found for query '{{ search_term }}'.</p>
                 <table class="table table-striped">
                     <tr>
