@@ -10,6 +10,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///motions.db'
 
 # Initialise the database
 db = SQLAlchemy(app)
+current_year = datetime.now().year
 
 categories = ['Art and Culture',
     'Business',
@@ -142,7 +143,8 @@ def search():
         query_exists = False
         intl="0"
     return render_template("search.jinja", search_term=search_term, motions=motions,
-    query_exists=query_exists, categories=categories, request_args=request_args, intl=intl)
+    query_exists=query_exists, categories=categories, request_args=request_args, intl=intl,
+    current_year=current_year)
 
 @app.route("/about/")
 def about():

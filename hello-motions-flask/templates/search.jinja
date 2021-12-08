@@ -45,7 +45,7 @@
 		    </div>
 	    </div>
         <div class="row">
-            <h4>Filter by category</h3>
+            <h6>Filter by category</h6>
             <div class="form-group col-md-2">
                 {% if "q" in request_args and "All topics" not in request_args %}
                     <input type="checkbox" name="All topics" value="All topics" Checked>All topics<br>
@@ -64,6 +64,18 @@
                 {% endif %}
                 {% endfor %}
             </div>
+        </div>
+        <div class="row col-md-6">
+        <h6>Year range</h6>
+        <input type="number" name="start_year", min="1999" max={{current_year}} step="1" value="1999"> to <input type="number" name="end_year" min="1999" max={{current_year}} step="1" value={{current_year}}>
+        </div>
+        <div class="row col-md-6">
+        <h6>Chief Adjudicators</h6>
+            {% if "cas" in request_args %}
+                    <input class="form-control" type="text" name="cas" placeholder="Separate CA names with commas. E.g.: John Doe, Jane Doe", value="{{cas}}">
+            {% else %}
+                <input class="form-control" type="text" name="cas" placeholder="Separate CA names with commas. E.g.: John Doe, Jane Doe">
+            {% endif %}	
         </div>
     </form>
 
