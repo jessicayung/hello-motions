@@ -66,7 +66,7 @@ class Motion(db.Model):
         return f'<Motion {self.id}: {self.motion}>'
 
 @app.route("/")
-def hello_world():
+def index():
     return render_template("index.jinja")
 
 @app.route("/add-motions/", methods=["POST", "GET"])
