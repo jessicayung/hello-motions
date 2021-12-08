@@ -120,8 +120,10 @@ def random_motions(num):
 def search():
     search_term = request.args.get("q")
     query_exists = True
+    request_args = []
     if search_term is not None:
         intl = request.args.get("intl")
+        request_args = list(request.args.keys())
         if intl is None:
             intl = 0
         motions = Motion.query.filter(Motion.international >= int(intl)).filter(or_(field.ilike(f'%{search_term}%') for field in [Motion.motion, 
@@ -138,8 +140,9 @@ def search():
     else:
         motions = []
         query_exists = False
+        intl="0"
     return render_template("search.jinja", search_term=search_term, motions=motions,
-    query_exists=query_exists, categories=categories)
+    query_exists=query_exists, categories=categories, request_args=request_args, intl=intl)
 
 @app.route("/about/")
 def about():

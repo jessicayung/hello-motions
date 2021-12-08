@@ -9,14 +9,35 @@
     <form method="get" id="search-motions">
 	    <div class="row">
 		    <div class="form-group, col-md-6">
-		        <input class="form-control" type="text" name="q" placeholder="e.g. International Relations, WUDC, Cambridge IV">
+                {% if "q" in request_args %}
+                    <input class="form-control" type="text" name="q" placeholder="e.g. International Relations, WUDC, Cambridge IV", value="{{search_term}}">
+                {% else %}
+                    <input class="form-control" type="text" name="q" placeholder="e.g. International Relations, WUDC, Cambridge IV">
+                {% endif %}	                	        
 		    </div>
 		    <div class="form-group col-md-3">
 		    	<select name="intl" class="form-control">
-                    <option value="0">All Tournaments</option>
-                    <option value="1">Internationals Only</option>
-                    <option value="2">Large Internationals Only</option>
-                    <option value="3">WUDC Only</option>
+                    {% if intl == "0" %}
+                        <option value="0">All Tournaments</option>
+                        <option value="1">Internationals Only</option>
+                        <option value="2">Large Internationals Only</option>
+                        <option value="3">WUDC Only</option>
+                    {% elif intl == "1" %}
+                        <option value="0">All Tournaments</option>
+                        <option value="1" selected>Internationals Only</option>
+                        <option value="2">Large Internationals Only</option>
+                        <option value="3">WUDC Only</option>
+                    {% elif intl == "2" %}
+                        <option value="0">All Tournaments</option>
+                        <option value="1">Internationals Only</option>
+                        <option value="2" selected>Large Internationals Only</option>
+                        <option value="3">WUDC Only</option>
+                    {% else %}
+                        <option value="0">All Tournaments</option>
+                        <option value="1">Internationals Only</option>
+                        <option value="2">Large Internationals Only</option>
+                        <option value="3" selected>WUDC Only</option>
+                    {% endif %}
             	</select>
 		    </div>
 		    <div class="col-md-1">
@@ -26,13 +47,21 @@
         <div class="row">
             <h4>Filter by category</h3>
             <div class="form-group col-md-2">
-                <input type="checkbox" name="All topics" value="All topics" Checked>All topics<br>
+                {% if "q" in request_args and "All topics" not in request_args %}
+                    <input type="checkbox" name="All topics" value="All topics" Checked>All topics<br>
+                {% else %}
+                    <input type="checkbox" name="All topics" value="All topics" Checked>All topics<br>
+                {% endif %}
                 {% for category in categories %}
                     {% if loop.index0 % 6 == 5 %}
                         </div>
                         <div class="form-group col-md-2">
                     {% endif %}
-                <input type="checkbox" name="{{category}}" value="{{category}}">{{ category}}<br>
+                {% if category in request_args %}
+                    <input type="checkbox" name="{{category}}" value="{{category}}" Checked>{{ category}}<br>
+                {% else %}
+                    <input type="checkbox" name="{{category}}" value="{{category}}">{{ category}}<br>
+                {% endif %}
                 {% endfor %}
             </div>
         </div>
