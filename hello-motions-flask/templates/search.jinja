@@ -44,65 +44,88 @@
 		    	<button type="submit" class="btn btn-primary">Search</button>
 		    </div>
 	    </div>
-        <div class="row">
-            <h6>Filter by category</h6>
-            <div class="form-group col-md-2">
-                {% if "q" in request_args and "All topics" not in request_args %}
-                    <input type="checkbox" name="All topics" value="All topics" Checked>All topics<br>
-                {% else %}
-                    <input type="checkbox" name="All topics" value="All topics" Checked>All topics<br>
-                {% endif %}
-                {% for category in categories %}
-                    {% if loop.index0 % 6 == 5 %}
-                        </div>
-                        <div class="form-group col-md-2">
-                    {% endif %}
-                {% if category in request_args %}
-                    <input type="checkbox" name="{{category}}" value="{{category}}" Checked>{{ category}}<br>
-                {% else %}
-                    <input type="checkbox" name="{{category}}" value="{{category}}">{{ category}}<br>
-                {% endif %}
-                {% endfor %}
+        <div id="accordion">
+        <div class="card">
+            <div class="card-header" id="advancedsearch-button">
+            <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#advancedsearch" aria-expanded="false" aria-controls="advancedsearch" type="button">
+                Advanced search filters (Filter by category, year range, CAs)
+                </button>
+            </h5>
+            </div>
+
+            <div id="advancedsearch" class="collapse" aria-labelledby="advancedsearch-button" data-parent="#accordion">
+            <div class="card-body">
+                <div class="row">
+                    <h6>Filter by category</h6>
+                    <div class="form-group col-md-2">
+                        {% if "q" in request_args and "All topics" not in request_args %}
+                            <input type="checkbox" name="All topics" value="All topics" Checked>All topics<br>
+                        {% else %}
+                            <input type="checkbox" name="All topics" value="All topics" Checked>All topics<br>
+                        {% endif %}
+                        {% for category in categories %}
+                            {% if loop.index0 % 6 == 5 %}
+                                </div>
+                                <div class="form-group col-md-2">
+                            {% endif %}
+                        {% if category in request_args %}
+                            <input type="checkbox" name="{{category}}" value="{{category}}" Checked>{{ category}}<br>
+                        {% else %}
+                            <input type="checkbox" name="{{category}}" value="{{category}}">{{ category}}<br>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="row col-md-6">
+                <h6>Year range</h6>
+                <input type="number" name="start_year", min="1999" max={{current_year}} step="1" value={{start_year}}> to <input type="number" name="end_year" min="1999" max={{current_year}} step="1" value={{end_year}}>
+                </div>
+                <div class="row col-md-6">
+                <h6>Chief Adjudicators</h6>
+                    {% if cas %}
+                    {{cas}}
+                            <input class="form-control" type="text" name="cas" placeholder="Separate CA names with commas. E.g.: John Doe, Jane Doe", value="{{cas}}">
+                    {% else %}
+                        <input class="form-control" type="text" name="cas" placeholder="Separate CA names with commas. E.g.: John Doe, Jane Doe">
+                    {% endif %}	
+                </div>
+            </div>
             </div>
         </div>
-        <div class="row col-md-6">
-        <h6>Year range</h6>
-        <input type="number" name="start_year", min="1999" max={{current_year}} step="1" value="1999"> to <input type="number" name="end_year" min="1999" max={{current_year}} step="1" value={{current_year}}>
-        </div>
-        <div class="row col-md-6">
-        <h6>Chief Adjudicators</h6>
-            {% if "cas" in request_args %}
-                    <input class="form-control" type="text" name="cas" placeholder="Separate CA names with commas. E.g.: John Doe, Jane Doe", value="{{cas}}">
-            {% else %}
-                <input class="form-control" type="text" name="cas" placeholder="Separate CA names with commas. E.g.: John Doe, Jane Doe">
-            {% endif %}	
-        </div>
+        
     </form>
+    <div class="row col-md-9">
+        <p><a href={{url_for('search')}}>Reset query</a></p>
+    </div>
 
-    {% if query_exists %}
-        {% if motions %}
-            <h2>Results</h2>
-            <p>{{ motions|length }} motions found for query '{{ search_term }}'.</p>
-            <table class="table table-striped">
-                <tr>
-                <th>Date</th>
-                <th>Tournament</th>
-                <th>Round</th>
-                <th>Motion</th>
-                </tr>
-                <!--Output data of each row-->
-                {% for motion in motions %}
-                <tr>
-                    <td>{{ motion.date }}</td>
-                    <td>{{ motion.tournament }}</td>
-                    <td>{{ motion.round }}</td>
-                    <td>{{ motion.motion }}</td>
-                </tr>
-                {% endfor %}
-        </table>
-        {% else %}
-            <p>No motions found.</p>
+    <div class="row col-md-9">
+        {% if query_exists %}
+            {% if motions %}
+                <h2>Results</h2>
+                <p>{{ motions|length }} motions found for query '{{ search_term }}'.</p>
+                <table class="table table-striped">
+                    <tr>
+                    <th>Date</th>
+                    <th>Tournament</th>
+                    <th>Round</th>
+                    <th>Motion</th>
+                    </tr>
+                    <!--Output data of each row-->
+                    {% for motion in motions %}
+                    <tr>
+                        <td>{{ motion.date }}</td>
+                        <td>{{ motion.tournament }}</td>
+                        <td>{{ motion.round }}</td>
+                        <td>{{ motion.motion }}</td>
+                    </tr>
+                    {% endfor %}
+            </table>
+            {% else %}
+                <p>No motions found.</p>
+            {% endif %}
         {% endif %}
-    {% endif %}
+    </div>
 {% endblock %}
+
 
