@@ -65,6 +65,53 @@ class Motion(db.Model):
     def __repr__(self):
         return f'<Motion {self.id}: {self.motion}>'
 
+
+def set_default_if_query_none(query_info):
+    if query_info['intl'] is None:
+        query_info['intl'] = 0
+    if query_info['start_year'] is None:
+        query_info['start_year'] = 1999
+    if query_info['end_year'] is None:
+        query_info['end_year'] = current_year
+    return query_info
+
+def get_motions_given_query(request, return_object=False, empty_query_return_all=False):
+    search_term = request.args.get("q")
+    intl = request.args.get("intl")
+    start_year = request.args.get("start_year")
+    end_year = request.args.get("end_year")
+    cas = request.args.get("cas")
+    request_args = list(request.args.keys())
+    if intl is None:
+        intl = 0
+    if empty_query_return_all and search_term is None:
+        search_term = ""
+    query_info = {"intl": intl, "start_year": start_year, "end_year": end_year, "cas": cas, "request_args": request_args,
+              "search_term": search_term}
+    query_info = set_default_if_query_none(query_info)
+    motions = Motion.query.filter(Motion.international >= int(query_info['intl'])).filter(Motion.date >= f"{query_info['start_year']}-01-01") \
+                .filter(Motion.date <= f"{query_info['end_year']}-12-31") \
+                .filter(or_(field.ilike(f"%{query_info['search_term']}%") for field in [Motion.motion, 
+                    Motion.tournament, Motion.ca_1, Motion.ca_2, Motion.ca_3, 
+                    Motion.ca_4, Motion.ca_5, Motion.ca_6, Motion.ca_7, Motion.ca_8, Motion.ca_9, Motion.topic_area_1, 
+                    Motion.topic_area_2, Motion.topic_area_3, Motion.topic_area_specific_1, Motion.topic_area_automated]))
+    if request.args.get("All topics") is None:
+        topics = []        
+        for category in categories:
+            if request.args.get(category) is not None:
+                topics.append(category)
+        motions = motions.filter(or_(Motion.topic_area_automated.ilike(category) for category in topics))
+    if cas:
+        if cas[-1] == ".":
+            cas = cas[:-1]
+        ca_names = [n.strip() for n in query_info['cas'].split(",")]
+        ca_fields = [Motion.ca_1, Motion.ca_2, Motion.ca_3, 
+                    Motion.ca_4, Motion.ca_5, Motion.ca_6, Motion.ca_7, Motion.ca_8, Motion.ca_9]
+        motions = motions.filter(or_(ca_field.ilike(f'%{name}%') for name in ca_names for ca_field in ca_fields))
+    if not return_object:
+        motions = motions.all()
+    return motions, query_info
+
 @app.route("/")
 def index():
     return render_template("index.jinja")
@@ -91,7 +138,6 @@ def add_motions():
 
 @app.route("/motions<year>/", methods=["GET"])
 def motions_year(year):
-    # or: Motion.category.ilike("%family%")
     try:
         year_num = int(year)
         if year_num >= 1999 and year_num <= int(datetime.now().year):
@@ -105,57 +151,34 @@ def motions_year(year):
     except:
         return render_template("page_not_found.jinja")
 
-@app.route("/random-motions<num>/", methods=["GET"])
-def random_motions(num):
-    # might change num to be a request-based thing
-    # and change page to be just random-motions.
-    random_motions = Motion.query.order_by(func.random()).limit(num).all()
-    return render_template("random_motions.jinja", num=num, 
-            random_motions=random_motions)
-
 @app.route("/search/", methods=["POST", "GET"])
 def search():
     search_term = request.args.get("q")
     query_exists = True
-    request_args = []
-    start_year = 1999
-    end_year = current_year
-    cas = None
     if search_term is not None:
-        intl = request.args.get("intl")
-        start_year = request.args.get("start_year")
-        end_year = request.args.get("end_year")
-        cas = request.args.get("cas")
-        request_args = list(request.args.keys())
-        if intl is None:
-            intl = 0
-        motions = Motion.query.filter(Motion.international >= int(intl)).filter(Motion.date >= f'{start_year}-01-01') \
-                    .filter(Motion.date <= f'{end_year}-12-31') \
-                    .filter(or_(field.ilike(f'%{search_term}%') for field in [Motion.motion, 
-                        Motion.tournament, Motion.ca_1, Motion.ca_2, Motion.ca_3, 
-                        Motion.ca_4, Motion.ca_5, Motion.ca_6, Motion.ca_7, Motion.ca_8, Motion.ca_9, Motion.topic_area_1, 
-                        Motion.topic_area_2, Motion.topic_area_3, Motion.topic_area_specific_1, Motion.topic_area_automated]))
-        if request.args.get("All topics") is None:
-            topics = []        
-            for category in categories:
-                if request.args.get(category) is not None:
-                    topics.append(category)
-            motions = motions.filter(or_(Motion.topic_area_automated.ilike(category) for category in topics))
-        if cas:
-            if cas[-1] == ".":
-                cas = cas[:-1]
-            ca_names = [n.strip() for n in cas.split(",")]
-            ca_fields = [Motion.ca_1, Motion.ca_2, Motion.ca_3, 
-                        Motion.ca_4, Motion.ca_5, Motion.ca_6, Motion.ca_7, Motion.ca_8, Motion.ca_9]
-            motions = motions.filter(or_(ca_field.ilike(f'%{name}%') for name in ca_names for ca_field in ca_fields))
-        motions = motions.all()
+        motions, query_info = get_motions_given_query(request)
     else:
         motions = []
         query_exists = False
-        intl="0"
-    return render_template("search.jinja", search_term=search_term, motions=motions,
-    query_exists=query_exists, categories=categories, request_args=request_args, intl=intl,
-    start_year=start_year, end_year=end_year, cas=cas)
+        query_info = {"intl": 0, "start_year": 1999, "end_year": current_year, "cas": None, "request_args": list(request.args.keys()),
+              "search_term": search_term}
+    return render_template("search.jinja", motions=motions,
+    query_exists=query_exists, query_info=query_info, categories=categories, current_year=current_year)
+
+@app.route("/random-motions<num>/", methods=["GET"])
+def random_motions(num):
+    if num == "":
+        num = 10
+    # might change num to be a request-based thing
+    # and change page to be just random-motions.
+    random_motions, query_info = get_motions_given_query(request, return_object=True, empty_query_return_all=True)
+    random_motions = random_motions.order_by(func.random()).limit(num).all()
+    return render_template("random_motions.jinja", num=num, 
+            random_motions=random_motions, categories=categories, query_info=query_info, current_year=current_year)
+
+@app.route("/ten-random-motions/")
+def ten_random_motions():
+    return random_motions(10)
 
 @app.route("/about/")
 def about():

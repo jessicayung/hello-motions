@@ -5,6 +5,98 @@
 
 <h1>{{num}} Random Motions</h1>
 
+<form method="get" id="search-motions">
+	<div id="accordion">
+        <div class="card">
+            <div class="card-header" id="advancedsearch-button">
+            <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#advancedsearch" aria-expanded="false" aria-controls="advancedsearch" type="button">
+                Advanced search filters (Filter by category, year range, CAs)
+                </button>
+            </h5>
+            </div>
+            <div id="advancedsearch" class="collapse" aria-labelledby="advancedsearch-button" data-parent="#accordion">
+            <div class="card-body">
+                <div class="row">
+		    <div class="form-group, col-md-6">
+                {% if "q" in query_info.request_args %}
+                    <input class="form-control" type="text" name="q" placeholder="e.g. International Relations, WUDC, Cambridge IV", value="{{query_info.search_term}}">
+                {% else %}
+                    <input class="form-control" type="text" name="q" placeholder="e.g. International Relations, WUDC, Cambridge IV">
+                {% endif %}	                	        
+		    </div>
+		    <div class="form-group col-md-3">
+		    	<select name="intl" class="form-control">
+                    {% if query_info.intl == "1" %}
+                        <option value="0">All Tournaments</option>
+                        <option value="1" selected>Internationals Only</option>
+                        <option value="2">Large Internationals Only</option>
+                        <option value="3">WUDC Only</option>
+                    {% elif query_info.intl == "2" %}
+                        <option value="0">All Tournaments</option>
+                        <option value="1">Internationals Only</option>
+                        <option value="2" selected>Large Internationals Only</option>
+                        <option value="3">WUDC Only</option>
+                    {% elif query_info.intl == "3" %}
+                        <option value="0">All Tournaments</option>
+                        <option value="1">Internationals Only</option>
+                        <option value="2">Large Internationals Only</option>
+                        <option value="3" selected>WUDC Only</option>
+                    {% else %}
+                        <option value="0">All Tournaments</option>
+                        <option value="1">Internationals Only</option>
+                        <option value="2">Large Internationals Only</option>
+                        <option value="3">WUDC Only</option>
+                    {% endif %}
+            	</select>
+		    </div>
+		    <div class="col-md-1">
+		    	<button type="submit" class="btn btn-primary">Filter</button>
+		    </div>
+	    </div>
+		<div class="row">
+			<div class="row">
+				<h6>Filter by category</h6>
+				<div class="form-group col-md-2">
+					{% if "q" in query_info.request_args and "All topics" not in query_info.request_args %}
+						<input type="checkbox" name="All topics" value="All topics" Checked>All topics<br>
+					{% else %}
+						<input type="checkbox" name="All topics" value="All topics" Checked>All topics<br>
+					{% endif %}
+					{% for category in categories %}
+						{% if loop.index0 % 6 == 5 %}
+							</div>
+							<div class="form-group col-md-2">
+						{% endif %}
+					{% if category in query_info.request_args %}
+						<input type="checkbox" name="{{category}}" value="{{category}}" Checked>{{ category}}<br>
+					{% else %}
+						<input type="checkbox" name="{{category}}" value="{{category}}">{{ category}}<br>
+					{% endif %}
+					{% endfor %}
+				</div>
+			</div>
+			<div class="row col-md-6">
+			<h6>Year range</h6>
+			<input type="number" name="start_year", min="1999" max={{current_year}} step="1" value={{query_info.start_year}}> to <input type="number" name="end_year" min="1999" max={{current_year}} step="1" value={{query_info.end_year}}>
+			</div>
+			<div class="row col-md-6">
+			<h6>Chief Adjudicators</h6>
+				{% if query_info.cas %}
+					<input class="form-control" type="text" name="cas" placeholder="Separate CA names with commas. E.g.: John Doe, Jane Doe", value="{{query_info.cas}}">
+				{% else %}
+					<input class="form-control" type="text" name="cas" placeholder="Separate CA names with commas. E.g.: John Doe, Jane Doe">
+				{% endif %}	
+			</div>
+	</div>
+	</div>
+	</div>
+        
+    </form>
+    <div class="row col-md-9">
+        <p><a href={{url_for('search')}}>Reset query</a></p>
+    </div>
+
         {% for motion in random_motions %}
 		<div class="col-md-6">
 		<div class="panel panel-default">

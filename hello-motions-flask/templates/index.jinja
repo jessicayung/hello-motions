@@ -9,14 +9,17 @@
         <p>Search for motions by keyword, category, Chief Adjudicator or tournament. <a href="https://docs.google.com/spreadsheets/d/1qQlqFeJ3iYbzXYrLBMgbmT6LcJLj6JcG3LJyZSbkAJY/edit?usp=sharing">Access the motions spreadsheet directly here</a>. </p>
 
           <form action="search" method="get" id="search-motions" >
+          <div class="row">
             <div class="form-group, col-md-6">
                 <input class="form-control" type="text" name="q" placeholder="e.g. International Relations, WUDC, Cambridge IV">
             </div>
-            <p>
-              <div class="form-group">
-                <button type="submit" name="search-motions" class="btn btn-success">Search</button>
-              </div>
-            </p>
+            <div class="form-group, col-md-2">
+              <a href={{url_for('search')}}><button type="button" class="btn">Advanced</button></a>
+            </div>
+            <div class="form-group, col-md-2">
+              <button type="submit" class="btn btn-success">Search</button>
+            </div>
+          </div>
           </form>
 
           <!-- <a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a> -->
@@ -30,12 +33,12 @@
 
         <h2>New Features</h2>
           <p><ol>
-            <li><a href="ten-random-motions">Ten Random Motions</a></li>
+            <li><a href="random-motions10">Ten Random Motions</a></li>
             <li><a href="http://hellomotions.com/search?q=Dan+Lahav%2C+Mubarrat+Wassey%2C+Bobbi+Leet%2C+Boemo+Delano+Phirinyane%2C+Connor+O%27Brien%2C+Milos+Marjanovic%2C+Sebastian+Dasso%2C+Sooyoung+Park%2C+Teck+Wei+Tan%2C+Tejal+Patwardhan&intl=0">Motions set by the 2021 Korea WUDC CA Team</a></li>
             <li><a href="http://hellomotions.com/search?q=Raffy+Marshall%2C+Monica+Forman%2C+Melda+Eren%2C+Tin+Puljic%2C+Tom+Manor&search-motions=">Motions set by the 2020 Astana EUDC CA Team</a></li>
             <li><a href="wudc-motions">WUDC Motions</a></li>
             <li><a href="eudc-motions">EUDC Motions</a></li>
-            <li><a href="random-motion">Random Motion</a></li>
+            <li><a href="random-motions1">Random Motion</a></li>
             <li><a href="search?q=&intl=1">Filter for only international tournaments</a></li>
           </ol></p>
         </div>
