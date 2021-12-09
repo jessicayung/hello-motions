@@ -6,7 +6,11 @@
 <h1>{{num}} Random Motions</h1>
 
 <form method="get" id="search-motions">
-	<button type="submit" class="btn btn-primary">Refresh</button>
+	<div class="row">
+		<div class="col-md-4">
+			<button type="submit" class="btn btn-primary">Refresh</button>
+		</div>
+	</div>
 	<div id="accordion">
         <div class="card">
             <div class="card-header" id="advancedsearch-button">
@@ -103,8 +107,10 @@
 	</div>
         
 </form>
-<div class="row col-md-9">
-	<p><a href={{url_for('search')}}>Reset query</a></p>
+<div class="row">
+	<div class="col-md-4">
+		<p><a href={{url_for('random_motions')}}>Reset query</a></p>
+	</div>
 </div>
 
 {% for motion in random_motions %}
