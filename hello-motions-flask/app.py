@@ -165,10 +165,12 @@ def search():
     return render_template("search.jinja", motions=motions,
     query_exists=query_exists, query_info=query_info, categories=categories, current_year=current_year)
 
-@app.route("/random-motions<num>/", methods=["GET"])
-def random_motions(num):
-    if num == "":
-        num = 10
+@app.route("/random-motions/", methods=["GET"])
+def random_motions(num=10):
+    """Shows 10 random motions by default."""
+    num_from_request = request.args.get("num_motions")
+    if num_from_request is not None:
+        num = num_from_request
     # might change num to be a request-based thing
     # and change page to be just random-motions.
     random_motions, query_info = get_motions_given_query(request, return_object=True, empty_query_return_all=True)
@@ -178,7 +180,11 @@ def random_motions(num):
 
 @app.route("/ten-random-motions/")
 def ten_random_motions():
-    return random_motions(10)
+    return random_motions(num=10)
+
+@app.route("/random-motion/")
+def random_motion():
+    return random_motions(num=1)
 
 @app.route("/about/")
 def about():
