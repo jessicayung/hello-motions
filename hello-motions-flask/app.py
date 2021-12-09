@@ -114,7 +114,13 @@ def get_motions_given_query(request, return_object=False, empty_query_return_all
 
 @app.route("/")
 def index():
-    return render_template("index.jinja")
+    recent_motions = Motion.query.filter(Motion.date >= f'{current_year-2}-01-01') \
+                                .order_by(Motion.date.desc()) \
+                                .order_by(Motion.tournament.asc()) \
+                                .order_by(Motion.round_code.asc()) \
+                                .limit(100).all()
+    print(len(recent_motions))
+    return render_template("index.jinja", recent_motions=recent_motions)
 
 @app.route("/add-motions/", methods=["POST", "GET"])
 def add_motions():
@@ -185,6 +191,14 @@ def ten_random_motions():
 @app.route("/random-motion/")
 def random_motion():
     return random_motions(num=1)
+
+@app.route("/wudc-motions/")
+def wudc_motions():
+    return 'WUDC motions'
+
+@app.route("/eudc-motions/")
+def eudc_motions():
+    return 'EUDC motions'
 
 @app.route("/about/")
 def about():
