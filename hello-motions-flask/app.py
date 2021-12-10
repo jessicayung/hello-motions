@@ -150,7 +150,10 @@ def motions_year(year):
         if year_num >= 1999 and year_num <= int(datetime.now().year):
             motions = Motion.query.filter(Motion.date >= f'{year}-01-01') \
                                 .filter(Motion.date <= f'{year}-12-31') \
-                                .order_by(Motion.date.asc()).all()
+                                .order_by(Motion.date.asc()) \
+                                .order_by(Motion.tournament.asc()) \
+                                .order_by(Motion.round_code.asc()) \
+                                .all()
             return render_template("motions_year.jinja", motions=motions, year=year)
         else:
             return render_template("page_not_found.jinja", extra_info="We have pages for \
@@ -203,4 +206,4 @@ def eudc_motions():
 
 @app.route("/about/")
 def about():
-    return "<p>About</p>"
+    return render_template("about.jinja", categories=categories)
