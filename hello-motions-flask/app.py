@@ -196,9 +196,50 @@ def ten_random_motions():
 def random_motion():
     return random_motions(num=1)
 
+wudc_locations = {
+    2021: 'Korea',
+    2020: 'Thailand',
+    2019: 'Cape Town',
+    2018: 'Mexico',
+    2017: 'Dutch',
+    2016: 'Thessaloniki',
+    2015: 'Malaysia',
+    2014: 'Chennai',
+    2013: 'Berlin',
+    2012: 'Manila',
+    2011: 'Botswana',
+    2010: 'Vehbi Koc',
+    2009: 'Cork',
+    2008: 'Assumption',
+    2007: 'UBC',
+}
+
 @app.route("/wudc-motions/")
 def wudc_motions():
-    return 'WUDC motions'
+    wudc_info = {}
+    for year, location in wudc_locations.items():
+        year_dict = {}
+        motions = Motion.query.filter(Motion.international == 3) \
+                                .filter(Motion.date >= f'{year}-01-01') \
+                                .filter(Motion.date <= f'{year}-12-31') \
+                                .order_by(Motion.round_code.asc()) \
+                                .with_entities(Motion.motion, Motion.round, Motion.infoslide, 
+                                Motion.ca_1, Motion.ca_2, Motion.ca_3, Motion.ca_4, Motion.ca_5, 
+                                Motion.ca_6, Motion.ca_7, Motion.ca_8, Motion.ca_9) \
+                                .all()
+        year_dict['motions'] = motions
+        sample_motion = motions[0]
+        cas_string = ""
+        for i, field_name in enumerate(['ca_1', 'ca_2', 'ca_3', 'ca_4', 'ca_5', 'ca_6', 'ca_7', 'ca_8', 'ca_9']):
+            if sample_motion[field_name]:
+                if i > 0:
+                    cas_string += ", "
+                cas_string += sample_motion[field_name]
+        year_dict['cas'] = cas_string
+        year_dict['location'] = location
+        wudc_info[year] = year_dict
+    wudc_info = sorted(wudc_info.items(), reverse=True)
+    return render_template("wudc_motions.jinja", wudc_info=wudc_info)
 
 @app.route("/eudc-motions/")
 def eudc_motions():
