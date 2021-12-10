@@ -53,6 +53,7 @@ class Motion(db.Model):
     ca_9 = db.Column(db.String(50))
     event_link = db.Column(db.String(100))
     round_code = db.Column(db.String(10))
+    round = db.Column(db.String(10))
     motion = db.Column(db.String(5000), nullable=False)
     infoslide = db.Column(db.String(5000), default="")
     topic_area_1 = db.Column(db.String(50))
