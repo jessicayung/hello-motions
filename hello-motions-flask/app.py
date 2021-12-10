@@ -214,8 +214,23 @@ wudc_locations = {
     2007: 'UBC',
 }
 
+eudc_locations = {
+    2021: 'Madrid',
+    2020: 'Astana',
+    2019: 'Athens',
+    2018: 'Novi Sad',
+    2017: 'Tallinn',
+    2016: 'Warsaw',
+    2015: 'Vienna',
+    2014: 'Zagreb',
+    2013: 'Manchester',
+    2012: 'Belgrade',
+}
+
 @app.route("/wudc-motions/")
 def wudc_motions():
+    info = get_wudc_or_eudc_info("WUDC", wudc_locations)
+    return render_template("wudc_motions.jinja", wudc_info=info)
     wudc_info = {}
     for year, location in wudc_locations.items():
         year_dict = {}
@@ -241,9 +256,36 @@ def wudc_motions():
     wudc_info = sorted(wudc_info.items(), reverse=True)
     return render_template("wudc_motions.jinja", wudc_info=wudc_info)
 
+def get_wudc_or_eudc_info(tournament_name, tournament_locations):
+    info = {}
+    for year, location in tournament_locations.items():
+        year_dict = {}
+        motions = Motion.query.filter(Motion.tournament.ilike(f'%{tournament_name}%')) \
+                                .filter(Motion.date >= f'{year}-01-01') \
+                                .filter(Motion.date <= f'{year}-12-31') \
+                                .order_by(Motion.round_code.asc()) \
+                                .with_entities(Motion.motion, Motion.round, Motion.infoslide, 
+                                Motion.ca_1, Motion.ca_2, Motion.ca_3, Motion.ca_4, Motion.ca_5, 
+                                Motion.ca_6, Motion.ca_7, Motion.ca_8, Motion.ca_9) \
+                                .all()
+        year_dict['motions'] = motions
+        sample_motion = motions[0]
+        cas_string = ""
+        for i, field_name in enumerate(['ca_1', 'ca_2', 'ca_3', 'ca_4', 'ca_5', 'ca_6', 'ca_7', 'ca_8', 'ca_9']):
+            if sample_motion[field_name]:
+                if i > 0:
+                    cas_string += ", "
+                cas_string += sample_motion[field_name]
+        year_dict['cas'] = cas_string
+        year_dict['location'] = location
+        info[year] = year_dict
+    info = sorted(info.items(), reverse=True)
+    return info
+
 @app.route("/eudc-motions/")
 def eudc_motions():
-    return 'EUDC motions'
+    info = get_wudc_or_eudc_info("EUDC", eudc_locations)
+    return render_template("eudc_motions.jinja", eudc_info=info)
 
 @app.route("/about/")
 def about():
