@@ -76,7 +76,7 @@ def set_default_if_query_none(query_info):
         query_info['end_year'] = current_year
     return query_info
 
-def get_motions_given_query(request, return_object=False, empty_query_return_all=False):
+def get_motions_given_query(request, return_object=False, empty_query_return_all=False, order_by_most_recent=False):
     search_term = request.args.get("q")
     intl = request.args.get("intl")
     start_year = request.args.get("start_year")
@@ -109,6 +109,8 @@ def get_motions_given_query(request, return_object=False, empty_query_return_all
         ca_fields = [Motion.ca_1, Motion.ca_2, Motion.ca_3, 
                     Motion.ca_4, Motion.ca_5, Motion.ca_6, Motion.ca_7, Motion.ca_8, Motion.ca_9]
         motions = motions.filter(or_(ca_field.ilike(f'%{name}%') for name in ca_names for ca_field in ca_fields))
+    if order_by_most_recent:
+        motions = motions.order_by(Motion.date.desc()).order_by(Motion.tournament.asc()).order_by(Motion.round_code.asc())
     if not return_object:
         motions = motions.all()
     return motions, query_info
@@ -166,7 +168,7 @@ def search():
     search_term = request.args.get("q")
     query_exists = True
     if search_term is not None:
-        motions, query_info = get_motions_given_query(request)
+        motions, query_info = get_motions_given_query(request, order_by_most_recent=True)
     else:
         motions = []
         query_exists = False
@@ -184,6 +186,7 @@ def random_motions(num=10):
     # might change num to be a request-based thing
     # and change page to be just random-motions.
     random_motions, query_info = get_motions_given_query(request, return_object=True, empty_query_return_all=True)
+    print(random_motions)
     random_motions = random_motions.order_by(func.random()).limit(num).all()
     return render_template("random_motions.jinja", num=num, 
             random_motions=random_motions, categories=categories, query_info=query_info, current_year=current_year)
@@ -227,35 +230,6 @@ eudc_locations = {
     2012: 'Belgrade',
 }
 
-@app.route("/wudc-motions/")
-def wudc_motions():
-    info = get_wudc_or_eudc_info("WUDC", wudc_locations)
-    return render_template("wudc_motions.jinja", wudc_info=info)
-    wudc_info = {}
-    for year, location in wudc_locations.items():
-        year_dict = {}
-        motions = Motion.query.filter(Motion.international == 3) \
-                                .filter(Motion.date >= f'{year}-01-01') \
-                                .filter(Motion.date <= f'{year}-12-31') \
-                                .order_by(Motion.round_code.asc()) \
-                                .with_entities(Motion.motion, Motion.round, Motion.infoslide, 
-                                Motion.ca_1, Motion.ca_2, Motion.ca_3, Motion.ca_4, Motion.ca_5, 
-                                Motion.ca_6, Motion.ca_7, Motion.ca_8, Motion.ca_9) \
-                                .all()
-        year_dict['motions'] = motions
-        sample_motion = motions[0]
-        cas_string = ""
-        for i, field_name in enumerate(['ca_1', 'ca_2', 'ca_3', 'ca_4', 'ca_5', 'ca_6', 'ca_7', 'ca_8', 'ca_9']):
-            if sample_motion[field_name]:
-                if i > 0:
-                    cas_string += ", "
-                cas_string += sample_motion[field_name]
-        year_dict['cas'] = cas_string
-        year_dict['location'] = location
-        wudc_info[year] = year_dict
-    wudc_info = sorted(wudc_info.items(), reverse=True)
-    return render_template("wudc_motions.jinja", wudc_info=wudc_info)
-
 def get_wudc_or_eudc_info(tournament_name, tournament_locations):
     info = {}
     for year, location in tournament_locations.items():
@@ -282,6 +256,11 @@ def get_wudc_or_eudc_info(tournament_name, tournament_locations):
     info = sorted(info.items(), reverse=True)
     return info
 
+@app.route("/wudc-motions/")
+def wudc_motions():
+    info = get_wudc_or_eudc_info("WUDC", wudc_locations)
+    return render_template("wudc_motions.jinja", wudc_info=info)
+
 @app.route("/eudc-motions/")
 def eudc_motions():
     info = get_wudc_or_eudc_info("EUDC", eudc_locations)
@@ -290,3 +269,7 @@ def eudc_motions():
 @app.route("/about/")
 def about():
     return render_template("about.jinja", categories=categories)
+
+@app.route("/contact/")
+def contact():
+    return render_template("contact.jinja")
